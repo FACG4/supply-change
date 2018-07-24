@@ -1,5 +1,5 @@
 # Supply Change
-​​Supply Change is a marketplace for Social Enterprises to find, apply for and deliver Public Sector contracts, and for Public Sector Buyers to find trusted and suitable Social Enterprises to invite them for bidding.
+​​Supply change is a marketplace for social enterprises to find, apply for and deliver public sector contracts, and for public sector buyers to find trusted and suitable social enterprises to invite them for bidding.
 
 ![Supply change](https://i.imgur.com/rAREU7L.jpg)
 
