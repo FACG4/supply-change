@@ -42,7 +42,7 @@ Creating website for Social Enterprises to find, apply for and deliver Public Se
 
 ### Database Schema:
 the App database structure for represent the App tables and the relations between them.
-![DB](https://i.imgur.com/zqhKODY.png)
+![DB](https://i.imgur.com/MJaQtfM.png)
 #### Prototype: :link:
 There is the link of prototype on figma [Here ](https://www.figma.com/file/0omMKJTbFpD7r6AuscYko6Wq/supply-change?node-id=0%3A1)
 
