@@ -1,0 +1,54 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  padding: 0;
+
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  background: #2D918E;
+  height: 220px;
+  text-align: left;
+  color: #E3F4F4;
+}
+
+img{
+  margin-top: 25px;
+  margin-left: -8px;
+}
+.contact-inf{
+  margin-left:100px;
+}
+.journey{
+margin-top: 33px;
+margin-right: 80px;
+
+}
+
+input{
+  max-width:200px;
+  height:27px;
+  margin-right:60px;
+  border-radius:28px;
+  text-align: center;
+  background: #edf7f6
+}
+#follow{
+margin-bottom: 8px;
+margin-left: 8px;
+}
+
+.socail-media{
+    margin: 0 auto;
+    margin-top: 27px;
+    margin-right: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+i{
+  font-size: 25px;
+}
