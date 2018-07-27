@@ -42,7 +42,7 @@ class Header extends Component {
                   </span>
                   <div className='companyAction-content' >
                     <a href='#'><i className='fas fa-user'></i>Profile</a>
-                    <a href='#'><i className='fas fa-plus-circle'></i> Post a contract</a>
+                    <a href='#'><i className='fas fa-plus-circle'></i>Post a contract</a>
                     <a href='#'><i className='fas fa-sign-out-alt'></i>Logout</a>
 
                   </div>
