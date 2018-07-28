@@ -1,8 +1,10 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: 0.5s ease;
 }
+
 .App {
   position: absolute;
   top: 0;
@@ -24,14 +26,8 @@ header {
   height: 250px;
   width: 100%;
   transition: 0.5s ease;
-  background:
-    linear-gradient(
-      rgba(45, 145, 42, 0.21),
-      rgba(45, 145, 42, 0.21)
-    ),
-    url('http://wallpaperpulse.com/thumb/261987.jpg');
-   background-size: cover;
-
+  background: linear-gradient( rgba(45, 145, 42, 0.21), rgba(45, 145, 42, 0.21)), url('http://wallpaperpulse.com/thumb/261987.jpg');
+  background-size: cover;
 }
 
 .navbar .navbar--fixed .nav {
@@ -41,7 +37,7 @@ header {
   float: right;
   padding-left: 96px;
   position: absolute;
-  top: 2%;
+  top: 10px;
   right: 0;
 }
 
@@ -55,12 +51,9 @@ header {
   transition: 0.5s ease;
 }
 
-
-
 .navbar .navbar--fixed .nav .item a {
   text-decoration: none;
   color: #fff;
-
 }
 
 .navbar .navbar--fixed .logo {
@@ -76,43 +69,49 @@ header {
 .navbar .navbar--fixed .logo img {
   width: 120%
 }
-.post_find_Contract{
-width: 145px;
-background-color: #e3f4f496;
-text-align: center;
-padding: 7px 0;
-border-radius: 65px;
+
+.post_find_Contract {
+  width: 145px;
+  background-color: #e3f4f496;
+  text-align: center;
+  padding: 7px 0;
+  border-radius: 65px;
 }
-.welcome{
+
+.welcome {
   color: #fff;
   width: 100%;
   clear: both;
   position: absolute;
   top: 65%;
   text-align: center;
+}
 
-}
 .navbar.scrolled {
- transition: 0.5s ease;
- background: #2D918E
+  transition: 0.5s ease;
+  background: #2D918E
 }
+
 .scrolled .navbar--fixed .nav {
-  top: 12%
+  top: 10px
 }
+
 .scrolled .welcome {
   display: none;
 }
+
 .scrolled.navbar {
   height: 60px;
   background-color: #2D918E;
   transition: 0.5s ease;
 }
 
-
-.scrolled.navbar  .navbar--fixed .nav .item {
+.scrolled.navbar .navbar--fixed .nav .item {
   transition: 0.5s ease;
 }
+
 /* Keep it please I need it for active links */
+
 /* .scrolled.navbar .navbar--fixed .nav .item .contact {
   display: inline-block;
   background-color: #ffffff;
@@ -126,17 +125,20 @@ border-radius: 65px;
   width: 40px;
   transition: 0.5s ease;
 }
-.companyAction{
+
+.companyAction {
   position: relative;
   margin-left: 50px;
 }
-.companyAction > span{
+
+.companyAction__span {
   color: #ffffff;
   font-family: Open Sans;
   font-size: 18px;
   cursor: pointer;
 }
-.companyAction > span> img{
+
+.companyAction__img {
   position: absolute;
   float: left;
   top: -10px;
@@ -151,25 +153,23 @@ border-radius: 65px;
   border-style: none;
   width: 40px;
 }
-.companyAction > span> i {
+
+.companyAction__span .fas {
   float: right;
   font-size: 10px;
   margin-left: 13PX;
   margin-top: 5%;
 }
 
-.la-angle-down:before {
-    content: "\f110";
-}
-.companyAction-content  {
+.companyAction-content {
   position: absolute;
   right: -12%;
   margin: 0;
   background: #ffffff;
-  -moz-box-shadow: 0px 0px 40px rgba(0,0,0,0.1);
-  -ms-box-shadow: 0px 0px 40px rgba(0,0,0,0.1);
-  -o-box-shadow: 0px 0px 40px rgba(0,0,0,0.1);
-  box-shadow: 0px 0px 40px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
@@ -179,7 +179,8 @@ border-radius: 65px;
   padding: 20px 3px;
   z-index: 10000
 }
-.companyAction-content::after{
+
+.companyAction-content::after {
   position: absolute;
   right: 10px;
   top: -6px;
@@ -198,20 +199,21 @@ border-radius: 65px;
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-.companyAction-content  a{
-float: left;
-width: 100%;
-padding: 5px 16px;
-position: relative;
-display: block;
+
+.companyAction-content a {
+  float: left;
+  width: 100%;
+  padding: 5px 16px;
+  position: relative;
+  display: block;
 }
 
 .companyAction-content {
-    display: none;
+  display: none;
 }
 
 .companyAction-content a {
-    color: #2D918E !important;
+  color: #2D918E !important;
 }
 
 .companyAction-content a:hover {
@@ -225,12 +227,15 @@ display: block;
 .companyAction:hover {
   height: 40px;
 }
-.companyAction-content a i {
+
+.companyAction-content .fas {
   margin-right: 15px
 }
-main{
+
+main {
   margin-top: 250px;
 }
-#main.scrolled{
+
+#main.scrolled {
   margin-top: 130px;
 }
