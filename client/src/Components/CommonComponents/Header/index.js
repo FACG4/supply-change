@@ -4,10 +4,12 @@ import './style.css';
 class Header extends Component {
   componentDidMount() {
     window.addEventListener('scroll', () => {
-      if (Math.round(window.scrollY) > 100) {
+      if (Math.round(window.scrollY) > 30) {
         document.querySelector('#navbar').classList.add('scrolled');
+        document.querySelector('#main').classList.add('scrolled');
       } else {
         document.querySelector('#navbar').classList.remove('scrolled');
+        document.querySelector('#main').classList.remove('scrolled');
       }
     });
   }

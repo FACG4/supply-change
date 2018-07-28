@@ -17,18 +17,6 @@ header {
   top: 0;
   width: 100%;
   z-index: 10;
-  background-color: #2D918E
-}
-
-@supports (position: sticky) {
-  body {
-    padding-top: 0;
-  }
-
-  header {
-    position: sticky;
-  }
-
 }
 
 .navbar {
@@ -104,7 +92,7 @@ border-radius: 65px;
   text-align: center;
 
 }
-.scrolled {
+.navbar.scrolled {
  transition: 0.5s ease;
  background: #2D918E
 }
@@ -116,7 +104,7 @@ border-radius: 65px;
 }
 .scrolled.navbar {
   height: 60px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #2D918E;
   transition: 0.5s ease;
 }
 
@@ -239,4 +227,10 @@ display: block;
 }
 .companyAction-content a i {
   margin-right: 15px
+}
+main{
+  margin-top: 250px;
+}
+#main.scrolled{
+  margin-top: 130px;
 }
