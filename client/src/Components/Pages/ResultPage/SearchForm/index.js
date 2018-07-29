@@ -20,16 +20,13 @@ class SearchForm extends Component {
   render() {
     return (
       <form className='searchContractForm'>
-
         <div className='contractTitleDiv'>
           <input type='text' placeholder='Job title, keywords or company name' className='contractTitleDiv__input'/>
           <i className='far fa-keyboard'></i>
         </div>
-
         <div className='selectCityDiv'>
           <Select options={this.state.options} placeholder="Select contract region..." isMulti={false} isClearable={true} name='city'/>
         </div>
-
         <div className='searchBtnDiv'>
           <button className='searchBtn'type='submit'><i className='fas fa-search'></i></button>
         </div>
