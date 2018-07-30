@@ -136,7 +136,7 @@ Already have an account?
 Login Now
 
                 </p>
-                {' '}
+          
               </a>
             </div>
           </div>
