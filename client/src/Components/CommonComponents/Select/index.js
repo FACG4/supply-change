@@ -7,21 +7,19 @@ class Select extends Component {
     selectedOption: '',
   }
   handleChange = (selectedOption) => {
-    this.setState({ selectedOption });
+    this.setState({
+      ...this.state,
+      selectedOption
+    });
   }
   render() {
     const { selectedOption } = this.state;
-    const { name, placeholder, options, isMulti, isClearable } = this.props;
 
     return (
       <ReactSelect
-        name={name}
-        value={selectedOption}
-        onChange={this.handleChange}
-        placeholder={placeholder}
-        options={options}
-        isMulti={isMulti}
-        isClearable={isClearable}
+      {...this.props}
+      value={selectedOption}
+      onChange={this.handleChange}
       />
     );
   }
