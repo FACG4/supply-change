@@ -1,27 +1,28 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Group from './Imgs/Group.png';
-import password from './Imgs/password.png';
-import business from './Imgs/business.png';
-import user from './Imgs/user.png';
-import family from './Imgs/family.png';
-import mail from './Imgs/mail.png';
-import confirm from './Imgs/confirm.png';
-import phonecall from './Imgs/phone-call.png';
-import Group1 from './Imgs/Group1.png';
 import './style.css';
-
-
+import Fontawesome from 'react-fontawesome';
+import family from './Imgs/family.png';
+import Group1 from './Imgs/Group1.png'
 class Signup extends Component {
+  state={
+    userInfo:{}
+  }
+
+  handleChange = (e)=>{
+    const {userInfo} = this.state;
+    userInfo[e.target.name]=e.target.value;
+    this.setState({userInfo})
+    console.log(this.state);
+  }
   render() {
     return (
-      <div>
-        <div className="topForm">
-          <h3 className="header">
-Sign Up
-            {' '}
-          </h3>
+      <div className="main">
 
+        <div className="topForm">
+          <h3 className="header1">
+Sign Up
+          </h3>
           <div className="select-user">
             <button className="button button1">
 Buyer
@@ -29,7 +30,6 @@ Buyer
             <button className="button button1">
 Supplier
             </button>
-
           </div>
         </div>
 
@@ -40,110 +40,92 @@ Supplier
             <form action="" method="POST" className="form Signup">
 
               <div className="form__field">
-                <input id="CompanyHouseNumber" type="text" name="CompanyHouseNumber" className="form__input" placeholder="Company House Number" required />
-                <label htmlFor="Company House Number">
-                  <img src={Group} className="icon" alt="CompanyHouseNumber" />
-
-                  <span className="hidden">
-              Username
-                  </span>
+                <input id="CompanyHouseNumber" type="text" name="CompanyHouseNumber" onChange={this.handleChange} className="form__input" placeholder="Company House Number" required />
+                <label htmlFor="CompanyHouseNumber">
+                  <Fontawesome className="fontawesome" name="sort-numeric-desc" />
+                  <span className="hidden" />
                 </label>
               </div>
 
               <div className="form__field">
-                <input id="businessName" type="text" name="businessName" className="form__input" placeholder="Business Name" required />
+                <input id="businessName" type="text" name="businessName"  onChange={this.handleChange} className="form__input" placeholder="Business Name" required />
                 <label htmlFor="businessName">
-                  <img src={business} className="icon" alt="businessName" />
-                  <span className="hidden">
-              Password
-                  </span>
+                  <Fontawesome className="fontawesome" name="briefcase" />
+                  <span className="hidden" />
                 </label>
               </div>
 
               <div className="form__field">
-                <input id="firstName" type="text" name="firstName" className="form__input" placeholder="First Name" required />
+                <input id="firstName" type="text" name="firstName"  onChange={this.handleChange} className="form__input" placeholder="First Name" required />
                 <label htmlFor="firstName">
-                  <img src={user} className="icon" alt="firstName" />
-                  <span className="hidden">
-              Password
-                  </span>
+                  <Fontawesome className="fontawesome" name="user-circle-o" />
+                  <span className="hidden" />
                 </label>
               </div>
 
               <div className="form__field">
-                <input id="lastName" type="text" name="lastName" className="form__input" placeholder="Last Name" required />
+                <input id="lastName" type="text" name="lastName"   onChange={this.handleChange} className="form__input" placeholder="Last Name" required />
                 <label htmlFor="lastName">
-                  <img src={family} className="icon" alt="lastName" />
-                  <span className="hidden">
-              Password
-                  </span>
+                  <img src={family} className="icon family" alt="lastName" />
+                  <span className="hidden" />
                 </label>
               </div>
 
               <div className="form__field">
-                <input id="email" type="text" name="eamil" className="form__input" placeholder="Email" required />
+                <input id="email" type="text" name="eamil"  onChange={this.handleChange} className="form__input" placeholder="Email" required />
                 <label htmlFor="email">
-                  <img src={mail} className="icon" />
-                  <span className="hidden">
-              Password
-                  </span>
+                  <Fontawesome className="fontawesome" name="envelope-o" />
+                  <span className="hidden" />
                 </label>
               </div>
 
               <div className="form__field">
-                <input id="password" type="password" name="password" className="form__input" placeholder="Password" required />
+                <input id="password" type="password" name="password"  onChange={this.handleChange} className="form__input" placeholder="Password" required />
                 <label htmlFor="password">
-                  <img src={password} className="icon" alt="password" />
-                  <span className="hidden">
-              Password
-                  </span>
+                  <Fontawesome className="fontawesome" name="lock" />
+                  <span className="hidden" />
                 </label>
               </div>
 
               <div className="form__field">
-                <input id="confirm" type="password" name="confirm" className="form__input" placeholder="Confirm Password" required />
+                <input id="confirm" type="password" name="confirm"   onChange={this.handleChange} className="form__input" placeholder="Confirm Password" required />
                 <label htmlFor="confirm">
-                  <img src={confirm} className="icon" alt="confirm" />
-                  <span className="hidden">
-              Password
-                  </span>
+                  <Fontawesome className="fontawesome" name="unlock-alt" />
+
+                  <span className="hidden" />
                 </label>
               </div>
 
               <div className="form__field">
-                <input id="phone" type="text" name="phone" className="form__input" placeholder="Phone Number" required />
+                <input id="phone" type="text" name="phone"  onChange={this.handleChange} className="form__input" placeholder="Phone Number" required />
                 <label htmlFor="phone">
-                  <img src={phonecall} className="icon" alt="phonecall" />
-                  <span className="hidden">
-              Password
-                  </span>
+                  <Fontawesome className="fontawesome" name="phone" />
+                  <span className="hidden" />
                 </label>
               </div>
 
               <div className="spaceDiv--imgDiv">
                 <div className="spaceDiv" />
-                <img src={Group1} alt="" className="Group1" />
+                <img src={Group1} alt="" className="spaceImg" />
               </div>
 
               <div className="checkBox">
                 <input id="mailingList" type="checkbox" name="mailingList" value="mailingList" />
                 <span className="checkBoxSpan">
 Join Mailing List
+                  {' '}
                 </span>
-
-
                 <input id="T&C" type="checkbox" name="T&C" value="T&C" checked />
                 <span className="checkBoxSpan">
 T&C
                 </span>
-
               </div>
 
               <div className="form__field">
                 <input type="submit" value="Sign Up" />
               </div>
-
             </form>
+
             <div className="SubmitDiv">
               <p className="text--center">
 Already have an account?
@@ -157,13 +139,8 @@ Login Now
                 {' '}
               </a>
             </div>
-
-
           </div>
-
-
         </div>
-
       </div>
     );
   }
