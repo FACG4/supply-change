@@ -1,0 +1,84 @@
+.searchContractForm {
+  width: 80%;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.contractTitleDiv {
+  width: 55%;
+  float: left;
+  position: relative;
+  border: 1px solid gray;
+  border-radius: 8px
+}
+
+.contractTitleDiv__input {
+  float: left;
+  width: 80%;
+  background: no-repeat;
+  border: none;
+  font-size: 13px;
+  color: #888888;
+  padding: 0 0 0 30px;
+  line-height: 50px;
+  background-color: #FFF;
+  border-radius: 8px;
+  outline: none;
+}
+
+.contractTitleDiv .far {
+  position: absolute;
+  right: 30px;
+  line-height: 50px;
+  font-size: 27px;
+  color: #fb236a;
+}
+
+.selectCityDiv {
+  width: 37%;
+  display: inline;
+  position: relative;
+}
+
+.selectCityDiv>div {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  display: inline;
+  height: 50px;
+}
+
+.selectCityDiv>div>div {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.searchBtnDiv {
+  width: 7%;
+}
+
+.searchBtn {
+  width: 100%;
+  max-width: 60px;
+  min-width: 50px;
+  background-color: #8b91dd;
+  height: 50px;
+  border-radius: 8px;
+  font-size: 20px;
+  color: #FFF;
+  letter-spacing: 1px;
+  outline: none;
+  border: none;
+}
+
+.searchBtn .fas {
+  font-size: inherit;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+}
