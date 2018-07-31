@@ -18,7 +18,6 @@ class SignUp extends Component {
   render() {
     return (
       <div>
-
       <div className="topForm">
           <h3 className="header1">
               Sign Up
