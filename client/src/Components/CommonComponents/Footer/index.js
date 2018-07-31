@@ -1,47 +1,41 @@
 import React from 'react';
-import './Style.css';
 import logo from './logo.svg';
+import './Style.css';
 
 const Footer = () => (
+
   <div>
-
-    <footer className="footer">
-
-      <div className="contact-inf">
-        <img src={logo} alt="" />
+    <footer className='footer'>
+      <div className='contact-inf'>
+        <img className='logo' src={logo} alt='' />
         <br />
         <small>
-Collin Street West, Victor 8007, London
-          {' '}
+          18 London Ln
         </small>
         <br />
         <small>
-+1 246-345-0695
+          E8 3PR London
         </small>
         <br />
         <small>
-hello@supplychange.co.uk
+          hello@supplychange.co.uk
         </small>
         <br />
       </div>
-      <div className="journey">
-        <p id="follow">
-Follow your journey
-          {' '}
+      <div className='journey'>
+        <p id='follow'>
+          Follow your journey
         </p>
-        <input placeholder="Enter your email" />
-        <div className="socail-media">
-          <i className="fab fa-facebook-f" />
-          <i className="fab fa-twitter" />
-          <i className="fab fa-instagram" />
+        <div className='labeld-input'>
+          <input placeholder='Enter your email' />
+          <i className='fas fa-envelope' />
         </div>
-
-
+        <div className='socail-media'>
+          <a href='https://twitter.com/_SupplyChange' onClick='https://twitter.com/_SupplyChange' className='fab fa-twitter' />
+          <small className='tw-account'>: @_SupplyChange</small>
+        </div>
       </div>
-
-
     </footer>
-
   </div>
 );
 

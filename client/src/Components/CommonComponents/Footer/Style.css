@@ -1,54 +1,82 @@
-*{
+* {
   font-family: 'Montserrat', sans-serif;
-  margin: 0 auto;
+  /* margin: 0; */
   padding: 0;
 
 }
 
-.footer{
+.footer {
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   background: #2D918E;
   height: 220px;
   text-align: left;
   color: #E3F4F4;
 }
 
-img{
-  margin-top: 25px;
-  margin-left: -8px;
-}
-.contact-inf{
-  margin-left:100px;
-}
-.journey{
-margin-top: 33px;
-margin-right: 80px;
-
+.logo {
+  /* margin-top: 25px; */
+  /* margin-left: -8px; */
 }
 
-input{
-  max-width:200px;
-  height:27px;
-  margin-right:60px;
-  border-radius:28px;
+.contact-inf, .journey {
+  /* margin-left:100px; */
+  width: 170px;
+}
+
+.journey {
+
+  /* margin-top: 20px; */
+  /* margin-right: 10px; */
+}
+
+.journey input {
+  width: 200px;
+  height: 35px;
+  /* margin-right: 60px; */
+  border-radius: 28px;
   text-align: center;
-  background: #edf7f6
-}
-#follow{
-margin-bottom: 8px;
-margin-left: 8px;
+  background: #edf7f6;
+  border: none;
 }
 
-.socail-media{
-    margin: 0 auto;
-    margin-top: 27px;
-    margin-right: 60px;
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-  }
+#follow {
+  margin-bottom: 8px;
+  margin-left: 30px;
+}
 
-i{
+.socail-media {
+  margin-top: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 24px;
+}
+
+.tw-account {
+  margin-left: 3px;
+  margin-top: 6px;
+}
+
+.socail-media a {
   font-size: 25px;
+  text-decoration-line: none;
+  color: #E3F4F4;
+}
+
+.fa-envelope {
+  color: #2d918e;
+  font-size: 20px;
+}
+
+.labeld-input {
+  position: relative;
+}
+
+.labeld-input i {
+  position: absolute;
+  right: -13px;
+  top: calc(50% - 10px);
 }
