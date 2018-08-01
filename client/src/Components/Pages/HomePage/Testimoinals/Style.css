@@ -1,23 +1,25 @@
-*{
-font-family: 'Montserrat', sans-serif;
-margin: 0;
-padding: 0;
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
 }
-.slick-list{
-width: 100%;
-height: 300px;
-font-size: 30px;
-margin-top: 35px;
-text-align: center;
-color: #2D918E;
+
+.slick-list {
+  width: 100%;
+  height: 300px;
+  font-size: 30px;
+  margin-top: 35px;
+  text-align: center;
+  color: #2D918E;
 }
-.slick-dots{
-bottom: -25px;
-width: 100%;
-margin: 0;
-list-style: none;
-text-align: center;
-font-size:30px;
+
+.slick-dots {
+  bottom: -25px;
+  width: 100%;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
 }
 
 .slick-dots li button {
@@ -34,11 +36,12 @@ font-size:30px;
   background: 0 0;
 }
 
-.slick-slide img{
+.slick-slide img {
   display: inline;
   margin-top: 15px;
 }
-.test-descrp{
+
+.test-descrp {
   color: black;
   font-size: 20px;
 }

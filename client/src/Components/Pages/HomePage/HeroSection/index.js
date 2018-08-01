@@ -1,5 +1,6 @@
 import React from 'react';
 import './Style.css';
+
 const HeroSection = () => (
   <div className='hero-section'>
     <div className='supplyChange'></div>
