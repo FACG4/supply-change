@@ -1,6 +1,7 @@
 BEGIN;
 
-DROP TABLE IF EXISTS social_enterprise_basic, social_enterprise_details, contract, uk_cities, policy, social_impact_list; 
+DROP TABLE IF EXISTS social_enterprise_basic, social_enterprise_details, contract, policy, social_impact_list; 
+DROP TYPE IF EXISTS regions, trade_type, turnover_size, social_mission, uk_cities;
 
 CREATE TYPE regions AS ENUM(
     'Greater London',
@@ -108,5 +109,3 @@ CREATE TABLE contract(
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP
 );
-
-
