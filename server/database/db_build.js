@@ -8,8 +8,10 @@ const dbConnect = (cb) => {
         cb(null, res);
     });
 };
+
 dbConnect((err, result) => {
-    console.log('Supply-Change database has been initialized');
+    if(err) return console.log(err);
+    return console.log('Supply-Change database has been initialized');
 });
 
 module.exports = dbConnect;
