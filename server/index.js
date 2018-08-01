@@ -3,7 +3,6 @@ const path = require('path');
 const app = express();
 const controllers = require('./controllers');
 
-
 app.use(controllers);
 
 app.use(express.static(path.join(__dirname, 'client', 'build')));
