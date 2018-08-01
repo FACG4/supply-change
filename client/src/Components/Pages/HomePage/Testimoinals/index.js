@@ -6,15 +6,14 @@ import test from './test.svg';
 import './Style.css';
 
 class Testimoinals extends React.Component {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+
   render() {
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
-    
     return (
       <Slider {...settings}>
         <div>
@@ -43,5 +42,6 @@ class Testimoinals extends React.Component {
     );
   }
 }
+};
 
 export default Testimoinals;
