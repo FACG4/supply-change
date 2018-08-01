@@ -5,14 +5,20 @@
 }
 
 .footer {
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: #2D918E;
-  height: 220px;
-  text-align: left;
-  color: #E3F4F4;
+    width: 100%;
+    position: absolute;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #2D918E;
+    height: 220px;
+    text-align: left;
+    color: #E3F4F4;
+    bottom: 0px;
+
 }
 
 .contact-inf, .journey {
@@ -22,7 +28,6 @@
 .journey input {
   width: 200px;
   height: 35px;
-  /* margin-right: 60px; */
   border-radius: 28px;
   text-align: center;
   background: #edf7f6;
