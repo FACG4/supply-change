@@ -36,7 +36,6 @@ header {
   display: inline-block;
   float: right;
   padding-left: 96px;
-  position: absolute;
   top: 10px;
   right: 0;
 }
@@ -233,7 +232,7 @@ header {
 }
 
 #main {
-  margin-top: 250px;
+  margin-top:250px;
 }
 
 #main.scrolled {
