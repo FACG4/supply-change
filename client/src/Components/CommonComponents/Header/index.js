@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+
 import './style.css';
 
 class Header extends Component {
@@ -21,14 +23,14 @@ class Header extends Component {
           <div className='navbar--fixed' >
             <ul className='nav'>
               <li className='item'>
-                <a href='#'>How it works</a>
+              <NavLink to='howitwork'>How it works</NavLink>
               </li>
               <li className='item'>
-                <a href='#'>About us</a>
+              <NavLink to='./about'>About us</NavLink>
               </li>
               <li className='item'>
                 <div className='post_find_Contract'>
-                  <a href='#'>Post a contract</a>
+                <NavLink to='./contract/post'>Post a contract</NavLink>
                 </div>
               </li>
               <li className='item' >
@@ -39,6 +41,7 @@ class Header extends Component {
                     <i className='fas fa-caret-down'></i>
                   </span>
                   <div className='companyAction-content' >
+                    <NavLink to='./profile'><i className='fas fa-user'></i>Profile</NavLink>
                     <a href='#'><i className='fas fa-user'></i>Profile</a>
                     <a href='#'><i className='fas fa-plus-circle'></i>Post a contract</a>
                     <a href='#'><i className='fas fa-sign-out-alt'></i>Logout</a>
