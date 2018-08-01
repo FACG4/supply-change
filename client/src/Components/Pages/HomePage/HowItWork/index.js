@@ -13,9 +13,7 @@ const HowItWork = () => (
       <h1>Sign up today</h1>
       <div className='select-signup'>
         <a href='javascript:;' >I am a Social Enterprise</a>
-        <a href='javascript:;' >I am a Public Sector Organisation
-        </a>
-
+        <a href='javascript:;' >I am a Public Sector Organisation</a>
       </div>
     </div>
 

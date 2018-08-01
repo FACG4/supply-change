@@ -14,6 +14,7 @@ class Testimoinals extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1
     };
+    
     return (
       <Slider {...settings}>
         <div>
