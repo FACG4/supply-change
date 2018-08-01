@@ -1,0 +1,67 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.supplyChange {
+  background-color: #ffffff8f;
+  height: 250vh;
+  width: 150vh;
+  top: -372px;
+  left: -21%;
+  position: absolute;
+  transform: skewX(30deg);
+}
+
+.description {
+  font-size: 35px;
+  width: 100%;
+  margin-top: 45px;
+  margin-bottom: 10px;
+}
+
+.whatSupplyChange {
+  font-size: 25px;
+}
+
+.findMore {
+  width: 40%;
+  margin: 0 auto;
+  background: #2D918E;
+  height: 20px;
+  text-align: center;
+  padding: 15px;
+  opacity: 0.8;
+  font-size: 20px;
+  font-family: Montserrat;
+  display: block;
+  text-decoration-line: none;
+  color: black;
+}
+
+.hero-section {
+  background: url('https://i.imgur.com/PKKcCYI.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 418px;
+  filter: brightness(50%);
+  position: relative;
+  overflow: hidden;
+  background-position: 50% 50%;
+}
+
+.hero-section .content-wrp {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: absolute;
+  padding: 100px;
+  z-index: 99;
+}
+
+.hero-section .content-wrp p {
+  margin-bottom: 30px;
+  font-size: 20px;
+  text-align: initial;
+  font-weight: 200;
+}
