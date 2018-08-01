@@ -1,35 +1,35 @@
 .contanier {
-  margin-top: 40px;
+  padding-top: 50px;
   display: grid;
-  grid-template-columns: repeat(12,1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 50px 140px;
   grid-template-areas:
-  "h h h h h h h h h h h h"
-  "m m m m m m m m l c c c"
-  "d d d d d d d d l c c c";
+   "h h h h h h h h h h h h"
+   "m m m m m m m m l c c c"
+   "d d d d d d d d l c c c";
 }
-.heading{
-grid-area: h;
-margin-top: -50px
+
+.heading {
+  grid-area: h;
 }
 
 .heading h2 {
   margin-left: 50px;
-  color:#171616;
+  color: #171616;
   font-size: 27px;
   font-weight: 400;
 }
 
-.mainInfo{
+.mainInfo {
   grid-area: m;
-  margin-top: 15px;
+  margin-top: 20px;
   margin-left: 40px;
   border-radius: 9px;
   overflow: hidden;
   box-sizing: border-box;
-  -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.31);
-    -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.31);
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.31);
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.31);
+  -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.31);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.31);
 }
 
 .mainInfo .allBoxesDiv {
@@ -42,20 +42,19 @@ margin-top: -50px
   margin-left: 24px
 }
 
-.mainInfo .allBoxesDiv .boxDiv .icon_div{
+.mainInfo .allBoxesDiv .boxDiv .icon_div {
   margin-top: 60px;
   display: inline-block;
   margin-left: 15px;
 }
 
-.mainInfo .allBoxesDiv .boxDiv .text_div{
+.mainInfo .allBoxesDiv .boxDiv .text_div {
   display: inline-block;
   margin-left: -20px
-
 }
 
 .mainInfo .allBoxesDiv .boxDiv .text_div .infoType {
-  font-size:18px;
+  font-size: 18px;
   font-weight: bold;
   color: #000;
 }
@@ -67,27 +66,26 @@ margin-top: -50px
   font-weight: bolder;
 }
 
-
-.comInformation{
-  grid-area:c;
+.comInformation {
+  grid-area: c;
   margin-top: 10px;
   margin-left: -20px
 }
 
-.comInformation .companyLogo{
+.comInformation .companyLogo {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   box-sizing: border-box;
   margin-left: 65px;
   display: block;
-  -webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.41);
-  -moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.41);
-  box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.41);
+  -webkit-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.41);
 }
 
-.comInformation figcaption{
-  margin-left:40px;
+.comInformation figcaption {
+  margin-left: 40px;
   margin-top: 10px;
   font-size: 25px
 }
@@ -97,79 +95,78 @@ margin-top: -50px
 }
 
 .comInformation .listItems .listItemsInfo {
-  margin-left:5px;
+  margin-left: 5px;
 }
 
-.comInformation .listItems .listItemsInfo ul ,
-.comInformation .listItems .socialMedia ul,
-.mainInfo .allBoxesDiv .boxDiv .text_div ul{
+.comInformation .listItems .listItemsInfo ul,
+ .comInformation .listItems .socialMedia ul,
+  .mainInfo .allBoxesDiv .boxDiv .text_div ul {
   list-style: none;
   margin-left: 10px;
   margin-top: 10px
 }
 
 .comInformation .listItems .listItemsInfo ul li,
-.comInformation .listItems .socialMedia ul li,
-.mainInfo .allBoxesDiv .boxDiv .text_div ul li {
+ .comInformation .listItems .socialMedia ul li,
+ .mainInfo .allBoxesDiv .boxDiv .text_div ul li {
   font-size: 14px;
-  margin-top:10px;
+  margin-top: 10px;
   margin-left: 20px
 }
+
 .comInformation .listItems .listItemsInfo ul li span {
   margin-left: 10px;
   line-height: 30px;
-  margin-top:0
+  margin-top: 0
 }
 
 .comInformation .listItems .socialMedia {
   margin-top: 50px;
-  margin-left:5px;
+  margin-left: 5px;
 }
 
 .comInformation .listItems .socialMedia li {
   display: inline;
 }
 
-.comDescription{
-  grid-area:d;
+.comDescription {
+  grid-area: d;
   margin-top: 80px;
   margin-left: 40px;
   margin-bottom: 40px;
   border-radius: 10px
 }
+
 .comDescription .descriptionTextDiv {
-  width:100%;
+  width: 100%;
   margin-top: 20px;
   text-align: left;
   border-radius: 9px;
   height: 400px;
-  overflow:hidden;
+  overflow: hidden;
   box-sizing: border-box;
-  -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.31);
-  -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.31);
-   box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.31);
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.31);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.31);
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.31);
 }
 
-.comDescription .descriptionTextDiv .descriptionText{
+.comDescription .descriptionTextDiv .descriptionText {
   width: 100%;
   padding: 25px;
-  overflow:hidden;
-
+  overflow: hidden;
 }
 
 .comDescription .descriptionTextDiv p {
   line-height: 20px;
-  overflow:hidden;
+  overflow: hidden;
   width: 90%;
 }
 
-
-.lineDiv{
-  grid-area:l;
+.lineDiv {
+  grid-area: l;
   margin-top: 20px;
-  width:1px;
+  width: 1px;
   height: 370;
-  margin-left:100px;
+  margin-left: 100px;
   background: #C4C4C4;
-
 }
