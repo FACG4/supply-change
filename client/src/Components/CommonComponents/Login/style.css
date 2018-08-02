@@ -152,7 +152,10 @@ body {
   text-transform: uppercase;
 }
 
-.login input[type='text']:focus, .login input[type='text']:hover, .login input[type='password']:focus, .login input[type='password']:hover {
+.login input[type='text']:focus,
+.login input[type='text']:hover,
+.login input[type='password']:focus,
+.login input[type='password']:hover {
   box-shadow: -1px 0px 1px 0px #C4C4C4
 }
 
@@ -167,7 +170,8 @@ body {
   width: 100px;
 }
 
-.login input[type='submit']:focus, .login input[type='submit']:hover {
+.login input[type='submit']:focus,
+.login input[type='submit']:hover {
   border: 2px solid #2d918e;
   border-radius: 9px;
   color: #2d918e;
