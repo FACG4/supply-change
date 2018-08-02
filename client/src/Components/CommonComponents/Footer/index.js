@@ -3,7 +3,6 @@ import logo from './logo.svg';
 import './Style.css';
 
 const Footer = () => (
-
   <div>
     <footer className='footer'>
       <div className='contact-inf'>
@@ -23,9 +22,7 @@ const Footer = () => (
         <br />
       </div>
       <div className='journey'>
-        <p id='follow'>
-          Follow your journey
-        </p>
+        <p id='follow'>Follow your journey</p>
         <div className='labeld-input'>
           <input placeholder='Enter your email' />
           <i className='fas fa-envelope' />
