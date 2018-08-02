@@ -17,19 +17,19 @@ class LogIn extends Component {
 
     return (
       <div className="flex">
-      <div className="topForm">
+      <div className="log__header">
           <h3 className="heading">
               LOG IN
           </h3>
         </div>
-        <div className="align">
-          <div className="grid">
+        <div className="login__main">
+          <div className="login__top">
             <form action="" method="POST" className="form login">
 
               <div className="form__field">
                 <input id="username" type="text" name="username" onChange={this.handleChange} className="form__input" placeholder="user name" required />
                   <label htmlFor="username">
-                  <Fontawesome className="fontawesome" name="user" />
+                  <Fontawesome className="fontawe" name="user" />
                   <span className="hidden" />
                 </label>
                </div>
