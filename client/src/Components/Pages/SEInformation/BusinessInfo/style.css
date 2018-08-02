@@ -1,0 +1,216 @@
+* {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  color: #606468;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  height: 100%;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.align {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.grid {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 320px;
+  max-width: 20rem;
+  width: 90%;
+}
+
+.topForm {
+  padding-top: 20px
+}
+
+.header1 {
+  display: block;
+  font-size: 1.77em;
+  color: #222222;
+  text-align: center;
+  line-height: 10px;
+  margin-bottom: 60px;
+  margin-top: 40px;
+  margin-left: 1%;
+  height: 59;
+}
+
+.form {
+  margin: -14px;
+  margin: -0.875rem;
+}
+
+.BusinessInfo input {
+  background-image: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.BusinessInfo input[type='submit'] {
+  cursor: pointer;
+}
+
+.form input[type='password'], .form input[type='text'], .form input[type='submit'] {
+  width: 100%;
+}
+
+.form__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 14px;
+  margin: 0.375rem;
+  width: 100%
+}
+
+.form__input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.BusinessInfo label,
+.BusinessInfo input[type='text'],
+.BusinessInfo input[type='password'], .BusinessInfo input[type='submit'] {
+  border-radius: 0.25rem;
+  padding: 16px;
+  padding: 1rem;
+  box-sizing: border-box;
+  color: #000
+}
+
+.BusinessInfo label {
+  background-color: #fff;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  border: 1px solid #CCD4D4;
+  border-left: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-sizing: border-box;
+  margin-bottom: 19px;
+  width: 60px
+}
+
+.BusinessInfo input :: placeholder {
+  color: #474747;
+}
+
+.BusinessInfo input[type='password'],
+.BusinessInfo input[type='text'] {
+  background-color: #fff;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border: 1px solid #CCD4D4;
+  border-right: 0;
+  margin-bottom: 19px;
+  width: 361px
+}
+
+.BusinessInfo input[type='submit'] {
+  background-color: #2D918E;
+  color: #eee;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.BusinessInfo input[type='text']:focus,
+.BusinessInfo input[type='text']:hover,
+.BusinessInfo input[type='password']:focus,
+.BusinessInfo input[type='password']:hover,
+.text__area:focus, .text__area:hover {
+  box-shadow: -1px 0px 1px 0px #C4C4C4
+}
+
+.icon {
+  display: inline-block;
+  fill: #606468;
+  font-size: 16px;
+  font-size: 1.35rem;
+  height: 1em;
+  vertical-align: middle;
+  width: 1.1em;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 25px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 110px;
+  height: 25px;
+  line-height: 4px
+}
+
+.BusinessInfo input[type='submit']:focus,
+.BusinessInfo input[type='submit']:hover {
+  border: 2px solid #2d918e;
+  color: #2d918e;
+  background: #fff;
+  border-radius: 12px
+}
+
+.SaveBtn {
+  margin-top: 30px;
+  border-radius: 12px
+}
+
+.text__area {
+  height: 100px;
+  border: 1px solid #CCD4D4;
+  border-radius: 12px;
+}
+
+ .text__area textarea::placeholder {
+  color: #7F7E7E;
+  line-height: 90px;
+  padding-left: 15px;
+  font-size: 14px
+}
