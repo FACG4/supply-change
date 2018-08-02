@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
-import signal from './Imgs/signal.png';
-import binarycode from './Imgs/binarycode.png';
-import director from './Imgs/director.png';
-import network from './Imgs/network.png';
-import typeOfTrade from './Imgs/typeOfTrade.png';
+import signal from './imgs/signal.png';
+import binarycode from './imgs/binarycode.png';
+import director from './imgs/director.png';
+import network from './imgs/network.png';
+import typeOfTrade from './imgs/typeOfTrade.png';
 
 class BusinessInfo extends Component {
   render() {
@@ -20,27 +20,27 @@ class BusinessInfo extends Component {
         <div className="align">
           <div className="grid">
             <div className="form BusinessInfo">
-              <div className="form__field">
-                <input id="CompanyLocation" type="text" name="" className="form__input" placeholder="Company Location" required />
-                <label htmlFor="CompanyLocation">
-                  <img src={signal} className="icon" alt="signal" />
+               <div className="form__field">
+                 <input id="CompanyLocation" type="text" name="" className="form__input" placeholder="Company Location" required />
+                   <label htmlFor="CompanyLocation">
+                   <img src={signal} className="icon" alt="signal" />
                   <span className="hidden" />
                 </label>
               </div>
 
               <div className="form__field">
                 <input id="CompanyAddress" type="text" name="CompanyAddress" className="form__input" placeholder="Company Address" required />
-                <label htmlFor="CompanyAdress">
-                  <img src={signal} className="icon" alt="signal" />
-                  <span className="hidden" />
+                 <label htmlFor="CompanyAddress">
+                   <img src={signal} className="icon" alt="signal" />
+                   <span className="hidden" />
                 </label>
               </div>
 
               <div className="form__field">
                 <input id="SIC-Code" type="text" name="SIC Code:" className="form__input" placeholder="SIC Code:" required />
-                <label htmlFor="SIC-Code">
-                  <img src={binarycode} className="icon" alt="binarycode" />
-                  <span className="hidden" />
+                 <label htmlFor="SIC-Code">
+                   <img src={binarycode} className="icon" alt="binarycode" />
+                   <span className="hidden" />
                 </label>
               </div>
 
@@ -68,17 +68,14 @@ class BusinessInfo extends Component {
                 </label>
               </div>
 
-              <div className="form__field">
-                <textarea id="DescriptionOfTheCompany " type="text" name="DescriptionOfTheCompany" className="form__input text__area" placeholder="Description of the company" required />
+              <div className="form__field text__area">
+                <textarea id="DescriptionOfTheCompany " type="text" name="DescriptionOfTheCompany" className="form__input" placeholder="Description of the company" required />
               </div>
 
               <div className="form__field SaveBtn">
                 <input type="submit" value="Save & Continue" />
               </div>
-
             </div>
-
-
           </div>
         </div>
       </div>
