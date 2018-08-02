@@ -3,26 +3,46 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import SEProfile from './Pages/SEProfile';
 import HomePage from './Pages/HomePage';
 import ResultPage from './Pages/ResultPage';
+import Signup from './Pages/Signup';
 import Header from './CommonComponents/Header';
 import './App.css';
 
+
+
 class App extends Component {
+  state={
+    isLogin:true,
+    businessRole:'SE',
+    businessId:'',
+    businessName:'ramy company',
+    avatarUrl:'https://upload.wikimedia.org/wikipedia/commons/6/62/USPHS_Commissioned_Corps_insignia.png'
+    }
+    loginLogout=()=>{
+      this.setState({
+        ...this.state,
+        isLogin:!this.state.isLogin
+      })
+    }
+
   render() {
+
     return (
       <BrowserRouter>
         <div>
-          <Header />
-          <div id='main' >
+          <Route path={/[^/]/} render={() => <Header {...this.state} loginLogout={this.loginLogout}/>}/>
             <Switch>
-              <Route path='/' component={HomePage} exact/>
-              <Route path='/se' component={SEProfile}/>
-              <Route path='/howitwork' component={ResultPage}/>
+              <Route path='/' component={HomePage} exact  />
+              <div id={ this.state.isLogin ? 'main' : null} >
+              <Route path='/profile' component={SEProfile} exact />
+              <Route path='/contract/find' component={ResultPage} exact />
+              <Route path='/signup' component={Signup} exact />
+              </div>
             </Switch>
-          </div>
         </div>
       </BrowserRouter>
     );
   }
 }
+
 
 export default App;

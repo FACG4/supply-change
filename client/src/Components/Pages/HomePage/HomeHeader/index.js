@@ -1,4 +1,6 @@
 import React from 'react';
+import { NavLink, Redirect } from 'react-router-dom';
+
 import './Style.css';
 import logo from './logo.svg';
 
@@ -9,11 +11,11 @@ const HomeHeader = () => (
         <img src={logo} alt=''/>
       </div>
       <div className='textNavBar'>
-        <a>Post a contract</a>
+        <NavLink to='/contract/post'>Post a contract</NavLink>
         <span>|</span>
-        <a>About</a>
+        <NavLink to='/about'>About</NavLink>
         <span>|</span>
-        <a>Log in</a>
+        <NavLink to='/login'>login</NavLink>
       </div>
     </div>
   </header>);

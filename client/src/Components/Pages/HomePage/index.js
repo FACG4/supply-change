@@ -9,7 +9,7 @@ import Testimoinals from './Testimoinals';
 class HomePage extends Component {
   render() {
     return (
-      <div id='main'>
+      <div >
         <HomeHeader />
         <HeroSection />
         <HowItWork />
