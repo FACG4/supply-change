@@ -1,5 +1,5 @@
 .contanier {
-  padding-top: 50px;
+  padding-top: 60px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 50px 140px;
