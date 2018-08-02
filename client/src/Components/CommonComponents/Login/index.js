@@ -16,7 +16,7 @@ class LogIn extends Component {
   render() {
 
     return (
-      <div>
+      <div className="flex">
       <div className="topForm">
           <h3 className="heading">
               LOG IN

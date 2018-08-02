@@ -22,6 +22,12 @@ body {
   min-height: 100vh;
 }
 
+.flex {
+  display: flex;
+  flex-direction:column;
+  margin-top:5%;
+}
+
 .align {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -39,9 +45,18 @@ body {
   margin-top: 50px;
   background: #eee;
   width: 400px;
-  height:300px;
+  height:350px;
   margin: auto;
   padding: auto
+}
+
+.topForm {
+  background: #2D918E;
+    width: 400px;
+    height: 80px;
+    margin: auto;
+    padding: auto;
+    margin-top: 20px
 }
 
 .grid {
@@ -66,13 +81,12 @@ body {
 .heading {
   display: block;
   font-size: 2.17em;
-  color: #2D918E;
+  color: #fff;
   text-align: center;
-  line-height: 10px;
+  line-height: 5px;
   margin-bottom: 40px;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-left: 1%;
-  height: 59;
 }
 
 .form {
