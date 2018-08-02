@@ -11,9 +11,10 @@ class LogIn extends Component {
   handleChange = (e)=>{
     const { loginInfo } = this.state;
     loginInfo[e.target.name]=e.target.value;
-    this.setState({ loginInfo })
+    this.setState({loginInfo})
   }
   render() {
+
     return (
       <div>
       <div className="topForm">
