@@ -18,26 +18,25 @@ class LogIn extends Component {
     return (
       <div>
       <div className="topForm">
-          <h3 className="header1">
+          <h3 className="heading">
               LOG IN
           </h3>
         </div>
-
         <div className="align">
           <div className="grid">
             <form action="" method="POST" className="form login">
 
               <div className="form__field">
                 <input id="username" type="text" name="username" onChange={this.handleChange} className="form__input" placeholder="user name" required />
-                <label htmlFor="username">
+                  <label htmlFor="username">
                   <Fontawesome className="fontawesome" name="user" />
                   <span className="hidden" />
                 </label>
-              </div>
+               </div>
 
-              <div className="form__field">
-                <input id="password" type="text" name="password" onChange={this.handleChange} className="form__input" placeholder="password" required />
-                 <label htmlFor="password">
+               <div className="form__field">
+                 <input id="password" type="text" name="password" onChange={this.handleChange} className="form__input" placeholder="password" required />
+                  <label htmlFor="password">
                   <Fontawesome className="fontawesome" name="lock" />
                   <span className="hidden" />
                  </label>

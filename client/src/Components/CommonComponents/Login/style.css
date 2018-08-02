@@ -36,7 +36,12 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 50px;
+  background: #eee;
+  width: 400px;
+  height:300px;
+  margin: auto;
+  padding: auto
 }
 
 .grid {
@@ -58,10 +63,10 @@ body {
   width: 1px;
 }
 
-.header1 h3 {
+.heading {
   display: block;
-  font-size: 2.57em;
-  color: #222222;
+  font-size: 2.17em;
+  color: #2D918E;
   text-align: center;
   line-height: 10px;
   margin-bottom: 40px;
