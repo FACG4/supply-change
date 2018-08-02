@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import './App.css';
 import SEProfile from './Pages/SEProfile'
 
@@ -9,6 +8,7 @@ class App extends Component {
       <div className="App">
         <SEProfile  />
       </div>
+
     );
   }
 }

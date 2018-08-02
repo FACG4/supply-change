@@ -1,0 +1,73 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #2D918E;
+  height: 220px;
+  text-align: left;
+  color: #E3F4F4;
+  bottom: 0px;
+}
+
+.contact-inf, .journey {
+  width: 170px;
+}
+
+.journey input {
+  width: 200px;
+  height: 35px;
+  border-radius: 28px;
+  text-align: center;
+  background: #edf7f6;
+  border: none;
+}
+
+#follow {
+  margin-bottom: 8px;
+  margin-left: 30px;
+}
+
+.socail-media {
+  margin-top: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 24px;
+}
+
+.tw-account {
+  margin-left: 3px;
+  margin-top: 6px;
+}
+
+.socail-media a {
+  font-size: 25px;
+  text-decoration-line: none;
+  color: #E3F4F4;
+}
+
+.fa-envelope {
+  color: #2d918e;
+  font-size: 20px;
+}
+
+.labeld-input {
+  position: relative;
+}
+
+.labeld-input i {
+  position: absolute;
+  right: -13px;
+  top: calc(50% - 10px);
+}
