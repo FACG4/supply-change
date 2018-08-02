@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
+// import ReactDOM from 'react-dom';
+import Turnover from './Pages/SEInformation/Turnover';
 import './App.css';
-import SignUp from  './Pages/Signup'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <SignUp  />
-      </div>
+      <React.Fragment>
+        <div className='App' />
+        <Turnover />
 
+      </React.Fragment>
     );
   }
 }
