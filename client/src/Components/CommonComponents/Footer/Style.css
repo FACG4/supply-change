@@ -5,19 +5,19 @@
 }
 
 .footer {
-    width: 100%;
-    position: absolute;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -ms-flex-align: center;
-    align-items: center;
-    background: #2D918E;
-    height: 220px;
-    text-align: left;
-    color: #E3F4F4;
-    bottom: 0px;
+  width: 100%;
+  position: absolute;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #2D918E;
+  height: 220px;
+  text-align: left;
+  color: #E3F4F4;
+  bottom: 0px;
 
 }
 
