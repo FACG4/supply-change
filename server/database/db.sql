@@ -87,7 +87,7 @@ CREATE TABLE social_enterprise_details(
     SE_description TEXT NOT NULL,
     selected_contract INT[],
     policy_general INT[],
-    location uk_cities
+    location uk_cities NOT NULL
 );
 
 CREATE TABLE social_impact_list(
@@ -113,7 +113,7 @@ CREATE TABLE contract(
     open_for_splitting BOOLEAN DEFAULT FALSE,
     active_state BOOLEAN DEFAULT TRUE, 
     company_name VARCHAR UNIQUE NOT NULL,
-    location uk_cities,
+    contract_region regions NOT NULL,
     post_code VARCHAR NOT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP
