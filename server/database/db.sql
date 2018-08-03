@@ -79,7 +79,7 @@ CREATE TABLE social_enterprise_basic(
 
 CREATE TABLE social_enterprise_details(
     id SERIAL,
-    SE_id INT NOT NULL REFERENCES social_enterprise_basic(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    SE_id INT PRIMARY KEY NOT NULL REFERENCES social_enterprise_basic(id) ON DELETE CASCADE ON UPDATE CASCADE,
     SE_address VARCHAR NOT NULL,
     SIC_code INT NOT NULL, 
     director VARCHAR NOT NULL,
@@ -96,8 +96,7 @@ CREATE TABLE social_enterprise_details(
     selected_contract INT[],
     policy_general INT[],
     location uk_cities NOT NULL,
-    places_to_work_in regions[] NOT NULL,
-    PRIMARY KEY (id, SE_id)
+    places_to_work_in regions[] NOT NULL    
 );
 
 CREATE TABLE social_impact_list(
@@ -126,7 +125,6 @@ CREATE TABLE contract(
     contract_region regions NOT NULL,
     post_code VARCHAR NOT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP
 );
 
 COMMIT;
