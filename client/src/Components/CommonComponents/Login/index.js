@@ -4,21 +4,23 @@ import './style.css';
 import Fontawesome from 'react-fontawesome';
 
 class LogIn extends Component {
-  state={
+  state = {
     loginInfo:{}
   }
 
-  handleChange = (e)=>{
+  handleChange = (e)=> {
     const { loginInfo } = this.state;
-    loginInfo[e.target.name]=e.target.value;
-    this.setState({loginInfo})
+    const newLoginInfo = [...loginInfo]
+    newLoginInfo[e.target.name]=e.target.value;
+    this.setState({ newLoginInfo })
   }
   render() {
 
     return (
       <div className="flex">
+      <div className="tringle"/>
       <div className="log__header">
-          <h3 className="heading">
+          <h3 className="login__heading">
               LOG IN
           </h3>
         </div>
@@ -35,7 +37,7 @@ class LogIn extends Component {
                </div>
 
                <div className="form__field">
-                 <input id="password" type="text" name="password" onChange={this.handleChange} className="form__input" placeholder="password" required />
+                 <input id="password" type="password" name="password" onChange={this.handleChange} className="form__input" placeholder="password" required />
                   <label htmlFor="password">
                   <Fontawesome className="fontawesome" name="lock" />
                   <span className="hidden" />
@@ -43,7 +45,7 @@ class LogIn extends Component {
                 </div>
 
                 <div className="form__field">
-                  <input type="submit" className="submitButton"value="Log in" />
+                  <input type="submit" className="submitButton" value="Log in" />
                 </div>
 
                </form>

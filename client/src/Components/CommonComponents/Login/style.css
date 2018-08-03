@@ -28,6 +28,19 @@ body {
   margin-top:5%;
 }
 
+.tringle {
+  display: flex;
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: #2D918E;
+  margin:auto;
+  padding: auto;
+  margin-bottom: -20px;
+
+}
+
 .login__main {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -42,10 +55,10 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-top: 50px;
-  background: #eee;
+  margin-top: 70px;
+  background: #ebebeb;
   width: 400px;
-  height:350px;
+  height:300px;
   margin: auto;
   padding: auto
 }
@@ -53,10 +66,10 @@ body {
 .log__header {
   background: #2D918E;
     width: 400px;
-    height: 80px;
+    height: 70px;
     margin: auto;
     padding: auto;
-    margin-top: 20px
+    margin-top: 20px;
 }
 
 .login__top {
@@ -78,14 +91,14 @@ body {
   width: 1px;
 }
 
-.heading {
+.login__heading {
   display: block;
-  font-size: 2.17em;
+  font-size: 1.4em;
   color: #fff;
   text-align: center;
   line-height: 5px;
   margin-bottom: 40px;
-  margin-top: 20px;
+  margin-top: 35px;
   margin-left: 1%;
 }
 
@@ -121,7 +134,9 @@ body {
   flex: 1;
 }
 
-.login label, .login input[type='text'], .login input[type='password'], .login input[type='submit'] {
+.login label, .login input[type='text'],
+.login input[type='password'],
+.login input[type='submit'] {
   border-radius: 0.25rem;
   padding: 16px;
   padding: 1rem;
@@ -165,10 +180,10 @@ body {
 .login input[type='submit'] {
   background-color: #2D918E;
   color: #eee;
+  font-size: 17px;
   font-weight: 700;
   margin-top: 15px;
-  width: 100%;
-  text-transform: uppercase;
+  width: 100%
 }
 
 .login input[type='text']:focus,
