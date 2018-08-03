@@ -29,7 +29,7 @@ CREATE TYPE turnover_size AS ENUM(
 );
 
 CREATE TYPE contract_size AS ENUM(
-    'Less than 50k'
+    'Less than 50k',
     '50k-100k',
     '100-150k',
     '150-250k',
