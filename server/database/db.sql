@@ -1,7 +1,7 @@
 BEGIN;
 
 DROP TABLE IF EXISTS social_enterprise_basic, social_enterprise_details, contract, policy, social_impact_list; 
-DROP TYPE IF EXISTS regions, trade_type, turnover_size, social_mission, uk_cities;
+DROP TYPE IF EXISTS regions, trade_type, turnover_size, contract_size, social_mission, uk_cities;
 
 CREATE TYPE regions AS ENUM(
     'Greater London',
@@ -22,6 +22,14 @@ CREATE TYPE trade_type AS ENUM(
 
 CREATE TYPE turnover_size AS ENUM(
     'Turnover <50k'
+    '50k-100k',
+    '100-150k',
+    '150-250k',
+    '300k +'
+);
+
+CREATE TYPE contract_size AS ENUM(
+    '<50k'
     '50k-100k',
     '100-150k',
     '150-250k',
@@ -57,6 +65,7 @@ CREATE TABLE social_enterprise_basic(
     email VARCHAR UNIQUE NOT NULL,
     phone_number VARCHAR UNIQUE NOT NULL,
     mailing_list BOOLEAN DEFAULT FALSE,
+    is_complete BOOLEAN DEFAULT FALSE,
     password VARCHAR NOT NULL CHECK(CHAR_LENGTH(password) >= 8)
 );
 
@@ -74,7 +83,7 @@ CREATE TABLE social_enterprise_details(
     travel_distance INT NOT NULL,
     employees_NO INT NOT NULL,
     turnover turnover_size,
-    contract_NO INT NOT NULL,
+    contract_size contract_size NOT NULL,
     SE_description TEXT NOT NULL,
     selected_contract INT[],
     policy_general INT[],
@@ -109,3 +118,5 @@ CREATE TABLE contract(
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP
 );
+
+COMMIT;
