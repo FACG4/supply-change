@@ -39,7 +39,7 @@ class LogIn extends Component {
                <div className="form__field">
                  <input id="password" type="password" name="password" onChange={this.handleChange} className="form__input" placeholder="password" required />
                   <label htmlFor="password">
-                  <Fontawesome className="fontawesome" name="lock" />
+                  <Fontawesome className="fontawe" name="lock" />
                   <span className="hidden" />
                  </label>
                 </div>
