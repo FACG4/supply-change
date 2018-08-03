@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default (props)=> {
+export default props => {
     const { selected, img, title } = props;
     const className = 'progress__circle ' + (selected ? 'progress__circle-selected' : '');
 

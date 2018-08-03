@@ -2,7 +2,7 @@ import React from 'react';
 import Progress from './Progress';
 import './style.css';
 
-export default ()=> {   
+export default () => {   
     return(
         <section className = 'ptracker__container'>
             < div className = 'ptracker__v-center ptracker__caution' >
