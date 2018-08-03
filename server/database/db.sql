@@ -53,7 +53,15 @@ CREATE TYPE uk_cities AS ENUM(
     'Birmingham',
     'Leeds',
     'Glasgow',
-    'Sheffield'
+    'Sheffield',
+    'Greater London',
+    'South East', 
+    'South West', 
+    'West Midlands', 
+    'North West', 
+    'North East', 
+    'Yorkshire and the Humber', 
+    'East Midlands'
 );
 
 CREATE TABLE social_enterprise_basic(
