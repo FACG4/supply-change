@@ -78,7 +78,7 @@ CREATE TABLE social_enterprise_basic(
 );
 
 CREATE TABLE social_enterprise_details(
-    id SERIAL PRIMARY KEY,
+    id SERIAL,
     SE_id INT NOT NULL REFERENCES social_enterprise_basic(id) ON DELETE CASCADE ON UPDATE CASCADE,
     SE_address VARCHAR NOT NULL,
     SIC_code INT NOT NULL, 
