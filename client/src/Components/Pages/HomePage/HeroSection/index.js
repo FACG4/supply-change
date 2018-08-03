@@ -1,3 +1,4 @@
+
 import React from 'react';
 import './Style.css';
 
@@ -17,5 +18,5 @@ const HeroSection = () => (
     </div>
   </div>
 );
-
 export default HeroSection;
+

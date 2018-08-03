@@ -13,7 +13,6 @@ html {
 body {
   background-color: #fff;
   color: #606468;
-  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-size: 0.875rem;
   font-weight: 400;
@@ -59,24 +58,23 @@ body {
   width: 1px;
 }
 
- .header1 {
-display: block;
-font-size: 2.57em;
-color:#222222;
-text-align: center;
-line-height: 10px;
-margin-bottom: 40px;
-margin-top: 40px;
-margin-left: 1%;
-height: 59;
+.header1 {
+  display: block;
+  font-size: 2.57em;
+  color: #222222;
+  text-align: center;
+  line-height: 10px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-left: 1%;
+  height: 59;
 }
 
-.select-user{
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-    margin-left: -9px
-
+.select-user {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: -9px
 }
 
 .form {
@@ -84,7 +82,7 @@ height: 59;
   margin: -0.875rem;
 }
 
-  .Signup  input {
+.Signup input {
   background-image: none;
   border: 0;
   color: inherit;
@@ -94,7 +92,6 @@ height: 59;
   padding: 0;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
-
 }
 
 .form__field {
@@ -103,19 +100,16 @@ height: 59;
   display: flex;
   margin: 14px;
   margin: 0.375rem;
-  width:100%
+  width: 100%
 }
 
 .form__input {
   -webkit-box-flex: 1;
   -ms-flex: 1;
-   flex: 1;
+  flex: 1;
 }
 
-.Signup label,
-.Signup input[type='text'],
-.Signup input[type='password'],
-.Signup input[type='submit'] {
+.Signup label, .Signup input[type='text'], .Signup input[type='password'], .Signup input[type='submit'] {
   border-radius: 0.25rem;
   padding: 16px;
   padding: 1rem;
@@ -123,9 +117,7 @@ height: 59;
   color: #000
 }
 
-
-.Signup label
- {
+.Signup label {
   background-color: #fff;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -133,9 +125,9 @@ height: 59;
   padding-left: 1.25rem;
   padding-right: 20px;
   padding-right: 1.25rem;
-  border-top:1px solid #CCD4D4;
-  border-bottom:1px solid #CCD4D4;
-  border-right:1px solid #CCD4D4;
+  border-top: 1px solid #CCD4D4;
+  border-bottom: 1px solid #CCD4D4;
+  border-right: 1px solid #CCD4D4;
   border-bottom-right-radius: 0;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
@@ -145,19 +137,18 @@ height: 59;
 }
 
 .Signup input :: placeholder {
-  color:#474747
+  color: #474747
 }
 
-.Signup input[type='password'],
-.Signup input[type='text'] {
+.Signup input[type='password'], .Signup input[type='text'] {
   background-color: #fff;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
-  border-top:1px solid #CCD4D4;
-  border-bottom:1px solid #CCD4D4;
-  border-left:1px solid #CCD4D4;
+  border-top: 1px solid #CCD4D4;
+  border-bottom: 1px solid #CCD4D4;
+  border-left: 1px solid #CCD4D4;
   margin-bottom: 19px;
   width: 361px
 }
@@ -166,19 +157,14 @@ height: 59;
   background-color: #2D918E;
   color: #eee;
   font-weight: 700;
-  margin-top:15px;
+  margin-top: 15px;
   width: 100%;
   text-transform: uppercase;
 }
 
-.Signup input[type='text']:focus,
-.Signup input[type='text']:hover,
-.Signup input[type='password']:focus,
-.Signup input[type='password']:hover {
-box-shadow:-1px 0px 1px 0px #C4C4C4
+.Signup input[type='text']:focus, .Signup input[type='text']:hover, .Signup input[type='password']:focus, .Signup input[type='password']:hover {
+  box-shadow: -1px 0px 1px 0px #C4C4C4
 }
-
-
 
 .icon {
   display: inline-block;
@@ -191,47 +177,46 @@ box-shadow:-1px 0px 1px 0px #C4C4C4
   width: 100px;
 }
 
-.spaceDiv--imgDiv{
+.spaceDiv--imgDiv {
   width: 100%;
-  position:relative;
+  position: relative;
   margin: 0.375rem;
 }
 
-.spaceDiv{
+.spaceDiv {
   width: 80%;
   height: 2px;
-  position:absolute;
+  position: absolute;
   margin-left: 35px;
   margin-top: 23px;
   background: #aaa
 }
 
-.spaceImg{
+.spaceImg {
   text-align: center;
-  margin-left:42%
+  margin-left: 42%
 }
 
-.checkBox{
-margin: auto;
+.checkBox {
+  margin: auto;
 }
 
-.checkBoxSpan{
-  color:black;
+.checkBoxSpan {
+  color: black;
   margin-top: -2px;
   line-height: -2px
 }
 
- .checkBox input[type="checkBox"] {
-  width:40px;
+.checkBox input[type="checkBox"] {
+  width: 40px;
   margin-left: 10%;
   margin-top: 10px
 }
 
-.Signup input[type='submit']:focus,
-.Signup input[type='submit']:hover {
+.Signup input[type='submit']:focus, .Signup input[type='submit']:hover {
   border: 2px solid #2d918e;
   border-radius: 9px;
-  color:#2d918e;
+  color: #2d918e;
   background: #fff
 }
 
@@ -249,7 +234,7 @@ margin: auto;
   cursor: pointer;
   width: 110px;
   height: 25px;
-  border-radius:9px;
+  border-radius: 9px;
   line-height: 4px
 }
 
@@ -260,10 +245,9 @@ margin: auto;
   margin-left: 32px
 }
 
-
 .button1:hover {
   background-color: #E3F4F4;
-  border:1px solid #E3F4F4
+  border: 1px solid #E3F4F4
 }
 
 .SubmitDiv a {
@@ -272,33 +256,34 @@ margin: auto;
   text-decoration: none;
 }
 
-.SubmitDiv a:focus,
-.SubmitDiv a:hover {
+.SubmitDiv a:focus, .SubmitDiv a:hover {
   text-decoration: underline;
 }
-.fontawesome{
-  font-size:1.5em;
-  color:#2D918E
+
+.fontawesome {
+  font-size: 1.5em;
+  color: #2D918E
 }
+
 .lastNameIcon {
-  width:24px;
+  width: 24px;
 }
 
 .text--center {
-  float:left
+  float: left
 }
 
-.text--login{
+.text--login {
   color: red;
   line-height: 70px;
   margin-left: 15px
 }
 
 .text--login :hover {
-  text-decoration:underline;
+  text-decoration: underline;
 }
-.text--center P ,
-.text--login p {
+
+.text--center P, .text--login p {
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
   margin-top: 24px;
