@@ -6,9 +6,7 @@ import ResultPage from './Pages/ResultPage';
 import Signup from './Pages/Signup';
 import Header from './CommonComponents/Header';
 import './App.css';
-import BusinessInfo from './Pages/SEInformation/BusinessInfo'
-import Header from './CommonComponents/Header'
-import LogIn from './CommonComponents/Login'
+import Login from './CommonComponents/Login'
 
 class App extends Component {
   state = {
@@ -46,5 +44,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;
