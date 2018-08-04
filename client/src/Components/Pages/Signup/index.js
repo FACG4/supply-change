@@ -18,15 +18,15 @@ class SignUp extends Component {
   render() {
     return (
       <div>
-      <div className="topForm">
+      <div className="signup__topForm">
           <h3 className="header1">
               Sign Up
           </h3>
           <div className="select-user">
-            <button className="button button1">
+            <button className="signup__button button0">
                Buyer
             </button>
-            <button className="button button1">
+            <button className="signup__button button0">
               Supplier
             </button>
           </div>

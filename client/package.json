@@ -10,8 +10,7 @@
     "react-scripts": "1.1.4",
     "react-select": "^2.0.0",
     "react-slick": "^0.23.1",
-    "slick-carousel": "^1.8.1",
-    "react-select": "^2.0.0"
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "react-scripts start",

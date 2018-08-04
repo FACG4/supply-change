@@ -1,7 +1,7 @@
 BEGIN;
 
 DROP TABLE IF EXISTS social_enterprise_basic, social_enterprise_details, contract, policy, social_impact_list; 
-DROP TYPE IF EXISTS regions, trade_type, turnover_size, social_mission, uk_cities;
+DROP TYPE IF EXISTS regions, trade_type, turnover_size, contract_size, social_mission, uk_cities;
 
 CREATE TYPE regions AS ENUM(
     'Greater London',
@@ -21,7 +21,15 @@ CREATE TYPE trade_type AS ENUM(
 );
 
 CREATE TYPE turnover_size AS ENUM(
-    'Turnover <50k'
+    'Turnover <50k',
+    '50k-100k',
+    '100-150k',
+    '150-250k',
+    '300k +'
+);
+
+CREATE TYPE contract_size AS ENUM(
+    'Less than 50k',
     '50k-100k',
     '100-150k',
     '150-250k',
@@ -45,7 +53,15 @@ CREATE TYPE uk_cities AS ENUM(
     'Birmingham',
     'Leeds',
     'Glasgow',
-    'Sheffield'
+    'Sheffield',
+    'Greater London',
+    'South East', 
+    'South West', 
+    'West Midlands', 
+    'North West', 
+    'North East', 
+    'Yorkshire and the Humber', 
+    'East Midlands'
 );
 
 CREATE TABLE social_enterprise_basic(
@@ -57,12 +73,13 @@ CREATE TABLE social_enterprise_basic(
     email VARCHAR UNIQUE NOT NULL,
     phone_number VARCHAR UNIQUE NOT NULL,
     mailing_list BOOLEAN DEFAULT FALSE,
+    is_complete BOOLEAN DEFAULT FALSE,
     password VARCHAR NOT NULL CHECK(CHAR_LENGTH(password) >= 8)
 );
 
 CREATE TABLE social_enterprise_details(
-    id SERIAL PRIMARY KEY,
-    SE_id INT NOT NULL REFERENCES social_enterprise_basic(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    id SERIAL,
+    SE_id INT PRIMARY KEY NOT NULL REFERENCES social_enterprise_basic(id) ON DELETE CASCADE ON UPDATE CASCADE,
     SE_address VARCHAR NOT NULL,
     SIC_code INT NOT NULL, 
     director VARCHAR NOT NULL,
@@ -74,11 +91,12 @@ CREATE TABLE social_enterprise_details(
     travel_distance INT NOT NULL,
     employees_NO INT NOT NULL,
     turnover turnover_size,
-    contract_NO INT NOT NULL,
+    contract_size contract_size NOT NULL,
     SE_description TEXT NOT NULL,
     selected_contract INT[],
     policy_general INT[],
-    location uk_cities
+    location uk_cities NOT NULL,
+    places_to_work_in regions[] NOT NULL    
 );
 
 CREATE TABLE social_impact_list(
@@ -99,13 +117,13 @@ CREATE TABLE contract(
     contract_description TEXT NOT NULL,
     value INT NOT NULL,
     social_impact_description TEXT NOT NULL,
-    application_date DATE NOT NULL, 
     start_date DATE NOT NULL, 
     open_for_splitting BOOLEAN DEFAULT FALSE,
     active_state BOOLEAN DEFAULT TRUE, 
     company_name VARCHAR UNIQUE NOT NULL,
-    location uk_cities,
+    contract_region regions NOT NULL,
     post_code VARCHAR NOT NULL,
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+COMMIT;
