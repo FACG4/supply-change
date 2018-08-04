@@ -32,8 +32,7 @@ const optionSizeContract = [
   }
 ];
 
-const props = () => {
-  const { selectedTurnover, selectedSizeContract, updateTurnover, updateSizeContract } = props;
+const TurnoverComp = (selectedTurnover, selectedSizeContract, updateTurnover, updateSizeContract) => {
 
   return (<div id = 'main'>
     <div className = 'topForm'>
@@ -47,12 +46,12 @@ const props = () => {
               placeholder = 'Number of Employees (or FTE)' required = 'required'/>
             <label htmlFor = 'business-size'> <span className = 'hidden'/></label>
           </div>
-          <Select value = { selectedTurnover } onChange = { updateTurnover } options = { optionTurnOver }
-            placeholder = "Last Year's turnover"/>
+          <Select value = { selectedTurnover } onChange = { updateTurnover }
+            options = { optionTurnOver } placeholder = "Last Year's turnover"/>
           <Select value = { selectedSizeContract } onChange = { updateSizeContract }
             options = { optionSizeContract } placeholder = 'Size of contracts you are able to deliver?'/>
-          <div className = 'SaveBtn'>
-            <input className = 'SaveBtn' type = 'submit' value = 'Save & Continue'/>
+          <div className = 'SaveInput'>
+            <input className = 'SaveInput' type = 'submit' value = 'Save & Continue'/>
           </div>
         </div>
       </div>
@@ -60,4 +59,4 @@ const props = () => {
   </div>);
 };
 
-export default props;
+export default TurnoverComp;

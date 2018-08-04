@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import TurnoverComp from './TurnoverComp';
+import TurnoverComp from './turnover';
 import './style.css';
 
 class Turnover extends Component {
@@ -17,7 +17,7 @@ class Turnover extends Component {
   updateSizeContract = (selectedSizeContract) => {
     this.setState({ selectedSizeContract });
   }
-
+  
   render() {
     const { selectedTurnover, selectedSizeContract } = this.state;
     return(
