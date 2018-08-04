@@ -22,7 +22,26 @@ body {
   min-height: 100vh;
 }
 
-.align {
+.flex {
+  display: flex;
+  flex-direction:column;
+  margin-top:10%;
+}
+
+.tringle {
+  display: flex;
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: #2D918E;
+  margin:auto;
+  padding: auto;
+  margin-bottom: -20px;
+
+}
+
+.login__main {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -36,10 +55,24 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 70px;
+  background: #ebebeb;
+  width: 400px;
+  height:300px;
+  margin: auto;
+  padding: auto
 }
 
-.grid {
+.log__header {
+  background: #2D918E;
+    width: 400px;
+    height: 70px;
+    margin: auto;
+    padding: auto;
+    margin-top: 20px;
+}
+
+.login__top {
   margin-left: auto;
   margin-right: auto;
   max-width: 320px;
@@ -58,24 +91,15 @@ body {
   width: 1px;
 }
 
-.signup__topForm {
-  padding-top: 40px;
-}
-.header1 {
+.login__heading {
   display: block;
-  font-size: 2.57em;
-  color: #222222;
+  font-size: 1.4em;
+  color: #fff;
   text-align: center;
-  line-height: 10px;
+  line-height: 5px;
+  margin-bottom: 40px;
+  margin-top: 35px;
   margin-left: 1%;
-  height: 59;
-}
-
-.select-user {
-  width: 100%;
-  text-align: center;
-  margin-top: 20px;
-  margin-left: -9px
 }
 
 .form {
@@ -83,7 +107,7 @@ body {
   margin: -0.875rem;
 }
 
-.Signup input {
+.login input {
   background-image: none;
   border: 0;
   color: inherit;
@@ -110,7 +134,9 @@ body {
   flex: 1;
 }
 
-.Signup label, .Signup input[type='text'], .Signup input[type='password'], .Signup input[type='submit'] {
+.login label, .login input[type='text'],
+.login input[type='password'],
+.login input[type='submit'] {
   border-radius: 0.25rem;
   padding: 16px;
   padding: 1rem;
@@ -118,17 +144,14 @@ body {
   color: #000
 }
 
-.Signup label {
+.login label {
   background-color: #fff;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  padding-left: 20px;
   padding-left: 1.25rem;
-  padding-right: 20px;
   padding-right: 1.25rem;
-  border-top: 1px solid #CCD4D4;
-  border-bottom: 1px solid #CCD4D4;
-  border-right: 1px solid #CCD4D4;
+  border: 1px solid #CCD4D4;
+  border-left: 0px;
   border-bottom-right-radius: 0;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
@@ -137,11 +160,11 @@ body {
   width: 60px
 }
 
-.Signup input :: placeholder {
+.login input :: placeholder {
   color: #474747
 }
 
-.Signup input[type='password'], .Signup input[type='text'] {
+.login input[type='password'], .login input[type='text'] {
   background-color: #fff;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
@@ -154,16 +177,19 @@ body {
   width: 361px
 }
 
-.Signup input[type='submit'] {
+.login input[type='submit'] {
   background-color: #2D918E;
   color: #eee;
+  font-size: 17px;
   font-weight: 700;
   margin-top: 15px;
-  width: 100%;
-  text-transform: uppercase;
+  width: 100%
 }
 
-.Signup input[type='text']:focus, .Signup input[type='text']:hover, .Signup input[type='password']:focus, .Signup input[type='password']:hover {
+.login input[type='text']:focus,
+.login input[type='text']:hover,
+.login input[type='password']:focus,
+.login input[type='password']:hover {
   box-shadow: -1px 0px 1px 0px #C4C4C4
 }
 
@@ -178,50 +204,15 @@ body {
   width: 100px;
 }
 
-.spaceDiv--imgDiv {
-  width: 100%;
-  position: relative;
-  margin: 0.375rem;
-}
-
-.spaceDiv {
-  width: 80%;
-  height: 2px;
-  position: absolute;
-  margin-left: 35px;
-  margin-top: 23px;
-  background: #aaa
-}
-
-.spaceImg {
-  text-align: center;
-  margin-left: 42%
-}
-
-.checkBox {
-  margin: auto;
-}
-
-.checkBoxSpan {
-  color: black;
-  margin-top: -2px;
-  line-height: -2px
-}
-
-.checkBox input[type="checkBox"] {
-  width: 40px;
-  margin-left: 10%;
-  margin-top: 10px
-}
-
-.Signup input[type='submit']:focus, .Signup input[type='submit']:hover {
+.login input[type='submit']:focus,
+.login input[type='submit']:hover {
   border: 2px solid #2d918e;
   border-radius: 9px;
   color: #2d918e;
   background: #fff
 }
 
-.signup__button {
+.button {
   border: none;
   color: white;
   padding: 25px 0px;
@@ -239,61 +230,7 @@ body {
   line-height: 4px
 }
 
-.button0 {
-  background-color: white;
-  color: black;
-  border: 1px solid #555555;
-  margin-left: 32px
-}
-
-.button0:hover {
-  background-color: #77C0C0;
-  border: 1px solid #77C0C0
-}
-
-.SubmitDiv a {
-  color: #aaa;
-  outline: 2px;
-  text-decoration: none;
-}
-
-.SubmitDiv a:focus, .SubmitDiv a:hover {
-  text-decoration: underline;
-}
-
-.fontawesome {
-  font-size: 1.5em;
+.fontawe {
+  font-size:1.5em;
   color: #2D918E
-}
-
-.lastNameIcon {
-  width: 24px;
-}
-
-.text--center {
-  float: left;
-  line-height: 70px;
-}
-
-.text--login {
-  color: red;
-  line-height: 70px;
-  margin-left: 15px
-}
-
-.text--login :hover {
-  text-decoration: underline;
-}
-
-.text--center P, .text--login p {
-  margin-bottom: 24px;
-  margin-bottom: 1.5rem;
-  margin-top: 24px;
-  margin-top: 1.5rem;
-}
-
-.SubmitDiv {
-  margin: auto;
-  width: 100%;
-  margin-left: 10%
 }

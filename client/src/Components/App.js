@@ -6,6 +6,7 @@ import ResultPage from './Pages/ResultPage';
 import Signup from './Pages/Signup';
 import Header from './CommonComponents/Header';
 import './App.css';
+import Login from './CommonComponents/Login'
 
 class App extends Component {
   state = {
@@ -24,7 +25,7 @@ class App extends Component {
     }
 
   render() {
-    
+
     return (
       <BrowserRouter>
         <div>
@@ -35,6 +36,7 @@ class App extends Component {
               <Route path='/profile' component={SEProfile} exact />
               <Route path='/contract/find' component={ResultPage} exact />
               <Route path='/signup' component={Signup} exact />
+              <Route path='/login' component={Login} exact />
               </div>
             </Switch>
         </div>
@@ -42,5 +44,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;
