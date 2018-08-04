@@ -117,14 +117,13 @@ CREATE TABLE contract(
     contract_description TEXT NOT NULL,
     value INT NOT NULL,
     social_impact_description TEXT NOT NULL,
-    application_date DATE NOT NULL, 
     start_date DATE NOT NULL, 
     open_for_splitting BOOLEAN DEFAULT FALSE,
     active_state BOOLEAN DEFAULT TRUE, 
     company_name VARCHAR UNIQUE NOT NULL,
     contract_region regions NOT NULL,
     post_code VARCHAR NOT NULL,
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 COMMIT;
