@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
 import SEProfile from './Pages/SEProfile';
 import HomePage from './Pages/HomePage';
 import ResultPage from './Pages/ResultPage';
 import Signup from './Pages/Signup';
 import Header from './CommonComponents/Header';
+import Login from './CommonComponents/Login'
 
 import './App.css';
 
@@ -36,6 +36,7 @@ class App extends Component {
               <Route path='/profile' component={SEProfile} exact />
               <Route path='/contract/find' component={ResultPage} exact />
               <Route path='/signup' component={Signup} exact />
+              <Route path='/login' component={Login} exact />
               </div>
             </Switch>
         </div>
@@ -43,5 +44,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;

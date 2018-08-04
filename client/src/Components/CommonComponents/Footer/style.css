@@ -1,6 +1,6 @@
-* {
+*{
   font-family: 'Montserrat', sans-serif;
-  padding: 0;
+  padding: 0
 }
 
 .footer {
@@ -20,7 +20,7 @@
 }
 
 .contact-inf, .journey {
-  width: 170px;
+  width: 170px; 
 }
 
 .journey input {

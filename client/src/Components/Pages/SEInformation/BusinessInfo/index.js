@@ -23,7 +23,7 @@ class BusinessInfo extends Component {
                <div className="form__field">
                  <input id="CompanyLocation" type="text" name="" className="form__input" placeholder="Company Location" required />
                    <label htmlFor="CompanyLocation">
-                   <img src={signal} className="icon" alt="signal" />
+                   <img src={signal} className="icons" alt="signal" />
                   <span className="hidden" />
                 </label>
               </div>
@@ -31,7 +31,7 @@ class BusinessInfo extends Component {
               <div className="form__field">
                 <input id="CompanyAddress" type="text" name="CompanyAddress" className="form__input" placeholder="Company Address" required />
                  <label htmlFor="CompanyAddress">
-                   <img src={signal} className="icon" alt="signal" />
+                   <img src={signal} className="icons" alt="signal" />
                    <span className="hidden" />
                 </label>
               </div>
@@ -39,7 +39,7 @@ class BusinessInfo extends Component {
               <div className="form__field">
                 <input id="SIC-Code" type="text" name="SIC Code:" className="form__input" placeholder="SIC Code:" required />
                  <label htmlFor="SIC-Code">
-                   <img src={binarycode} className="icon" alt="binarycode" />
+                   <img src={binarycode} className="icons" alt="binarycode" />
                    <span className="hidden" />
                 </label>
               </div>
@@ -47,7 +47,7 @@ class BusinessInfo extends Component {
               <div className="form__field">
                 <input id="Director" type="text" name="Director" className="form__input" placeholder="Director:" required />
                 <label htmlFor="Director">
-                  <img src={director} className="icon" alt="binarycode" />
+                  <img src={director} className="icons" alt="binarycode" />
                   <span className="hidden" />
                 </label>
               </div>
@@ -55,7 +55,7 @@ class BusinessInfo extends Component {
               <div className="form__field">
                 <input id="CompanyStructure" type="text" name="CompanyStructure" className="form__input" placeholder="Company Structure" required />
                 <label htmlFor="CompanyStructure">
-                  <img src={network} className="icon" alt="network" />
+                  <img src={network} className="icons" alt="network" />
                   <span className="hidden" />
                 </label>
               </div>
@@ -63,7 +63,7 @@ class BusinessInfo extends Component {
               <div className="form__field">
                 <input id="typeOfTrade" type="text" name="typeOfTrade" className="form__input" placeholder="Choose your type of trade:" required />
                 <label htmlFor="typeOfTrade">
-                  <img src={typeOfTrade} className="icon" alt="network" />
+                  <img src={typeOfTrade} className="icons" alt="network" />
                   <span className="hidden" />
                 </label>
               </div>

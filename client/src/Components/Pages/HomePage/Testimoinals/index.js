@@ -50,7 +50,6 @@ class Testimoinals extends React.Component {
       </Slider>
     );
   }
-
 };
 
 export default Testimoinals;

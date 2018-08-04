@@ -1,11 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
-import './Style.css';
+import './style.css';
 
 const Footer = () => (<div>
   <footer className='footer'>
     <div className='contact-inf'>
-      <img className='logo' src={logo} alt=''/>
+      <img className='logo' src={logo} alt='logo image'/>
       <br/>
       <small>
         18 London Ln
@@ -28,7 +28,7 @@ const Footer = () => (<div>
       </div>
       <div className='socail-media'>
         <a href='https://twitter.com/_SupplyChange' onClick='https://twitter.com/_SupplyChange' className='fab fa-twitter'/>
-        <small className='tw-account'>: @_SupplyChange</small>
+        <small className='tw-account'>:@_SupplyChange</small>
       </div>
     </div>
   </footer>

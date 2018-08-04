@@ -14,11 +14,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3",
     "react-select": "^2.0.0",
     "env2": "^2.2.2",
     "request": "^2.87.0"
-
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
