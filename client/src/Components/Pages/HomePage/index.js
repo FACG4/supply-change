@@ -1,25 +1,21 @@
-
 import React, { Component } from 'react';
-// import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 import HeroSection from './HeroSection';
 import HomeHeader from './HomeHeader';
-import HowItWork from './HowItWork ';
-import Testimoinals from './Testimoinals ';
-import './style.css';
-
-class Result extends Component {
+import HowItWork from './HowItWork';
+import Testimoinals from './Testimoinals';
+class HomePage extends Component {
   render() {
-
     return (
-      <main
-        id='main'>
+      <div >
         <HomeHeader />
         <HeroSection />
         <HowItWork />
         <Testimoinals />
-      </main>
+
+      </div>
     );
   }
 }
 
-export default Result;
+export default HomePage;
