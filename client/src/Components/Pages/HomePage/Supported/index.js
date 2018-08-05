@@ -39,9 +39,7 @@ const Supported =() => {
             <img src={ third } alt='img__fourth' />
           </div>
         </div>
-
       </div>
-
     </div>
   );
 };
