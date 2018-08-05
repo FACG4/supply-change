@@ -32,7 +32,7 @@
 .imgs__box {
   display: flex;
   align-content:space-between;
-  margin-left: 60px
+  margin-left: 0px
 }
 
 .img__div {
