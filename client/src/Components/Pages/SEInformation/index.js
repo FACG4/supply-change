@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import BusinessInfo from './BusinessInfo';
-// import LocationAndPlaces from './Location_Places';
-// import Policy from './Policy';
 import ProgressTracker from './ProgressTracker';
 import Turnover from './Turnover';
 // import UploadLogo from './UploadLogo';
@@ -30,9 +28,7 @@ class SEInofrmation extends Component {
     return (
       <div >
         <ProgressTracker />
-        <BusinessInfo changeState = {this.changeState} />
-        {/* <LocationAndPlaces /> */}
-        {/* <Policy /> */}
+        <BusinessInfo changeState = {this.changeState} /
         {/* <Turnover /> */}
         {/* <UploadLogo /> */}
       </div>
