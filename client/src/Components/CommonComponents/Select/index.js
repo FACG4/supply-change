@@ -11,6 +11,7 @@ class Select extends Component {
       ...this.state,
       selectedOption
     });
+    this.props.handleSelect(selectedOption)
   }
   render() {
     const { selectedOption } = this.state;

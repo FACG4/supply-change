@@ -1,7 +1,11 @@
-const path        = require('path');
-const express     = require('express');
-const app         = express();
+const path = require('path');
+const express = require('express');
+const app = express();
 const controllers = require('./controllers');
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.use(controllers);
 app.use(express.static(path.join(__dirname, 'client', 'build')));

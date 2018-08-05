@@ -1,29 +1,67 @@
-
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
+
+import Result from './Result';
+import filterData from './filter_data';
+
 import './style.css';
-import SearchForm from './SearchForm';
-import Contract from './Contract';
 
-class Result extends Component {
+class ResultPage extends Component {
+  state = {
+    allContracts: [],
+    filtereContracts:[],
+    SERegions: [],
+    title: '',
+    selectedRegion: '',
+    SEId:''
+  }
+
+changeState = (key, value) => {
+  value = value ? value : ''
+    this.setState({
+      ...this.state,
+      [key]:value
+    }, () => {
+      const { allContracts, selectedRegion, title } = this.state
+      const filteredRegion = filterData(allContracts, 'contract_region', selectedRegion.value)
+      const filteredTitle = filterData(filteredRegion, 'title', title)
+      this.setState({
+        ...this.state,
+        filtereContracts: filteredTitle
+      })
+    })
+  }
+
+  fetch = () => {
+    const { SEId } = this.state
+    axios.post('/search',{ SEId }).then(response => {
+      const { contracts, SERegions } = response.data;
+      this.setState({
+        ...this.state,
+        allContracts:contracts,
+        filtereContracts:contracts,
+        SERegions,
+      });
+    });
+  }
+
+  componentDidMount() {
+    const { SEId } = this.props
+    this.setState({
+      ...this.state,
+      SEId
+    }, () => this.fetch())
+  }
+
   render() {
+    const { handleChange } = this.props
+    const { filtereContracts, SERegions } = this.state
+
     return (
-
-      <main id='main'>
-        <div className='contract-search-sec'>
-          <h4 className='contract-search-sec__title'>Explore Contracts</h4>
-          <SearchForm />
-        </div>
-        <div className='contract-result'>
-          <div className='contract-result-summary'>
-            <h4 className='contract-result-summary__number'>15 Contracts found</h4>
-          </div>
-          <Contract />
-        </div>
-      </main>
-
+      <Result filtereContracts = { filtereContracts } SERegions = { SERegions } changeState ={ this.changeState }/>
     );
   }
 }
 
-export default Result;
+export default ResultPage;
