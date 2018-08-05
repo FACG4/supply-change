@@ -40,7 +40,6 @@ class App extends Component {
               <Route path='/contract/find'  render={()=><ResultPage SEId={this.state.businessId} />} exact  />
               <Route path='/signup' component={Signup} exact />
               <Route path='/login' component={Login} exact />
-              {/* <Route path='/Turnover' component={Turnover} exact /> */}
               <Route path='/seinofrmation' component={SEInofrmation} exact />
               </div>
             </Switch>
