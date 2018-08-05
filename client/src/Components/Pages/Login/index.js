@@ -1,19 +1,55 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import './style.css';
 import Fontawesome from 'react-fontawesome';
+import axios from 'axios';
+
+import './style.css';
 
 class LogIn extends Component {
+  
   state = {
-    loginInfo:{}
+    loginInfo: {},
+    err: null,
+    isLogged: true
   }
 
-  handleChange = (e)=> {
-    const { loginInfo } = this.state;
-    const newLoginInfo = [...loginInfo]
-    newLoginInfo[e.target.name]=e.target.value;
-    this.setState({ newLoginInfo })
+  ComponentDidMont(){
+    if(localStorage.getItem('token')){
+      window.location('/profile')
+    }
   }
+
+  callErr = (error) => {
+    this.setState({
+      ...this.state,
+      err: error
+    })
+  }
+
+  login = () => {
+    const { loginInfo } = this.state;
+
+    axios.post('/login', loginInfo)
+    .then(res=>{
+      if(!res.data.err){
+        localStorage.setItem('token', res.data.token);
+        window.location('/profile');  
+      }else{
+        this.callErr(res.data.err);
+      }
+      
+    }).catch(err=>{
+      this.callErr('Something went wrong');
+    })
+
+  }
+ 
+  handleChange = (e) => {
+    const { loginInfo } = this.state;
+    const newLoginInfo = {...loginInfo}
+    newLoginInfo[e.target.name] = e.target.value;
+    this.setState({ loginInfo: newLoginInfo })
+  }
+
   render() {
 
     return (
@@ -29,7 +65,7 @@ class LogIn extends Component {
             <form action="" method="POST" className="form login">
 
               <div className="form__field">
-                <input id="username" type="text" name="username" onChange={this.handleChange} className="form__input" placeholder="user name" required />
+                <input id="username" type="text" name="email" onChange={this.handleChange} className="form__input" placeholder="email" required />
                   <label htmlFor="username">
                   <Fontawesome className="fontawe" name="user" />
                   <span className="hidden" />
@@ -43,16 +79,19 @@ class LogIn extends Component {
                   <span className="hidden" />
                  </label>
                 </div>
+                
+                <div>{this.state.err}</div>
 
                 <div className="form__field">
-                  <input type="submit" className="submitButton" value="Log in" />
+                  <input type="submit" onClick= { this.login } className="submitButton" value="Log in" />
                 </div>
 
-               </form>
-              </div>
-             </div>
-            </div>
-          )
-        }
-      }
+            </form>
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+
 export default LogIn ;
