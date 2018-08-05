@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
+
 import signal from './imgs/signal.png';
 import binarycode from './imgs/binarycode.png';
 import director from './imgs/director.png';
@@ -97,10 +98,6 @@ class BusinessInfomation extends Component {
               <div className='form__field text__area'>
                 <textarea id='DescriptionOfTheCompany ' type='text' name='companyDescription' onChange = { this.props.changeState }
                   className='form__input' placeholder='Description of the company' required />
-              </div>
-
-              <div className='form__field SaveBtn'>
-                <input type='submit' value='Save & Continue' />
               </div>
             </div>
           </div>

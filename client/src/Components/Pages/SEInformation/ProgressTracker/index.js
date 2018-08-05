@@ -1,8 +1,25 @@
 import React from 'react';
+
 import Progress from './Progress';
+
 import './style.css';
 
-export default () => {
+const arr =[
+  { title: 'Business Information',
+    img: '/images/info.svg' },
+  { title: 'Upload logo',
+    img: '/images/camera.svg' },
+  { title: 'Social Impact',
+    img: '/images/social-care.svg' },
+  { title: 'Map',
+    img: '/images/social-care.svg' },
+  { title: 'Turnover',
+    img: '/images/line-chart.svg' },
+  { title: 'Policies & Governance',
+    img: '/images/policy.svg' }
+];
+
+export default ({ activePageIndex }) => {
   return (
     <section className = 'ptracker__container'>
       <div className = 'ptracker__v-center ptracker__caution' >
@@ -11,16 +28,10 @@ export default () => {
       </div>
       <div className = 'ptracker__step-container ptracker__v-center'>
         <div className = 'progress__container'>
-          <Progress selected = {true} title = 'Business Information' img = '/images/info.svg'/>
-          <Progress title = 'Upload logo' img = '/images/camera.svg'/>
-          <Progress title = 'Social Impact' img = '/images/social-care.svg'/>
-          <Progress title = 'Map' img = '/images/map.svg'/>
-          <Progress title = 'Turnover' img = '/images/line-chart.svg'/>
-          <Progress title = 'Policies & Governance' img = '/images/policy.svg'/>
+          {arr.map((el,key) => <Progress title = {el.title} img = {el.img} key = {key} index = {key} activePageIndex = {activePageIndex} />)}
         </div>
         <div className = 'ptracker__steps-line'></div>
       </div>
-      {/* <div className = 'ptracker__title ptracker__v-center'>Social Impact</div> */}
     </section>
   );
 };

@@ -1,8 +1,7 @@
 import React from 'react';
 
-export default props => {
-  const { selected, img, title } = props;
-  const className = `progress__circle ${selected ? 'progress__circle-selected' : ''}`;
+export default ({ selected, img, title, activePageIndex, index }) => {
+  const className = `progress__circle ${activePageIndex === index ? 'progress__circle-selected' : ''}`;
 
   return (
     <div className = 'progress__image-info'>
