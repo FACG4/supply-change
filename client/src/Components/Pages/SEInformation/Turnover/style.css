@@ -79,7 +79,7 @@
   height: 31px;
   padding: 17px 8px;
   box-sizing: border-box;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 
 .css-1492t68 {
@@ -126,7 +126,7 @@
   font-size: 15px;
 }
 
-.SaveBtn {
+.SaveInput {
   background-color: hsl(0, 0%, 98%);
   border-color: #009688;
   border-radius: 4px;
