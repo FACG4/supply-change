@@ -5,7 +5,9 @@ import HomePage from './Pages/HomePage';
 import ResultPage from './Pages/ResultPage';
 import Signup from './Pages/Signup';
 import Header from './CommonComponents/Header';
-import Login from './CommonComponents/Login'
+import Login from './CommonComponents/Login';
+import SEInofrmation from './Pages/SEInformation';
+
 
 import './App.css';
 
@@ -28,6 +30,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
+
         <div>
           <Route path={/[^/]/} render={() => <Header { ...this.state } loginLogout={ this.loginLogout }/>}/>
             <Switch>
@@ -37,6 +40,8 @@ class App extends Component {
               <Route path='/contract/find' component={ResultPage} exact />
               <Route path='/signup' component={Signup} exact />
               <Route path='/login' component={Login} exact />
+              {/* <Route path='/Turnover' component={Turnover} exact /> */}
+              <Route path='/seinofrmation' component={SEInofrmation} exact />
               </div>
             </Switch>
         </div>
