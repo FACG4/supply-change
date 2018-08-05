@@ -121,6 +121,7 @@ CREATE TABLE contract(
     open_for_splitting BOOLEAN DEFAULT FALSE,
     active_state BOOLEAN DEFAULT TRUE, 
     company_name VARCHAR UNIQUE NOT NULL,
+    company_logo VARCHAR NOT NULL,
     contract_region regions NOT NULL,
     post_code VARCHAR NOT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
