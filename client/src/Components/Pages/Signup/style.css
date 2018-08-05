@@ -23,6 +23,10 @@ body {
   min-height: 100vh;
 }
 
+.signup__main {
+  margin-top:5%
+}
+
 .align {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -266,6 +270,12 @@ margin: auto;
   border:1px solid #E3F4F4
 }
 
+.button0:hover {
+  background-color:#baeaeaf7;
+  border: 1px solid #baeaeaf7
+
+}
+
 .SubmitDiv a {
   color: #aaa;
   outline: 2px;
@@ -288,8 +298,8 @@ margin: auto;
   float:left
 }
 
-.text--login{
-  color: red;
+.text--login {
+  color: black;
   line-height: 70px;
   margin-left: 15px
 }
@@ -309,4 +319,16 @@ margin: auto;
   margin: auto;
   width: 100%;
   margin-left: 10%
+}
+
+.error-msg {
+  padding: 10px;
+  border-radius: 1rem;
+  color: red;
+  background-color: #eee;
+  width: 80%;
+  margin: 7% auto;
+  font-size: 20px;
+  word-spacing: .3em;
+  text-align: center;
 }
