@@ -14,8 +14,8 @@ import './App.css';
 class App extends Component {
   state = {
     isLogin: false,
-    businessRole: 'SE1',
-    businessId: '',
+    businessRole: 'SE',
+    businessId: '1',
     businessName: 'ramy company',
     avatarUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/62/USPHS_Commissioned_Corps_insignia.png'
     }
@@ -37,7 +37,7 @@ class App extends Component {
               <Route path='/' component={HomePage} exact  />
               <div id={ this.state.isLogin ? 'main' : null} >
               <Route path='/profile' component={SEProfile} exact />
-              <Route path='/contract/find' component={ResultPage} exact />
+              <Route path='/contract/find'  render={()=><ResultPage SEId={this.state.businessId} />} exact  />
               <Route path='/signup' component={Signup} exact />
               <Route path='/login' component={Login} exact />
               {/* <Route path='/Turnover' component={Turnover} exact /> */}

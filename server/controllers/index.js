@@ -1,7 +1,11 @@
-const express        = require('express');
-const router         = express.Router();
+const express = require('express');
+const search = require('./search');
+
 const getCompanyInfo = require('./get_company_info');
 
-router.get('/companyinfo/:companyNumber', getCompanyInfo);
+const router = express.Router();
 
-module.exports = router
+router.get('/companyinfo/:companyNumber', getCompanyInfo);
+router.post('/search', search);
+
+module.exports = router;
