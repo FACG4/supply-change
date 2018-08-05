@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 
-import SearchForm from './SearchForm';
-import Contract from './Contract';
+import Result from './Result';
 import filterData from './filter_data';
-
 
 import './style.css';
 
-class Result extends Component {
+class ResultPage extends Component {
   state = {
     allContracts: [],
     filtereContracts:[],
@@ -19,12 +17,12 @@ class Result extends Component {
     SEId:''
   }
 
-changeState =(key, value) => {
-  value = value?value:''
+changeState = (key, value) => {
+  value = value ? value : ''
     this.setState({
       ...this.state,
       [key]:value
-    },()=>{
+    }, () => {
       const { allContracts, selectedRegion, title } = this.state
       const filteredRegion = filterData(allContracts, 'contract_region', selectedRegion.value)
       const filteredTitle = filterData(filteredRegion, 'title', title)
@@ -33,45 +31,37 @@ changeState =(key, value) => {
         filtereContracts: filteredTitle
       })
     })
-}
+  }
+
+  fetch = () => {
+    const { SEId } = this.state
+    axios.post('/search',{ SEId }).then(response => {
+      const { contracts, SERegions } = response.data;
+      this.setState({
+        ...this.state,
+        allContracts:contracts,
+        filtereContracts:contracts,
+        SERegions,
+      });
+    });
+  }
 
   componentDidMount() {
     const { SEId } = this.props
     this.setState({
       ...this.state,
       SEId
-    },()=>{
-      const { SEId } = this.state
-      axios.post('/search',{ SEId }).then(response => {
-        console.log(response,'response');
-        const { contracts, SERegions } = response.data;
-        this.setState({
-          ...this.state,
-          allContracts:contracts,
-          filtereContracts:contracts,
-          SERegions,
-        });
-      });
-
-    });
+    }, () => this.fetch())
   }
+
   render() {
-    const { SERegions, filtereContracts } = this.state
+    const { handleChange } = this.props
+    const { filtereContracts, SERegions } = this.state
+
     return (
-      <main >
-        <div className='contract-search-sec'>
-          <h4 className='contract-search-sec__title'>Explore Contracts</h4>
-          <SearchForm SERegions={SERegions} handleSelect={this.handleSelect} handleChange={this.handleChange} changeState={this.changeState}/>
-        </div>
-        <div className='contract-result'>
-          <div className='contract-result-summary'>
-            <h4 className='contract-result-summary__number'>{filtereContracts.length} Contracts found</h4>
-          </div>
-          {filtereContracts.map(contract => <Contract contract={contract} />)}
-        </div>
-      </main>
+      <Result filtereContracts = { filtereContracts } SERegions = { SERegions } changeState ={ this.changeState }/>
     );
   }
 }
 
-export default Result;
+export default ResultPage;

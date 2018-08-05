@@ -10,10 +10,11 @@ module.exports = (req, res) => {
   WHERE  t2.SE_id = $1;`,
   values: [SEId]
   };
+
   query(sql).then(queryResult => {
     const results = queryResult.rows;
     const SERegions = convert(results[0].places_to_work_in);
-    const filteredResults = { contracts: [],SERegions };
+    const filteredResults = { contracts: [], SERegions };
     results.forEach(contract => {
       SERegions.forEach(region => {
         contract.contract_region === region ? filteredResults.contracts.push(contract) : null;
