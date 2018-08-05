@@ -5,8 +5,9 @@ import HomePage from './Pages/HomePage';
 import ResultPage from './Pages/ResultPage';
 import Signup from './Pages/Signup';
 import Header from './CommonComponents/Header';
-import './App.css';
 import Login from './CommonComponents/Login'
+
+import './App.css';
 
 class App extends Component {
   state = {
@@ -25,7 +26,6 @@ class App extends Component {
     }
 
   render() {
-
     return (
       <BrowserRouter>
         <div>
