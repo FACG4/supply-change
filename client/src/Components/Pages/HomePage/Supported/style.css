@@ -1,0 +1,61 @@
+.supported {
+  margin-top:5%;
+  display: flex;
+  flex-direction: column;
+  background:#ebebebba
+}
+
+.supported__heading {
+  display: flex;
+  position: relative;
+  height: 100px;
+  margin: auto;
+  color: #000;
+  font-size: 23px
+}
+
+.line__header {
+  display: flex;
+  position: absolute;
+  background: #fbb900;
+  margin: auto;
+  padding: auto;
+  left: 0;
+  right: 0;
+  margin-left: 35px;
+  top:65px;
+  width: 150px;
+  height: 2px;
+  line-height: -20px
+}
+
+.imgs__box {
+  display: flex;
+  align-content:space-between;
+  margin-left: 60px
+}
+
+.img__div {
+  padding:auto;
+  margin: auto;
+}
+
+.img__first {
+margin-top:80px;
+}
+
+.img__second {
+  padding:60px 50px;
+}
+
+.img__third {
+  padding-top: 60px;
+
+}
+.fourth {
+
+}
+.img__fourth {
+margin-top:50px;
+
+}
