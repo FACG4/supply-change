@@ -21,7 +21,8 @@ class SEInofrmation extends Component {
     companyDescription: '',
     businessSize: '',
     turnover: '',
-    contractSize: ''
+    contractSize: '',
+    workRegions: '',
   }
 
   changeState = ({target}) => {
