@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import SEProfile from './Pages/SEProfile';
 import HomePage from './Pages/HomePage';
 import ResultPage from './Pages/ResultPage';
+import SocialImpact from './Pages/SEInformation/SocialImpact';
 import Signup from './Pages/Signup';
 import Header from './CommonComponents/Header';
 import Login from './CommonComponents/Login'
@@ -37,6 +38,7 @@ class App extends Component {
               <Route path='/contract/find'  render={()=><ResultPage SEId={this.state.businessId} />} exact  />
               <Route path='/signup' component={Signup} exact />
               <Route path='/login' component={Login} exact />
+              <Route path='/SocialImpact' component={SocialImpact} exact />
               </div>
             </Switch>
         </div>
