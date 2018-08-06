@@ -12,7 +12,7 @@ const arr =[
   { title: 'Social Impact',
     img: '/images/social-care.svg' },
   { title: 'Map',
-    img: '/images/social-care.svg' },
+    img: '/images/map.svg' },
   { title: 'Turnover',
     img: '/images/line-chart.svg' },
   { title: 'Policies',

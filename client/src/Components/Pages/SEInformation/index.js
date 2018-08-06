@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios'
 
 import BusinessInfo from './BusinessInfo';
 import ProgressTracker from './ProgressTracker';
@@ -24,7 +25,8 @@ class SEInofrmation extends Component {
     contractSize: '',
     workRegions: '',
     policyArray: [],
-    socialImpactArray: []
+    socialImpactArray: [],
+    buttonText: 'Save & Continue',
   }
 
   changeState = ({target}) => {
@@ -32,16 +34,28 @@ class SEInofrmation extends Component {
     this.setState ({
       ...this.state,
       [name]: value
-    },()=>{
-      console.log(this.state,1111111111);
     })
+  }
+  sendData = () => {
+    axios.post('/userdetails',{...this.state}).then(response => {
+    });
   }
 
   indexIncrement = (e) => {
-    this.setState ({
-      ...this.state,
-      activePageIndex: this.state.activePageIndex +1
-    })
+      this.state.activePageIndex === 5 ?
+      this.sendData() : (
+      this.setState ({
+        ...this.state,
+        activePageIndex:  1+ this.state.activePageIndex
+      },()=>{
+        if(this.state.activePageIndex === 5){
+          this.setState ({
+            ...this.state,
+            buttonText: 'Submit'
+          })
+        }
+      })
+    )
   }
 
   render() {
@@ -50,7 +64,7 @@ class SEInofrmation extends Component {
       <div className = 'SEForm'>
         <ProgressTracker activePageIndex = { this.state.activePageIndex }/>
         <Switch changeState = { this.changeState } activePageIndex = { this.state.activePageIndex }/>
-        <Button children = 'Save & Continue' className = 'generalButton' onClick = { this.indexIncrement }/>
+        <Button children = {this.state.buttonText} className = 'generalButton' onClick = { this.indexIncrement }/>
       </div>
     );
   }
