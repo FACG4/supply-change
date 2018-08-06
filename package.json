@@ -9,14 +9,18 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "client:init": "cd client && npm i",
     "client:dev": "cd client && npm start",
-    "client:build": "cd client && npm run build"
+    "client:build": "cd client && npm run build",
+    "heroku-postbuild": "npm run client:init && npm run client:build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "env2": "^2.2.2",
     "express": "^4.16.3",
+    "pg": "^7.4.3",
+    "jsonwebtoken": "^8.3.0",
     "request": "^2.87.0"
   },
   "devDependencies": {
