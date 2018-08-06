@@ -10,8 +10,7 @@ module.exports = (req, res) => {
     values: [email]
   };
 
-  const errMsg = ress => res.end(JSON.stringify({ err: 'Wrong email or password' }));
-
+  // const errMsg = ress => res.end(JSON.stringify({ err: 'Wrong email or password' }));
 
   query(sql).then(queryResult => {
     if (queryResult.rowCount) {
@@ -24,19 +23,18 @@ module.exports = (req, res) => {
             res.cookie('token', token, { httpOnly: true });
             return res.end(JSON.stringify({ token }));
           }).catch(err => {
-              errMsg()
+            // errMsg()
           });
         } else {
-           errMsg()
+          // errMsg()
         }
       }).catch(err => {
-        errMsg()
+        // errMsg()
       });
     } else {
-    errMsg()
+    // errMsg()
     }
   }).catch(err => {
-    errMsg()
+    // errMsg()
   });
 };
-
