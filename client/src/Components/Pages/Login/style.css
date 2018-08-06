@@ -233,3 +233,9 @@ body {
   font-size:1.5em;
   color: #2D918E;
 }
+
+.errMsg{
+  text-align: center;
+  color: red;
+  font-size: 20px;
+}
