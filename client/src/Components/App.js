@@ -5,12 +5,9 @@ import HomePage from './Pages/HomePage';
 import ResultPage from './Pages/ResultPage';
 import Signup from './Pages/Signup';
 import Header from './CommonComponents/Header';
-<<<<<<< HEAD
 import Login from './Pages/Login'
-=======
 import Login from './CommonComponents/Login'
 import SocialImpact from  './Pages/SEInformation/SocialImpact'
->>>>>>> 1f635e70c4f16113b070332f6533135abf534528
 
 import './App.css';
 
