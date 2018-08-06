@@ -23,15 +23,21 @@ module.exports = (req, res) => {
             res.cookie('token', token, { httpOnly: true });
             return res.end(JSON.stringify({ token }));
           }).catch(err => {
+            res.end(JSON.stringify({ err: 'Wrong email or password' }));
             // errMsg()
           });
         } else {
           // errMsg()
+          res.end(JSON.stringify({ err: 'Wrong email or password' }));
         }
       }).catch(err => {
         // errMsg()
+        res.end(JSON.stringify({ err: 'Wrong email or password' }));
+
       });
     } else {
+      res.end(JSON.stringify({ err: 'Wrong email or password' }));
+
     // errMsg()
     }
   }).catch(err => {
