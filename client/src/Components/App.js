@@ -5,8 +5,7 @@ import HomePage from './Pages/HomePage';
 import ResultPage from './Pages/ResultPage';
 import Signup from './Pages/Signup';
 import Header from './CommonComponents/Header';
-import Login from './Pages/Login'
-import Login from './CommonComponents/Login'
+import Login from './Pages/Login';
 import SocialImpact from  './Pages/SEInformation/SocialImpact'
 
 import './App.css';
