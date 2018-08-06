@@ -12,7 +12,7 @@ INSERT INTO policy VALUES
 (DEFAULT, 'Do you have a quality assurance certification relevant to the trade you registered for? (e.g ISO 9001:2000)');
 
 INSERT INTO social_enterprise_basic VALUES
-(DEFAULT, 'THE NUMBER UK LIMITED', '61900', 'Matt', 'Davis', 'mavis@gsg.com', '00442072343456', DEFAULT, DEFAULT, '12345678'),
+(DEFAULT, 'THE NUMBER UK LIMITED s', '61900', 'Matt', 'Davis', 'mm@gsg.com', '0044207243456', DEFAULT, DEFAULT, '$2a$08$zvbcrzJJmrKPi/Bn04b8GOUP7kbZq3YDmO1eUmn9QvSE0Zi7AQaKu'),
 (DEFAULT, 'MercyCorps', '00016', 'Mavis', 'Davis', 'mavs@mc.com', '00443072343456', DEFAULT, DEFAULT, '12345678'),
 (DEFAULT, 'GSMC', '00306', 'Ramy', 'Alsurfa', 'ramy@gsg.com', '00442076343456', DEFAULT, DEFAULT, '12345678'),
 (DEFAULT, 'MCGO', '00007', 'Dan', 'Sofer', 'dan@fandc.com', '00442072342456', DEFAULT, DEFAULT, '12345678');
