@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const controllers = require('./controllers');
 const bodyParser = require('body-parser');
-const port = proces.env.PORT || 9000;
+const port = process.env.PORT || 9000;
 
 app.use((req,res,next) => {
   res.header('Access-Control-Allow-Origin', '*');
