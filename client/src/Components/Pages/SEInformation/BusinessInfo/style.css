@@ -106,6 +106,15 @@ body {
   -ms-flex: 1;
   flex: 1;
 }
+.form__input[name=companyDescription] {
+  width: 350px;
+  height: 130px;
+  border: 1px solid #CCD4D4;
+  border-radius: 12px;
+  margin: auto;
+  padding: 12px;
+  overflow: visible;
+}
 
 .BusinessInfo label,
 .BusinessInfo input[type='text'],

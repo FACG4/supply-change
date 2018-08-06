@@ -95,10 +95,8 @@ class BusinessInfomation extends Component {
 
               </div>
 
-              <div className='form__field text__area'>
                 <textarea id='DescriptionOfTheCompany ' type='text' name='companyDescription' onChange = { this.props.changeState }
                   className='form__input' placeholder='Description of the company' required />
-              </div>
             </div>
           </div>
         </div>

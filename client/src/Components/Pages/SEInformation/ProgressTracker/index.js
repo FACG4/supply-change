@@ -15,7 +15,7 @@ const arr =[
     img: '/images/social-care.svg' },
   { title: 'Turnover',
     img: '/images/line-chart.svg' },
-  { title: 'Policies & Governance',
+  { title: 'Policies',
     img: '/images/policy.svg' }
 ];
 

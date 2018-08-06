@@ -23,13 +23,17 @@ class SEInofrmation extends Component {
     turnover: '',
     contractSize: '',
     workRegions: '',
+    policyArray: [],
+    socialImpactArray: []
   }
 
   changeState = ({target}) => {
-    const {value, name}= target
+    const { value, name } = target
     this.setState ({
       ...this.state,
       [name]: value
+    },()=>{
+      console.log(this.state,1111111111);
     })
   }
 
@@ -43,10 +47,10 @@ class SEInofrmation extends Component {
   render() {
 
     return (
-      <div className='SEForm'>
-        <ProgressTracker activePageIndex={this.state.activePageIndex}/>
-        <Switch changeState={this.changeState} activePageIndex={this.state.activePageIndex}/>
-        <Button children='Save & Continue' className='generalButton' onClick={this.indexIncrement}/>
+      <div className = 'SEForm'>
+        <ProgressTracker activePageIndex = { this.state.activePageIndex }/>
+        <Switch changeState = { this.changeState } activePageIndex = { this.state.activePageIndex }/>
+        <Button children = 'Save & Continue' className = 'generalButton' onClick = { this.indexIncrement }/>
       </div>
     );
   }
