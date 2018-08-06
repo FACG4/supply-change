@@ -38,7 +38,6 @@ body {
   margin:auto;
   padding: auto;
   margin-bottom: -20px;
-
 }
 
 .login__main {
@@ -160,7 +159,7 @@ body {
   width: 60px
 }
 
-.login input :: placeholder {
+.login input::placeholder {
   color: #474747
 }
 
@@ -227,10 +226,10 @@ body {
   width: 110px;
   height: 25px;
   border-radius: 9px;
-  line-height: 4px
+  line-height: 4px;
 }
 
 .fontawe {
   font-size:1.5em;
-  color: #2D918E
+  color: #2D918E;
 }

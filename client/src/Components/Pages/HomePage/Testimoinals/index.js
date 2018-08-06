@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import test from './test.svg';
-import './Style.css';
+import './style.css';
 
 const settings = {
   dots: true,

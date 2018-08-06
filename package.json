@@ -18,6 +18,7 @@
     "body-parser": "^1.18.3",
     "env2": "^2.2.2",
     "express": "^4.16.3",
+    "pg": "^7.4.3",
     "request": "^2.87.0"
   },
   "devDependencies": {
