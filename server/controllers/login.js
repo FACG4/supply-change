@@ -4,13 +4,14 @@ const generateToken = require('./generate_token');
 const query = require('../database/query/query');
 
 module.exports = (req, res) => {
+  console.log(req.body);
   const { email, password } = req.body || { email: '', password: '' };
   const sql = {
     text: 'SELECT * FROM social_enterprise_basic WHERE email=$1',
     values: [email]
   };
 
-  // const errMsg = ress => res.end(JSON.stringify({ err: 'Wrong email or password' }));
+  // const errMsg = () => res.end(JSON.stringify({ err: 'Wrong email or password' }));
 
   query(sql).then(queryResult => {
     if (queryResult.rowCount) {
@@ -24,23 +25,17 @@ module.exports = (req, res) => {
             return res.end(JSON.stringify({ token }));
           }).catch(err => {
             res.end(JSON.stringify({ err: 'Wrong email or password' }));
-            // errMsg()
           });
         } else {
-          // errMsg()
           res.end(JSON.stringify({ err: 'Wrong email or password' }));
         }
       }).catch(err => {
-        // errMsg()
         res.end(JSON.stringify({ err: 'Wrong email or password' }));
-
       });
     } else {
       res.end(JSON.stringify({ err: 'Wrong email or password' }));
-
-    // errMsg()
     }
   }).catch(err => {
-    // errMsg()
+    res.end(JSON.stringify({ err: 'Wrong email or password' }));
   });
 };
