@@ -3,11 +3,11 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import SEProfile from './Pages/SEProfile';
 import HomePage from './Pages/HomePage';
 import ResultPage from './Pages/ResultPage';
-import SocialImpact from './Pages/SEInformation/SocialImpact';
+// import SocialImpact from './Pages/SEInformation/SocialImpact';
 import Signup from './Pages/Signup';
 import Header from './CommonComponents/Header';
 import Login from './Pages/Login';
-// import SocialImpact from  './Pages/SEInformation/SocialImpact'
+import Uploader from './Pages/SEInformation/ImageUploader';
 
 import './App.css';
 
@@ -29,21 +29,22 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
-        <div>
-          <Route path={/[^/]/} render={() => <Header { ...this.state } loginLogout={ this.loginLogout }/>}/>
-            <Switch>
-              <Route path='/' component={HomePage} exact  />
-              <div id={ this.state.isLogin ? 'main' : null} >
-              <Route path='/profile' component={SEProfile} exact />
-              <Route path='/contract/find'  render={()=><ResultPage SEId={this.state.businessId} />} exact  />
-              <Route path='/signup' component={Signup} exact />
-              <Route path='/login' component={Login} exact />
-              {/* <Route path='/SocialImpact' component={SocialImpact} exact /> */}
-              </div>
-            </Switch>
-        </div>
-      </BrowserRouter>
+      // <BrowserRouter>
+      //   <div>
+      //     <Route path={/[^/]/} render={() => <Header { ...this.state } loginLogout={ this.loginLogout }/>}/>
+      //       <Switch>
+      //         <Route path='/' component={HomePage} exact  />
+      //         <div id={ this.state.isLogin ? 'main' : null} >
+      //         <Route path='/profile' component={SEProfile} exact />
+      //         <Route path='/contract/find'  render={()=><ResultPage SEId={this.state.businessId} />} exact  />
+      //         <Route path='/signup' component={Signup} exact />
+      //         <Route path='/login' component={Login} exact />
+      //         {/* <Route path='/SocialImpact' component={SocialImpact} exact /> */}
+      //         </div>
+      //       </Switch>
+      //   </div>
+      // </BrowserRouter>
+      <Uploader />
     );
   }
 }
