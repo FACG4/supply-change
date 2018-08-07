@@ -22,7 +22,6 @@
     "env2": "^2.2.2",
     "express": "^4.16.3",
     "file-type": "^8.1.0",
-    "fs": "0.0.1-security",
     "jsonwebtoken": "^8.3.0",
     "multiparty": "^4.2.0",
     "pg": "^7.4.3",
