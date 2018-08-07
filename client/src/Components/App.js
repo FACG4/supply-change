@@ -14,7 +14,6 @@ class App extends Component {
   state = {
     isLogin: true,
     businessRole: 'SE',
-    businessId: '4',
     businessName: 'ramy company',
     avatarUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/62/USPHS_Commissioned_Corps_insignia.png'
     }
@@ -24,6 +23,19 @@ class App extends Component {
         ...this.state,
         isLogin:!this.state.isLogin
       })
+    }
+    componentDidMount() {
+      const info = JSON.parse(localStorage.getItem('userInfo'));
+      if (info) {
+        const {se_name, logo_link, is_complete, id} = info
+        this.setState({
+          ...this.state,
+          isLogin:true,
+          businessName:se_name.substring(0,12),
+          avatarUrl:logo_link,
+          businessId:id
+        })
+      }
     }
 
   render() {
@@ -36,7 +48,7 @@ class App extends Component {
               <Route path='/' component={HomePage} exact  />
               <div id={ this.state.isLogin ? 'main' : null} >
               <Route path='/profile' component={SEProfile} exact />
-              <Route path='/contract/find'  render={()=><ResultPage SEId={this.state.businessId} />} exact  />
+              <Route path='/contract/find'  render={()=><ResultPage  />} exact  />
               <Route path='/signup' component={Signup} exact />
               <Route path='/login' component={Login} exact />
               <Route path='/seinformation' render={() => <SEInofrmation SEId={this.state.businessId}/>}exact />

@@ -12,7 +12,7 @@ const router = express.Router();
 
 router.get('/companyinfo/:companyNumber', getCompanyInfo);
 router.post('/login', login);
-router.post('/search', auth, search);
+router.post('/search', search);
 router.post('/userdata', storeData);
 router.get('/profile/:id',profile);
 router.post('/userdetails', userDetails);
