@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './style.css';
-import Fontawesome from 'react-fontawesome';
+
 import Select from './../../../CommonComponents/Select';
-import Group1 from './Imgs/Group1.png';
+import getSelected from './get_selected';
+
+import './style.css';
 
 const array = [
   {
@@ -41,65 +42,87 @@ const array = [
 ];
 
 class SocialImpact extends Component {
-  render() {
+  state = {
+    str: '',
+    selectedSocial:''
+  }
+
+  handleSelect = (selectedSocial) => {
+    const value = selectedSocial ? selectedSocial.value : ''
+    this.props.changeState({target:{value,name:'selectedSocial'}})
+  }
+
+  handelBox = (event) => {
+    let newstr= this.state.str.includes(event.target.value) ? this.state.str.replace(event.target.value,'') : this.state.str.concat(event.target.value);
+    this.setState({
+      ...this.state,
+      str: newstr
+    },()=>{
+      this.props.changeState({
+        target: {
+          value: this.state.str.split(''),
+          name: 'socialImpactArray'
+        }
+      })
+    })
+  };
+
+render() {
+
     return (
       <div className='socialImpact__mainDiv'>
         <div className='socialImpact__heading'>
           <h3 >
-             Social Impact
+            Social Impact
           </h3>
         </div>
-
         <div className='h3__socialImpact'>
           <h3>
-            What is the main focus of your social mission?
+                  What is the main focus of your social mission?
           </h3>
         </div>
-
-        <div className='selectCityDiv'>
-          <Select options={ array } placeholder='Select your mission' />
+        <div className='selectImpact'>
+          <Select options={array} placeholder='What is your main social mission?' isMulti={false}
+            isClearable={true} name='city' handleSelect={this.handleSelect} />
         </div>
-
         <div className='form__field select__impact'>
-          <textarea id='DescriptionOfTheCompany ' type='text' name='DescriptionOfTheCompany' className='text__area' placeholder='Description of the company' required />
+          <textarea id='socialDescription' type='text' name='socialDescription' className='text__area' placeholder='- Describe your mission & impact here&#10;- Are you part of SE UK?&#10;- Do you have any awards ?' onChange = { this.props.changeState } />
         </div>
-
         <div className='space__mainDiv'>
           <div className='spaceDiv__img' />
-          <img src={Group1} alt='' className='space__img' />
-          {/* <Fontawesome name="address-card-o" /> */}
         </div>
-
         <div className='SocialImpactDiv'>
           <div className='textDiv'>
             <p>
-              Social impact is very important to us. Select any of the following that apply to you.
+            Social impact is very important to us. Select any of the following that apply to you.
             </p>
           </div>
-
           <div className='checkbox'>
-            <input id='mailingList' type='checkbox' name='mailingList' value='mailingList' />
-            <span className='checkBoxSpan'>
-               We are a not for profit , we invest our profits into
-            </span>
-            <br />
-            <input id='T&C' type='checkbox' name='T&C' value='T&C' checked />
-            <span className='checkBoxSpan'>
-              X% or more of our staff are from a disadvantaged background
-              or ask : What percentage of your employees?
-            </span>
-            <br />
-            <input id='T&C' type='checkbox' name='T&C' value='T&C' checked />
-            <span className='checkBoxSpan'>
-              CSR Policy, we invest x% of our profits in the local community
-            </span>
+            <div className='_box _tick'>
+              <div className = 'cell'>
+                <label htmlFor = 'socialImpact-1'>
+                  <input type = 'checkbox' name = 'socialImpact' value = '1' id = 'socialImpact-1' onChange = {this.handelBox}/>
+                  <span className = 'tick'></span>
+                        - We are primarily dedicated to social or environmental mission as evidenced by our governing documents
+                </label>
+              </div>
+              <div className = 'cell'>
+                <label htmlFor = 'socialImpact-2'>
+                  <input type = 'checkbox' name = 'socialImpact' value = '2' id = 'socialImpact-2' onChange = {this.handelBox}/>
+                  <span className = 'tick'></span>
+                        - At least 51% of our profit is dedicated to the social and environmental mission
+                </label>
+              </div>
+            </div>
+            <div className = 'cell'>
+              <label htmlFor = 'socialImpact-3'>
+                <input type = 'checkbox' name = 'socialImpact' value = '3' id = 'socialImpact-3' onChange = {this.handelBox}/>
+                <span className = 'tick'></span>
+                        - We can demonstrate social/environmental impact
+              </label>
+            </div>
           </div>
         </div>
-
-        <div className='form__field SaveBtn'>
-          <input type='submit' className='button' value='Save & Continue' />
-        </div>
-
       </div>
     );
   }

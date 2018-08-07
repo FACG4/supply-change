@@ -1,6 +1,9 @@
 * {
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -103,6 +106,15 @@ body {
   -ms-flex: 1;
   flex: 1;
 }
+.form__input[name=companyDescription] {
+  width: 350px;
+  height: 130px;
+  border: 1px solid #CCD4D4;
+  border-radius: 12px;
+  margin: auto;
+  padding: 12px;
+  overflow: visible;
+}
 
 .BusinessInfo label,
 .BusinessInfo input[type='text'],
@@ -130,7 +142,7 @@ body {
   width: 60px
 }
 
-.BusinessInfo input :: placeholder {
+.BusinessInfo input::placeholder {
   color: #474747;
 }
 

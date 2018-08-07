@@ -27,6 +27,11 @@
   text-align: center;
 }
 
+.textNavBar a {
+  text-decoration-line: none;
+  color: white;
+}
+
 .logoDiv {
   position: relative;
   top: 1%;

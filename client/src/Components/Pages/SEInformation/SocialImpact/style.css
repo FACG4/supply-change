@@ -19,12 +19,18 @@
   width: 50%
 }
 
+.selectImpact {
+  width: 350px;
+  margin: 20px auto;
+}
+
 .text__area{
   width: 350px;
-  height: 100px;
-  border:1px solid #CCD4D4;
+  border: 1px solid #CCD4D4;
   border-radius: 12px;
   margin: auto;
+  padding: 12px;
+  overflow: visible;
 }
 
  .text__area textarea ::placeholder {
@@ -89,7 +95,8 @@
   position: absolute;
   margin-left: 35px;
   margin-top: 23px;
-  background: #aaa
+  background: #aaa;
+  display: none
 }
 
 .space__img {
