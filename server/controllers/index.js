@@ -2,6 +2,7 @@ const express = require('express');
 
 const search = require('./search');
 const auth = require('./auth');
+const profile = require('./social_profile');
 const getCompanyInfo = require('./get_company_info');
 const login = require('./login');
 const storeData = require('./store_user_data');
@@ -12,5 +13,6 @@ router.get('/companyinfo/:companyNumber', getCompanyInfo);
 router.post('/login', login);
 router.post('/search', auth, search);
 router.post('/userdata', storeData);
+router.get('/profile/:id',profile);
 
 module.exports = router;
