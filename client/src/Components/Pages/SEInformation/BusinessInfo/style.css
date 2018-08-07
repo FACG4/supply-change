@@ -142,7 +142,7 @@ body {
   width: 60px
 }
 
-.BusinessInfo input :: placeholder {
+.BusinessInfo input::placeholder {
   color: #474747;
 }
 

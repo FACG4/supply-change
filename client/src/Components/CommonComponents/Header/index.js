@@ -58,7 +58,7 @@ class Header extends Component {
        ...this.state,
        redirect:true
      } , () => {
-       this.props.loginLogout()
+       localStorage.removeItem('userInfo')
        window.removeEventListener('scroll', this.handleScroll)
      });
    }

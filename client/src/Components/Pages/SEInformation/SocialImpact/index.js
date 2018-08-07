@@ -103,14 +103,14 @@ render() {
                 <label htmlFor = 'socialImpact-1'>
                   <input type = 'checkbox' name = 'socialImpact' value = '1' id = 'socialImpact-1' onChange = {this.handelBox}/>
                   <span className = 'tick'></span>
-                        - We are a not for profit , we invest our profits into
+                        - We are primarily dedicated to social or environmental mission as evidenced by our governing documents
                 </label>
               </div>
               <div className = 'cell'>
                 <label htmlFor = 'socialImpact-2'>
                   <input type = 'checkbox' name = 'socialImpact' value = '2' id = 'socialImpact-2' onChange = {this.handelBox}/>
                   <span className = 'tick'></span>
-                        - X% or more of our staff are from a disadvantaged background or ask: What percentage of your employees?
+                        - At least 51% of our profit is dedicated to the social and environmental mission
                 </label>
               </div>
             </div>
@@ -118,7 +118,7 @@ render() {
               <label htmlFor = 'socialImpact-3'>
                 <input type = 'checkbox' name = 'socialImpact' value = '3' id = 'socialImpact-3' onChange = {this.handelBox}/>
                 <span className = 'tick'></span>
-                        - CSR Policy, we invest x% of our profits in the local community
+                        - We can demonstrate social/environmental impact
               </label>
             </div>
           </div>

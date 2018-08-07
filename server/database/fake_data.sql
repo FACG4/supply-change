@@ -12,7 +12,7 @@ INSERT INTO policy VALUES
 (DEFAULT, 'Do you have a quality assurance certification relevant to the trade you registered for? (e.g ISO 9001:2000)');
 
 INSERT INTO social_enterprise_basic VALUES
-(DEFAULT, 'THE NUMBER UK LIMITED', '61900', 'Matt', 'Davis', 'mavis@gsg.com', '00442072343456', DEFAULT, DEFAULT, '12345678'),
+(DEFAULT, 'THE NUMBER UK LIMITED s', '61900', 'Matt', 'Davis', 'mm@gsg.com', '0044207243456', DEFAULT, DEFAULT, '$2a$08$zvbcrzJJmrKPi/Bn04b8GOUP7kbZq3YDmO1eUmn9QvSE0Zi7AQaKu'),
 (DEFAULT, 'MercyCorps', '00016', 'Mavis', 'Davis', 'mavs@mc.com', '00443072343456', DEFAULT, DEFAULT, '12345678'),
 (DEFAULT, 'GSMC', '00306', 'Ramy', 'Alsurfa', 'ramy@gsg.com', '00442076343456', DEFAULT, DEFAULT, '12345678'),
 (DEFAULT, 'MCGO', '00007', 'Dan', 'Sofer', 'dan@fandc.com', '00442072342456', DEFAULT, DEFAULT, '12345678');
@@ -32,8 +32,6 @@ INSERT INTO contract VALUES
 (DEFAULT, 'cleaning in north area', 'Cleaning', 'the company should have 50 employees or more...', 'contract about cleaning the houses in the north area', 50000, 'this is going to help alot of people', '2018-08-07', DEFAULT, DEFAULT, 'North original', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg','North East', '00971', DEFAULT),
 (DEFAULT, 'Catering in  area', 'Catering', 'the company should have 50 employees or more...', 'contract about Catering the houses in the north area', 100000, 'this is going to help alot of people', '2018-08-06', DEFAULT, DEFAULT, 'North comp iginal', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'South East', '01971', DEFAULT),
 (DEFAULT, 'Gardening in north area', 'Gardening & Landscaping', 'the company should have 50 employees or more...', 'contract about Gardening & Landscaping the houses in the north area', 150000, 'this is going to help alot of people', '2018-10-05', DEFAULT, DEFAULT, 'North ginal', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'Yorkshire and the Humber', '04971', DEFAULT);
-
-
 
 INSERT INTO social_enterprise_details VALUES
 (DEFAULT, 4, 'Fusion Point1', '613900', 'Matt', 'Functional Structure1', 'Cleaning', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{2, 3}', '300', '50', '50k-100k', '50k-100k', 'We a small social enterprise', '{2}','{2,3}','London', '{"Greater London","North East"}'),

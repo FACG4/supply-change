@@ -9,6 +9,7 @@
 .h3__socialImpact {
   margin: auto;
   padding: auto;
+  width: 29%;
   margin-top: 3%;
 }
 
@@ -17,6 +18,7 @@
   padding: auto;
   width: 50%
 }
+
 .selectImpact {
   width: 350px;
   margin: 20px auto;

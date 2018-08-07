@@ -5,8 +5,9 @@ const search = require('./search');
 const auth = require('./auth');
 const profile = require('./social_profile');
 const getCompanyInfo = require('./get_company_info');
-const login = require('./login');
 const storeData = require('./store_user_data');
+
+const login = require('./login');
 
 const router = express.Router();
 

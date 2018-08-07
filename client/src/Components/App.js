@@ -5,6 +5,7 @@ import HomePage from './Pages/HomePage';
 import ResultPage from './Pages/ResultPage';
 import Signup from './Pages/Signup';
 import Header from './CommonComponents/Header';
+import Footer from './CommonComponents/Footer';
 import Login from './Pages/Login'
 import SEInofrmation from './Pages/SEInformation';
 
@@ -54,6 +55,7 @@ class App extends Component {
               <Route path='/seinformation' render={() => <SEInofrmation SEId={this.state.businessId}/>}exact />
               </div>
             </Switch>
+            <Footer />
         </div>
       </BrowserRouter>
     );

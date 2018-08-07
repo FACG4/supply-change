@@ -4,6 +4,7 @@ const generateToken = require('./generate_token');
 const query = require('../database/query/query');
 
 module.exports = (req, res) => {
+  console.log(req.body);
   const { email, password } = req.body || { email: '', password: '' };
   console.log(req.body);
   const sql1 = {
