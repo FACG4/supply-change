@@ -47,7 +47,7 @@ class App extends Component {
           <Route path={/[^/]/} render={() => <Header { ...this.state } loginLogout={ this.loginLogout }/>}/>
             <Switch>
               <Route path='/' component={HomePage} exact  />
-              <div id={ this.state.isLogin ? 'main' : null} >
+              <div id={ this.state.isLogin ? 'main' : null} className='routerContainer'>
               <Route path='/profile' component={SEProfile} exact />
               <Route path='/contract/find'  render={()=><ResultPage  />} exact  />
               <Route path='/signup' component={Signup} exact />

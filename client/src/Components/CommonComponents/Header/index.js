@@ -6,6 +6,7 @@ import CompanyAction from './CompanyAction.js';
 import Nav from './Nav.js';
 
 import './style.css';
+import logo from './logo.svg';
 
 
 class Header extends Component {
@@ -76,7 +77,7 @@ class Header extends Component {
                 <Nav {...options}/>
                 <div className='logo'>
                   <NavLink to='/'>
-                    <img src='https://pbs.twimg.com/profile_images/996015715722387458/WofTKvoF_400x400.jpg' />
+                    <img src={logo} />
                   </NavLink>
                 </div>
               </div>

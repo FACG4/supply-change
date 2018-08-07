@@ -175,7 +175,9 @@ header {
   margin-top: 15px;
   width: 205px;
   padding: 20px 3px;
-  z-index: 10000
+  z-index: 10000;
+  margin-top: 5px;
+top: 29px;
 }
 
 .companyAction-content::after {

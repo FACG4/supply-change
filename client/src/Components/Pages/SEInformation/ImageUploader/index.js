@@ -30,6 +30,8 @@ class ImageUploader extends Component{
                 ...this.state,
                 imageLink: res.data.Location,
                 msg: 'Done uploading'
+            },()=>{
+              this.props.setImgLink(res.data.Location)
             })
             console.log('res=> ', res)
         }).catch(err => {

@@ -7,13 +7,13 @@ import Location from './Location_Places';
 import Policy from './Policy';
 import SocialImpact from './SocialImpact';
 
-const SwitchComponents = ({ activePageIndex, changeState }) => {
+const SwitchComponents = ({ activePageIndex, changeState, setImgLink }) => {
   switch (activePageIndex) {
     case 0:
       return <BusinessInfo changeState={changeState}/>;
       break;
     case 1:
-      return <ImageUploader changeState={changeState}/>;
+      return <ImageUploader changeState={changeState} setImgLink= {setImgLink}/>;
       break;
     case 2:
       return <SocialImpact changeState={changeState}/>;

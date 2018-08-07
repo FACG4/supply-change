@@ -29,7 +29,7 @@ class SEInofrmation extends Component {
     workRegions: '',
     policyArray: [],
     socialImpactArray: [],
-    logoLink: 'https://upload.wikimedia.org/wikipedia/commons/6/62/USPHS_Commissioned_Corps_insignia.png',
+    logoLink: '',
     buttonText: 'Continue',
     redirect:false
   }
@@ -41,6 +41,16 @@ class SEInofrmation extends Component {
       [name]: value
     },()=>{
     })
+  }
+  setImgLink = value => {
+    this.setState ({
+      ...this.state,
+      logoLink: value
+    },()=>{
+      console.log(this.state);
+    })
+
+
   }
   sendData = () => {
     const info = JSON.parse(localStorage.getItem('userInfo'));
@@ -81,7 +91,7 @@ class SEInofrmation extends Component {
         (
       <div className = 'SEForm'>
         <ProgressTracker activePageIndex = { this.state.activePageIndex }/>
-        <Switch changeState = { this.changeState } activePageIndex = { this.state.activePageIndex }/>
+        <Switch changeState = { this.changeState } activePageIndex = { this.state.activePageIndex } setImgLink= { this.setImgLink }/>
         <div className ='errMsg'>{this.state.error}</div>
         <Button children = {this.state.buttonText} className = 'generalButton' onClick = { this.indexIncrement }/>
       </div>
