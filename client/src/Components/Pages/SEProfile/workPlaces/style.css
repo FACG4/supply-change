@@ -40,6 +40,12 @@
   font-size: 18px
 }
 
+
+.no-line{
+  text-decoration-line: none;
+  color: white;
+}
+
 .browseBtnDiv{
   display: flex;
   align-items: center;
@@ -67,7 +73,7 @@
 }
 
 .browseBtnDiv button:hover {
-    background-color:white;
+    background-color:#6ca19f;
     color: #2D918E;
     border: 1px solid #2D918E;
 }
