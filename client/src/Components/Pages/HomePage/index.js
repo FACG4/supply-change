@@ -4,6 +4,7 @@ import HeroSection from './HeroSection';
 import HomeHeader from './HomeHeader';
 import HowItWork from './HowItWork';
 import Testimoinals from './Testimoinals';
+import Supported from './Supported';
 class HomePage extends Component {
   render() {
     return (
@@ -12,6 +13,7 @@ class HomePage extends Component {
         <HeroSection />
         <HowItWork />
         <Testimoinals />
+        <Supported />
 
       </div>
     );
