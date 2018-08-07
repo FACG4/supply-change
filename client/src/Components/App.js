@@ -13,7 +13,7 @@ import './App.css';
 
 class App extends Component {
   state = {
-    isLogin: true,
+    isLogin: false,
     businessRole: 'SE',
     businessName: 'ramy company',
     avatarUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/62/USPHS_Commissioned_Corps_insignia.png'
@@ -43,7 +43,7 @@ class App extends Component {
     return (
       <BrowserRouter>
 
-        <div>
+        <div className='routerContainer'>
           <Route path={/[^/]/} render={() => <Header { ...this.state } loginLogout={ this.loginLogout }/>}/>
             <Switch>
               <Route path='/' component={HomePage} exact  />
