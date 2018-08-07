@@ -5,7 +5,9 @@ import HomePage from './Pages/HomePage';
 import ResultPage from './Pages/ResultPage';
 import Signup from './Pages/Signup';
 import Header from './CommonComponents/Header';
-import Login from './CommonComponents/Login'
+import Login from './CommonComponents/Login';
+import SEInofrmation from './Pages/SEInformation';
+
 
 import './App.css';
 
@@ -13,7 +15,7 @@ class App extends Component {
   state = {
     isLogin: false,
     businessRole: 'SE',
-    businessId: '1',
+    businessId: '4',
     businessName: 'ramy company',
     avatarUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/62/USPHS_Commissioned_Corps_insignia.png'
     }
@@ -28,6 +30,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
+
         <div>
           <Route path={/[^/]/} render={() => <Header { ...this.state } loginLogout={ this.loginLogout }/>}/>
             <Switch>
@@ -37,6 +40,7 @@ class App extends Component {
               <Route path='/contract/find'  render={()=><ResultPage SEId={this.state.businessId} />} exact  />
               <Route path='/signup' component={Signup} exact />
               <Route path='/login' component={Login} exact />
+              <Route path='/seinofrmation' render={() => <SEInofrmation SEId={this.state.businessId}/>}exact />
               </div>
             </Switch>
         </div>
