@@ -1,4 +1,5 @@
 const express = require('express');
+const userDetails = require('./userdetails');
 
 const search = require('./search');
 const auth = require('./auth');
@@ -14,5 +15,6 @@ router.post('/login', login);
 router.post('/search', auth, search);
 router.post('/userdata', storeData);
 router.get('/profile/:id',profile);
+router.post('/userdetails', userDetails);
 
 module.exports = router;

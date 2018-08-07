@@ -1,16 +1,16 @@
 BEGIN;
 
-DROP TABLE IF EXISTS social_enterprise_basic, social_enterprise_details, contract, policy, social_impact_list; 
+DROP TABLE IF EXISTS social_enterprise_basic, social_enterprise_details, contract, policy, social_impact_list;
 DROP TYPE IF EXISTS regions, trade_type, turnover_size, contract_size, social_mission, uk_cities;
 
 CREATE TYPE regions AS ENUM(
     'Greater London',
-    'South East', 
-    'South West', 
-    'West Midlands', 
-    'North West', 
-    'North East', 
-    'Yorkshire and the Humber', 
+    'South East',
+    'South West',
+    'West Midlands',
+    'North West',
+    'North East',
+    'Yorkshire and the Humber',
     'East Midlands'
 );
 
@@ -54,14 +54,14 @@ CREATE TYPE uk_cities AS ENUM(
     'Leeds',
     'Glasgow',
     'Sheffield',
-    'Greater London',
-    'South East', 
-    'South West', 
-    'West Midlands', 
-    'North West', 
-    'North East', 
-    'Yorkshire and the Humber', 
-    'East Midlands'
+    'Bradford',
+    'Liverpool',
+    'Edinburgh',
+    'Manchester',
+    'Bristol',
+    'Kirklees',
+    'Fife',
+    'Wirral'
 );
 
 CREATE TABLE social_enterprise_basic(
@@ -81,7 +81,7 @@ CREATE TABLE social_enterprise_details(
     id SERIAL,
     SE_id INT PRIMARY KEY NOT NULL REFERENCES social_enterprise_basic(id) ON DELETE CASCADE ON UPDATE CASCADE,
     SE_address VARCHAR NOT NULL,
-    SIC_code INT NOT NULL, 
+    SIC_code INT NOT NULL,
     director VARCHAR NOT NULL,
     company_structure VARCHAR NOT NULL,
     trade_type trade_type NOT NULL,
@@ -96,7 +96,7 @@ CREATE TABLE social_enterprise_details(
     selected_contract INT[],
     policy_general INT[],
     location uk_cities NOT NULL,
-    places_to_work_in regions[] NOT NULL    
+    places_to_work_in regions[] NOT NULL
 );
 
 CREATE TABLE social_impact_list(
@@ -117,9 +117,9 @@ CREATE TABLE contract(
     contract_description TEXT NOT NULL,
     value INT NOT NULL,
     social_impact_description TEXT NOT NULL,
-    start_date DATE NOT NULL, 
+    start_date DATE NOT NULL,
     open_for_splitting BOOLEAN DEFAULT FALSE,
-    active_state BOOLEAN DEFAULT TRUE, 
+    active_state BOOLEAN DEFAULT TRUE,
     company_name VARCHAR UNIQUE NOT NULL,
     company_logo VARCHAR NOT NULL,
     contract_region regions NOT NULL,

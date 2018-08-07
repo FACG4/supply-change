@@ -17,6 +17,12 @@ INSERT INTO social_enterprise_basic VALUES
 (DEFAULT, 'GSMC', '00306', 'Ramy', 'Alsurfa', 'ramy@gsg.com', '00442076343456', DEFAULT, DEFAULT, '12345678'),
 (DEFAULT, 'MCGO', '00007', 'Dan', 'Sofer', 'dan@fandc.com', '00442072342456', DEFAULT, DEFAULT, '12345678');
 
+INSERT INTO social_enterprise_basic VALUES
+(DEFAULT, 'THE NUMBER UK LIMITED1', '619001', 'Matt1', 'Davis1', 'mavis@gsg.com1', '004420723434561', DEFAULT, DEFAULT, '123456781'),
+(DEFAULT, 'MercyCorps2', '000162', 'Mavis2', 'Davis2', 'mavs@mc.com2', '004430723434562', DEFAULT, DEFAULT, '123456782'),
+(DEFAULT, 'GSMC3', '003063', 'Ramy3', 'Alsurfa3', 'ramy@gsg.com3', '004420763434563', DEFAULT, DEFAULT, '123456783'),
+(DEFAULT, 'MCGO3', '000073', 'Dan3', 'Sofer3', 'dan@fandc.com3', '004420723424563', DEFAULT, DEFAULT, '123456783');
+
 INSERT INTO social_enterprise_details VALUES
 (DEFAULT, 1, 'Fusion Point', '61900', 'Matt', 'Functional Structure', 'Cleaning', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{2, 3}', '300', '50', '50k-100k', '50k-100k', 'We a small social enterprise', '{2}','{2,3}','London', '{"Greater London","North East"}'),
 (DEFAULT, 2, 'permin street', '00116', 'Ramy', 'Matrix Structure', 'Catering', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{1, 2, 3}', '500', '60', '100-150k', '100-150k', 'We a small social enterprise', NULL,'{2,5}','Leeds','{"East Midlands","South East"}'),
@@ -32,5 +38,5 @@ INSERT INTO contract VALUES
 INSERT INTO social_enterprise_details VALUES
 (DEFAULT, 4, 'Fusion Point1', '613900', 'Matt', 'Functional Structure1', 'Cleaning', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{2, 3}', '300', '50', '50k-100k', '50k-100k', 'We a small social enterprise', '{2}','{2,3}','London', '{"Greater London","North East"}'),
 (DEFAULT,  5,'Fusion Point1', '6113900', 'Matt', 'Functional Structure2', 'Catering', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{2, 3}', '300', '50', '50k-100k', '50k-100k', 'We a small social enterprise', '{2}','{2,3}','London', '{"Greater London","North East"}'),
-(DEFAULT, 6, 'Fusion Point1', '6900', 'Matt', 'Functional Structure3', 'Cleaning', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{2, 3}', '300', '50', '50k-100k', '50k-100k', 'We a small social enterprise', '{2}','{2,3}','London', '{"Greater London","North East"}'),
-(DEFAULT, 7, 'Fusion Point1', '61300', 'Matt', 'Functional Structure4', 'Gardening & Landscaping', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{2, 3}', '300', '50', '50k-100k', '50k-100k', 'We a small social enterprise', '{2}','{2,3}','London', '{"Greater London","North East"}');
+(DEFAULT, 6, 'Fusion Point1', '6900', 'Matt', 'Functional Structure3', 'Cleaning', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{2, 3}', '300', '50', '50k-100k', '50k-100k', 'We a small social enterprise', '{2}','{2,3}','London', '{"Greater London","North East"}')
+-- (DEFAULT, 4, 'Fusion Point1', '61300', 'Matt', 'Functional Structure4', 'Gardening & Landscaping', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{2, 3}', '300', '50', '50k-100k', '50k-100k', 'We a small social enterprise', '{2}','{2,3}','London', '{"Greater London","North East"}');

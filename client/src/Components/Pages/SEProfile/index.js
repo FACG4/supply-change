@@ -25,7 +25,7 @@ class SEProfile extends Component {
         axios.get(`/profile/${info.id}`)
         .then(res => {
           if(res.data.err) {
-            console.log('err');
+            console.log('err',res.data.err);
             this.setState({
               ...this.state,
               err:res.data.err,

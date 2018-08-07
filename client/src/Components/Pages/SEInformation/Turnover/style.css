@@ -21,14 +21,14 @@
   height: 59;
 }
 
-#main {
+/* #main {
   display: flex;
   justify-content: center;
   -ms-flex-align: center;
   align-items: center;
   flex-wrap: wrap;
   transform: translateY(80%);
-}
+} */
 
 .align {
   width: 100%;
@@ -42,7 +42,6 @@
 
 .business-size {
   width: 340px;
-  height: 30px;
 }
 
 #business-size {
