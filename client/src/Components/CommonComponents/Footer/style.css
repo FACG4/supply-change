@@ -16,7 +16,7 @@
   text-align: left;
   color: #E3F4F4;
   bottom: 0px;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .contact-inf, .journey {

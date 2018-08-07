@@ -2,7 +2,7 @@ import React from 'react';
 
 import BusinessInfo from './BusinessInfo';
 import Turnover from './Turnover';
-import UploadLogo from './UploadLogo';
+import ImageUploader from './ImageUploader';
 import Location from './Location_Places';
 import Policy from './Policy';
 import SocialImpact from './SocialImpact';
@@ -13,7 +13,7 @@ const SwitchComponents = ({ activePageIndex, changeState }) => {
       return <BusinessInfo changeState={changeState}/>;
       break;
     case 1:
-      return <UploadLogo changeState={changeState}/>;
+      return <ImageUploader changeState={changeState}/>;
       break;
     case 2:
       return <SocialImpact changeState={changeState}/>;

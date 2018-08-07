@@ -15,12 +15,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.286.2",
     "bcryptjs": "^2.4.3",
+    "bluebird": "^3.5.1",
     "body-parser": "^1.18.3",
     "env2": "^2.2.2",
     "express": "^4.16.3",
-    "pg": "^7.4.3",
+    "file-type": "^8.1.0",
     "jsonwebtoken": "^8.3.0",
+    "multiparty": "^4.2.0",
+    "pg": "^7.4.3",
     "request": "^2.87.0"
   },
   "devDependencies": {
