@@ -30,7 +30,7 @@ class SEInofrmation extends Component {
     policyArray: [],
     socialImpactArray: [],
     logoLink: 'https://upload.wikimedia.org/wikipedia/commons/6/62/USPHS_Commissioned_Corps_insignia.png',
-    buttonText: 'Save & Continue',
+    buttonText: 'Continue',
     redirect:false
   }
 

@@ -24,30 +24,27 @@ class Testimoinals extends React.Component {
     };
 
     return (
-      <Slider {...settings}>
-        <div>
-          <h3>Testimonials</h3>
-          <img src={test} alt=''/>
-          <p className='test-descrp'>“With Supply Change I now have
+      <div className='testimonials'>
+        <h3>Testimonials</h3>
+        <Slider {...settings}>
+          <div>
+            <img src='https://www.brandcrowd.com/gallery/brands/pictures/picture14471472909838.png' alt=''/>
+            <p className='test-descrp'>“With Supply Change I now have
              a real shot at winning public contracts”</p>
-          <small className='test-descrp'>-Kathy,Argonaut</small>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
-      </Slider>
+            <small className='test-descrp'>-Kathy,Argonaut</small>
+          </div>
+          <div>
+            <img src='https://cooloriginal.info/wp-content/uploads/2018/04/cleaning-company-logo-ideas-lovely-cleaning-service-logo-design-logo-design-louisas-cleaning-of-cleaning-company-logo-ideas.jpg' alt=''/>
+            <p className='test-descrp'>“as a social enterprise  company, supply change gave us the power and opportunity to find and submit for public organizations contracts ”</p>
+            <small className='test-descrp'>-Katty,Arnut</small>
+          </div>
+          <div>
+            <img src={test} alt=''/>
+            <p className='test-descrp'>”We recommend all social enterprises to sign up on this site, it helped us to grow up”</p>
+            <small className='test-descrp'>-Ana,Mosh</small>
+          </div>
+        </Slider>
+      </div>
     );
   }
 };

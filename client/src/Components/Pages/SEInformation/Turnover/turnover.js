@@ -3,8 +3,8 @@ import Select from 'react-select';
 
 const optionTurnOver = [
   {
-    value: ' <50k',
-    label: ' <50k'
+    value: '<50k',
+    label: '<50k'
   }, {
     value: '50k-100k',
     label: '50k-100k'
@@ -18,8 +18,8 @@ const optionTurnOver = [
 ];
 const optionSizeContract = [
   {
-    value: ' <50k',
-    label: ' <50k'
+    value: '<50k',
+    label: '<50k'
   }, {
     value: '50k-100k',
     label: '50k-100k'
