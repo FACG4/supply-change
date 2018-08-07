@@ -33,6 +33,7 @@ class ImageUploader extends Component{
             })
             console.log('res=> ', res)
         }).catch(err => {
+          console.log(err);
             this.setState({
                 ...this.state,
                 msg: "can't upload the image"
