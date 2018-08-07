@@ -15,7 +15,7 @@ class LogIn extends Component {
   }
 
   componentWillMount(){
-    if(localStorage.getItem('token')){
+    if(localStorage.getItem('userInfo')){
         this.redirect();
     }
   }
@@ -42,9 +42,9 @@ class LogIn extends Component {
     axios.post('/login', loginInfo)
     .then(res=>{
       if(!res.data.err){
-        localStorage.setItem('token', res.data.token);
+        console.log(res.data);
+        localStorage.setItem('userInfo', JSON.stringify(res.data));
         this.redirect()
-        // window.location = '/profile';
       }else{
         this.callErr(res.data.err);
       }
