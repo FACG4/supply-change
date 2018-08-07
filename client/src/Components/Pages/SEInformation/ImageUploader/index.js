@@ -36,7 +36,7 @@ class ImageUploader extends Component{
           console.log(err);
             this.setState({
                 ...this.state,
-                msg: "can't upload the image"
+                msg: `Can't upload the image / Check your internet connection`
             })
             console.log('err=> ', err)
         });
