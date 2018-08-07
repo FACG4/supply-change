@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink, Redirect } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import axios from 'axios'
 
@@ -20,13 +21,17 @@ class SEInofrmation extends Component {
     companyStructure: '',
     tradeType: '',
     companyDescription: '',
-    businessSize: '',
+    employeesNumber: '',
     turnover: '',
     contractSize: '',
+    socialDescription: '',
+    workDistance: '',
     workRegions: '',
     policyArray: [],
     socialImpactArray: [],
+    logoLink: 'https://upload.wikimedia.org/wikipedia/commons/6/62/USPHS_Commissioned_Corps_insignia.png',
     buttonText: 'Save & Continue',
+    redirect:false
   }
 
   changeState = ({target}) => {
@@ -34,13 +39,21 @@ class SEInofrmation extends Component {
     this.setState ({
       ...this.state,
       [name]: value
+    },()=>{
     })
   }
   sendData = () => {
-    axios.post('/userdetails',{...this.state}).then(response => {
+    const {SEId} = this.props
+    axios.post('/userdetails',{...this.state, SEId}).then(response => {
+      response.data === 'success' ? this.setState ({
+              ...this.state,
+              redirect : true
+            }) : this.setState ({
+                    ...this.state,
+                    error : 'Sorry, an error in inserting data'
+                  })
     });
   }
-
   indexIncrement = (e) => {
       this.state.activePageIndex === 5 ?
       this.sendData() : (
@@ -61,11 +74,16 @@ class SEInofrmation extends Component {
   render() {
 
     return (
+      this.state.redirect ?
+        <Redirect to='/profile' /> :
+        (
       <div className = 'SEForm'>
         <ProgressTracker activePageIndex = { this.state.activePageIndex }/>
         <Switch changeState = { this.changeState } activePageIndex = { this.state.activePageIndex }/>
+        <div className ='errMsg'>{this.state.error}</div>
         <Button children = {this.state.buttonText} className = 'generalButton' onClick = { this.indexIncrement }/>
       </div>
+    )
     );
   }
 }

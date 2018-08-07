@@ -29,3 +29,8 @@
   background: #fff;
   border-radius: 12px
 }
+.errMsg{
+  text-align: center;
+  color: red;
+  font-size: 20px;
+}

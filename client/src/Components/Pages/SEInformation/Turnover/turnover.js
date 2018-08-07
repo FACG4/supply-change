@@ -49,7 +49,7 @@ const TurnoverComp = (
         <div className = 'grid'>
           <div className = 'business-size'>
             <div className = 'form__input'>
-              <input id = 'business-size' type = 'number' name = 'businessSize' className = 'business-input'
+              <input id = 'business-size' type = 'number' name = 'employeesNumber' className = 'business-input'
                 placeholder = 'Number of Employees (or FTE)' required = 'required'
                 onChange = { changeState }/>
               <label htmlFor = 'business-size'> <span className = 'hidden'/></label>

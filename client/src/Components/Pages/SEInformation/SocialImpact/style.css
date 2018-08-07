@@ -93,7 +93,8 @@
   position: absolute;
   margin-left: 35px;
   margin-top: 23px;
-  background: #aaa
+  background: #aaa;
+  display: none
 }
 
 .space__img {

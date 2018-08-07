@@ -20,7 +20,62 @@ class BusinessInfomation extends Component {
         value: 'Gardening & Landscaping',
         label: 'Gardening & Landscaping'
       }
+    ],
+    selectedCity: null,
+    optionCity : [
+      {
+        value: 'London',
+        label: 'London'
+      }, {
+        value: 'Birmingham',
+        label: 'Birmingham'
+      }, {
+        value: 'Leeds',
+        label: 'Leeds'
+      }, {
+        value: 'Glasgow',
+        label: 'Glasgow'
+      }, {
+        value: 'Sheffield',
+        label: 'Sheffield'
+      }, {
+        value: 'Bradford',
+        label: 'Bradford'
+      }, {
+        value: 'Liverpool',
+        label: 'Liverpool'
+      }, {
+        value: 'Edinburgh',
+        label: 'Edinburgh'
+      }, {
+        value: 'Edinburgh',
+        label: 'Edinburgh'
+      }, {
+        value: 'Manchester',
+        label: 'Manchester'
+      }, {
+        value: 'Bristol',
+        label: 'Bristol'
+      }, {
+        value: 'Kirklees',
+        label: 'Kirklees'
+      }, {
+        value: 'Fife',
+        label: 'Fife'
+      }, {
+        value: 'Wirral',
+        label: 'Wirral'
+      }
     ]
+  }
+
+  updateLocation = (selectedCity) => {
+    this.setState({
+      ...this.state,
+      selectedCity:selectedCity
+    })
+    this.props.changeState({target:{name:'companyLocation', value: selectedCity.value}})
+
   }
 
   updateTrade = (selectedTrade) => {
@@ -32,7 +87,7 @@ class BusinessInfomation extends Component {
   }
 
   render() {
-    const { selectedTrade, optionTrade } = this.state;
+    const { selectedTrade, optionTrade, selectedCity, optionCity } = this.state;
     return (
       <div >
         <div className='topForm'>
@@ -45,12 +100,8 @@ class BusinessInfomation extends Component {
           <div className='grid'>
             <div className='form BusinessInfo'>
               <div className='form__field'>
-                <input id='CompanyLocation' type='text' name='companyLocation' onChange={this.props.changeState}
-                  className='form__input' placeholder='Company Location' required />
-                <label htmlFor='CompanyLocation'>
-                  <img src={signal} className='icons' alt='signal' />
-                  <span className='hidden' />
-                </label>
+              <Select className='form__input' value = { selectedCity } onChange = { this.updateLocation }
+              options = { optionCity } placeholder = 'Choose your type of trade:'/>
               </div>
 
               <div className='form__field'>
@@ -92,7 +143,6 @@ class BusinessInfomation extends Component {
               <div className='form__field'>
                 <Select className='form__input' value = { selectedTrade } onChange = { this.updateTrade }
                   options = { optionTrade } placeholder = 'Choose your type of trade:'/>
-
               </div>
 
                 <textarea id='DescriptionOfTheCompany ' type='text' name='companyDescription' onChange = { this.props.changeState }
