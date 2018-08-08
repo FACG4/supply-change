@@ -2,7 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './style.css';
 
-const Footer = () => (<div>
+const Footer = () => (
+
   <footer className='footer'>
     <div className='contact-inf'>
       <img className='logo' src={logo} alt='logo image'/>
@@ -32,6 +33,6 @@ const Footer = () => (<div>
       </div>
     </div>
   </footer>
-</div>);
+);
 
 export default Footer;

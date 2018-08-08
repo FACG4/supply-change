@@ -12,7 +12,8 @@
   height: 100px;
   margin: auto;
   color: #000;
-  font-size: 23px
+  font-size: 23px;
+  margin-top: 39px;
 }
 
 .line__header {
@@ -33,7 +34,13 @@
 .imgs__box {
   display: flex;
   align-content:space-between;
-  margin-left: 60px
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 0;
+  padding-bottom: 30px;
+  margin-top: -42px;
 }
 
 .img__div {
@@ -46,7 +53,7 @@ margin-top:80px;
 }
 
 .img__second {
-  padding:60px 50px;
+  padding:60px 70px;
 }
 
 .img__third {
@@ -57,6 +64,10 @@ margin-top:80px;
 
 }
 .img__fourth {
-margin-top:50px;
+margin-top:53px;
 
+}
+
+.slick-arrow{
+  display: none !important;
 }

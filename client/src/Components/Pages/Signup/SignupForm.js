@@ -5,7 +5,7 @@ import family from './Imgs/family.png';
 import Group1 from './Imgs/Group1.png';
 import Fontawesome from 'react-fontawesome';
 
-export default ({ handleChange, visible, error, isCompany, submitForm, companyInfo }) => {
+export default ({ handleChange, visible, error, error2, isCompany, submitForm, companyInfo }) => {
   return (
     <div className='signup__main'>
       <div className='signup__topForm'>
@@ -24,7 +24,9 @@ export default ({ handleChange, visible, error, isCompany, submitForm, companyIn
       </div>
 
       <div className='align'>
+
         <div className='grid'>
+
           <form action='' method='POST' className='form Signup'>
 
             <div className='form__field'>
@@ -39,6 +41,7 @@ export default ({ handleChange, visible, error, isCompany, submitForm, companyIn
               <div className='form__field'>
                 <input type='submit' className='submitButton' value='check' onClick={isCompany} />
               </div>
+
             }
             {
               error && <div className='error-msg'>Company Not Found</div>
@@ -127,6 +130,7 @@ export default ({ handleChange, visible, error, isCompany, submitForm, companyIn
               )
             }
           </form>
+          {error2&&visible?<div className='error-msg'>{error2}</div>:null}
           <div className='SubmitDiv'>
             <p className='text--center'>
                 Already have an account?
