@@ -5,22 +5,17 @@ import 'slick-carousel/slick/slick-theme.css';
 import test from './test.svg';
 import './style.css';
 
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1
-};
 class Testimoinals extends React.Component {
 
   render() {
     const settings = {
       dots: true,
       infinite: true,
-      speed: 500,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      speed: 2000,
+      autoplay: true,
+      autoplaySpeed: 4000
     };
 
     return (
