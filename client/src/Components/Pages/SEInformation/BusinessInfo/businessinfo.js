@@ -101,7 +101,7 @@ class BusinessInfomation extends Component {
             <div className='form BusinessInfo'>
               <div className='form__field'>
               <Select className='form__input' value = { selectedCity } onChange = { this.updateLocation }
-              options = { optionCity } placeholder = 'Choose your type of trade:'/>
+              options = { optionCity } placeholder = 'Choose company location'/>
               </div>
 
               <div className='form__field'>
@@ -115,7 +115,7 @@ class BusinessInfomation extends Component {
 
               <div className='form__field'>
                 <input id='SIC-Code' type='text' name='SICCode' onChange={this.props.changeState}
-                  className='form__input' placeholder='SIC Code:' required />
+                  className='form__input' placeholder='SIC Code' required />
                 <label htmlFor='SIC-Code'>
                   <img src={binarycode} className='icons' alt='binarycode' />
                   <span className='hidden' />
@@ -124,7 +124,7 @@ class BusinessInfomation extends Component {
 
               <div className='form__field'>
                 <input id='Director' type='text' name='director' onChange={this.props.changeState}
-                  className='form__input' placeholder='Director:' required />
+                  className='form__input' placeholder='Director' required />
                 <label htmlFor='Director'>
                   <img src={director} className='icons' alt='binarycode' />
                   <span className='hidden' />
