@@ -6,7 +6,7 @@ import Contract from './Contract';
 const Result = ({ handleChange, handleSelect, SERegions, changeState, filtereContracts }) => {
 
   return (
-    <main >
+    <main id='main' className='routerContainer'>
       <div className='contract-search-sec'>
         <h4 className='contract-search-sec__title'>Explore Contracts</h4>
         <SearchForm

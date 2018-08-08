@@ -8,6 +8,7 @@ import Header from './CommonComponents/Header';
 import Footer from './CommonComponents/Footer';
 import Login from './Pages/Login'
 import SEInofrmation from './Pages/SEInformation';
+import Error from './Pages/Error';
 
 import './App.css';
 
@@ -47,13 +48,12 @@ class App extends Component {
           <Route path={/[^/]/} render={() => <Header { ...this.state } loginLogout={ this.loginLogout }/>}/>
             <Switch>
               <Route path='/' component={HomePage} exact  />
-              <div id={ this.state.isLogin ? 'main' : null} className='routerContainer'>
               <Route path='/profile' component={SEProfile} exact />
               <Route path='/contract/find'  render={()=><ResultPage  />} exact  />
               <Route path='/signup' component={Signup} exact />
               <Route path='/login' component={Login} exact />
               <Route path='/seinformation' render={() => <SEInofrmation SEId={this.state.businessId}/>}exact />
-              </div>
+              <Route component={Error}  />
             </Switch>
             <Footer />
         </div>
