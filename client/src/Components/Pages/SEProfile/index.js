@@ -13,7 +13,8 @@ class SEProfile extends Component {
     err:null,
     redirect:false,
     new:true,
-    path:null
+    path:null,
+    mainId: ''
   }
 
   componentDidMount() {
@@ -31,6 +32,7 @@ class SEProfile extends Component {
               err:res.data.err,
               redirect: true,
               new:false,
+              mainId: 'main'
             })
           } else {
             console.log('no err',res.data)
@@ -39,6 +41,7 @@ class SEProfile extends Component {
               userInfo:res.data,
               redirect:false,
               new: false,
+              mainId: 'main'
             })
             console.log(this.state.userInfo)
           }
@@ -51,7 +54,8 @@ class SEProfile extends Component {
           ...this.state,
           redirect:true,
           new: false,
-          path:'seinformation'
+          path:'seinformation',
+          mainId: 'main'
         })
 
 
@@ -75,7 +79,7 @@ class SEProfile extends Component {
     return (
       this.state.new? null :(
         !this.state.redirect?(
-          <div>
+          <div id={this.state.mainId} className='routerContainer'>
             <MainInfo {...this.state.userInfo} />
             <Place places = { this.state.userInfo.places_to_work_in} />
           </div>

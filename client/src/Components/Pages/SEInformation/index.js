@@ -89,7 +89,7 @@ class SEInofrmation extends Component {
       this.state.redirect ?
         <Redirect to='/profile' /> :
         (
-      <div className = 'SEForm'>
+      <div className = 'SEForm' id='main' className='routerContainer'>
         <ProgressTracker activePageIndex = { this.state.activePageIndex }/>
         <Switch changeState = { this.changeState } activePageIndex = { this.state.activePageIndex } setImgLink= { this.setImgLink }/>
         <div className ='errMsg'>{this.state.error}</div>
