@@ -31,17 +31,49 @@ class SEInofrmation extends Component {
     socialImpactArray: [],
     logoLink: '',
     buttonText: 'Continue',
-    redirect:false
+    redirect:false,
+    error:'',
+    companyInfo:{}
   }
+
+  componentWillMount() {
+    const info = JSON.parse(localStorage.getItem('userInfo'));
+    const {se_house_no} = info;
+    console.log(se_house_no);
+      const companyNumber = se_house_no;
+      console.log(companyNumber,'iiiiiiiiiiiiiiiiii');
+    companyNumber?
+    axios.get(`/companyinfo/${companyNumber}`)
+      .then(result => {
+        console.log(result, 'resulttttttttttt');
+        if(result.data.err){
+          this.setState({error: result.data.errors[0].error})
+        }else{
+          this.setState({
+              companyInfo:result.data,
+              SICCode:result.data.sic_codes[0],
+              companyLocation:result.data.registered_office_address.locality,
+              companyAddress:result.data.registered_office_address.address_line_1,
+              error:''})
+        }
+      this.saveState()
+}):null
+}
+
+saveState = () =>{
+  const {state} =  this;
+  const info = localStorage.setItem('state', JSON.stringify(state))
+}
 
   changeState = ({target}) => {
     const { value, name } = target
     this.setState ({
       ...this.state,
       [name]: value
-    },()=>{
     })
-  }
+    this.saveState()
+    }
+
   setImgLink = value => {
     this.setState ({
       ...this.state,
@@ -85,13 +117,14 @@ class SEInofrmation extends Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       this.state.redirect ?
         <Redirect to='/profile' /> :
         (
       <div className = 'SEForm'>
         <ProgressTracker activePageIndex = { this.state.activePageIndex }/>
-        <Switch changeState = { this.changeState } activePageIndex = { this.state.activePageIndex } setImgLink= { this.setImgLink }/>
+        <Switch changeState = { this.changeState } activePageIndex = { this.state.activePageIndex } setImgLink= { this.setImgLink } companyInfo={this.state.companyInfo}/>
         <div className ='errMsg'>{this.state.error}</div>
         <Button children = {this.state.buttonText} className = 'generalButton' onClick = { this.indexIncrement }/>
       </div>

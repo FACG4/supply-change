@@ -42,7 +42,7 @@ class LogIn extends Component {
     axios.post('/login', loginInfo)
     .then(res=>{
       if(!res.data.err){
-        console.log(res.data);
+        console.log(res.data,'logindatafrombackend');
         localStorage.setItem('userInfo', JSON.stringify(res.data));
         this.redirect()
       }else{
@@ -58,6 +58,7 @@ class LogIn extends Component {
     const newLoginInfo = {...loginInfo}
     newLoginInfo[e.target.name] = e.target.value;
     this.setState({ loginInfo: newLoginInfo })
+    console.log(loginInfo,'login');
   }
 
   render() {

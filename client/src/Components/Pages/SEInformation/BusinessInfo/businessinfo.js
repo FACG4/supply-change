@@ -87,7 +87,11 @@ class BusinessInfomation extends Component {
   }
 
   render() {
-    const { selectedTrade, optionTrade, selectedCity, optionCity } = this.state;
+    const { selectedTrade, optionTrade, selectedCity, optionCity} = this.state;
+
+    if(!this.props.companyInfo.registered_office_address){
+      return null
+    }else{
     return (
       <div >
         <div className='topForm'>
@@ -99,14 +103,17 @@ class BusinessInfomation extends Component {
         <div className='align'>
           <div className='grid'>
             <div className='form BusinessInfo'>
-              <div className='form__field'>
-              <Select className='form__input' value = { selectedCity } onChange = { this.updateLocation }
-              options = { optionCity } placeholder = 'Choose company location'/>
-              </div>
+            <div className='form__field'>
+              <input id='companyLocation' type='text' name='companyLocation' className='form__input' value={this.props.companyInfo.registered_office_address.locality} required />
+              <label htmlFor='companyLocation'>
+                <img src={signal} className='icons' alt='signal' />
+                <span className='hidden' />
+              </label>
+            </div>
+
 
               <div className='form__field'>
-                <input id='CompanyAddress' type='text' name='companyAddress' onChange={this.props.changeState}
-                  className='form__input' placeholder='Company Address' required />
+                <input id='CompanyAddress' type='text' name='companyAddress' className='form__input' value={this.props.companyInfo.registered_office_address.address_line_1} required />
                 <label htmlFor='CompanyAddress'>
                   <img src={signal} className='icons' alt='signal' />
                   <span className='hidden' />
@@ -114,8 +121,8 @@ class BusinessInfomation extends Component {
               </div>
 
               <div className='form__field'>
-                <input id='SIC-Code' type='text' name='SICCode' onChange={this.props.changeState}
-                  className='form__input' placeholder='SIC Code' required />
+                <input id='SIC-Code' type='text' name='SICCode'
+                  className='form__input' name="SICCode" value={this.props.companyInfo.sic_codes} onChange={this.props.changeState} required />
                 <label htmlFor='SIC-Code'>
                   <img src={binarycode} className='icons' alt='binarycode' />
                   <span className='hidden' />
@@ -151,7 +158,7 @@ class BusinessInfomation extends Component {
           </div>
         </div>
       </div>
-    );
+    );}
   };
 };
 export default BusinessInfomation;

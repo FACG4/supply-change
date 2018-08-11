@@ -8,9 +8,10 @@ import './style.css';
 class BusinessInfo extends Component {
 
   render() {
-    const { changeState } = this.props;
+    const { changeState, companyInfo } = this.props;
+    console.log('0000222', companyInfo);
     return (
-      <BusinessInfomation changeState={changeState} />
+      <BusinessInfomation changeState={changeState} companyInfo={companyInfo} />
     );
   }
 }
