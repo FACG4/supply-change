@@ -1,4 +1,4 @@
-const query = require('../database/query/query');
+const query = require('../../database/query/query');
 
 exports.getContractDetails =contractId => {
   return new Promise((resolve,reject) => {
