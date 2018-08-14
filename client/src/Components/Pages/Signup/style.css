@@ -257,6 +257,13 @@ body {
   line-height: 4px
 }
 
+.buttonSE {
+  background-color:#bff1f1;
+  color: black;
+  border: 1px solid #bff1f1;
+  margin-left: 32px
+}
+
 .button0 {
   background-color: white;
   color: black;
@@ -264,16 +271,6 @@ body {
   margin-left: 32px
 }
 
-.button0:hover {
-  background-color: #77C0C0;
-  border: 1px solid #77C0C0
-}
-
-.button0:hover {
-  background-color:#baeaeaf7;
-  border: 1px solid #baeaeaf7
-
-}
 
 .SubmitDiv a {
   color: #aaa;

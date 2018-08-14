@@ -1,11 +1,109 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
-import family from './Imgs/family.png';
 import Group1 from './Imgs/Group1.png';
 import Fontawesome from 'react-fontawesome';
+import Input from './Input';
+import Checkbox from './Checkbox';
 
 export default ({ handleChange, visible, error, isCompany, submitForm, companyInfo }) => {
+  const arr = [
+    { id: 'businessName',
+      type: 'text',
+      name: 'businessName',
+      className: 'form__input',
+      placeholder: 'Business Name',
+      htmlFor: 'businessName',
+      value: companyInfo.company_name,
+      required: true,
+      finame: 'briefcase'
+    },
+    { id: 'firstName',
+      type: 'text',
+      name: 'firstName',
+      className: 'form__input',
+      placeholder: 'First Name',
+      htmlFor: 'firstName',
+      value: null,
+      min: null,
+      required: true,
+      finame: 'user'
+    },
+    { id: 'lastName',
+      type: 'text',
+      name: 'lastName',
+      className: 'form__input',
+      placeholder: 'Last Name',
+      htmlFor: 'lastName',
+      value: null,
+      min: null,
+      required: true,
+      finame: 'users'
+    },
+    { id: 'email',
+      type: 'email',
+      name: 'email',
+      className: 'form__input',
+      placeholder: 'Email',
+      htmlFor: 'email',
+      value: null,
+      min: null,
+      required: true,
+      finame: 'envelope'
+    },
+    { id: 'password',
+      type: 'password',
+      name: 'password',
+      className: 'form__input',
+      placeholder: 'Password',
+      htmlFor: 'password',
+      value: null,
+      min: null,
+      required: true,
+      finame: 'lock'
+    },
+    { id: 'confirm',
+      type: 'password',
+      name: 'confirm',
+      className: 'form__input',
+      placeholder: 'Confirm Password',
+      htmlFor: 'confirm',
+      value: null,
+      min: null,
+      required: true,
+      finame: 'undo-alt'
+    },
+    { id: 'phone',
+      type: 'number',
+      name: 'phone',
+      className: 'form__input',
+      placeholder: 'Phone Number',
+      htmlFor: 'phone',
+      value: null,
+      min: '0',
+      required: true,
+      finame: 'phone'
+    }
+  ];
+  const checkbox =[
+    {
+      id: 'mailingList',
+      name: 'mailingList',
+      value: 'mailingList',
+      className: 'checkBoxSpan',
+      type: 'checkbox',
+      text: 'Join Mailing List'
+    },
+    {
+      id: 'T&C',
+      name: 'T&C',
+      value: 'T&C',
+      className: 'checkBoxSpan',
+      type: 'checkbox',
+      text: 'T&C'
+    }
+
+  ];
   return (
     <div className='signup__main'>
       <div className='signup__topForm'>
@@ -13,12 +111,11 @@ export default ({ handleChange, visible, error, isCompany, submitForm, companyIn
              Sign Up
         </h3>
         <div className='select-user'>
-
-          <button className='signup__button button0'>
-              Buyer
+          <button className='signup__button buttonSE'>
+        Supplier
           </button>
           <button className='signup__button button0'>
-             Supplier
+              Buyer
           </button>
         </div>
       </div>
@@ -41,7 +138,6 @@ export default ({ handleChange, visible, error, isCompany, submitForm, companyIn
               <div className='form__field'>
                 <input type='submit' className='submitButton' value='check' onClick={isCompany} />
               </div>
-
             }
             {
               error && <div className='error-msg'>Company Not Found</div>
@@ -49,78 +145,15 @@ export default ({ handleChange, visible, error, isCompany, submitForm, companyIn
             {
               visible && (
                 <div>
-                  <div className='form__field'>
-                    <input id='businessName' type='text' name='businessName' value={companyInfo.company_name} className='form__input' placeholder='Business Name' required />
-                    <label htmlFor='businessName'>
-                      <Fontawesome className='fontawesome' name='briefcase' />
-                      <span className='hidden' />
-                    </label>
-                  </div>
-
-                  <div className='form__field'>
-                    <input id='firstName' type='text' name='firstName' onChange={handleChange} className='form__input' placeholder='First Name' required />
-                    <label htmlFor='firstName'>
-                      <Fontawesome className='fontawesome' name='user' />
-                      <span className='hidden' />
-                    </label>
-                  </div>
-
-                  <div className='form__field'>
-                    <input id='lastName' type='text' name='lastName' onChange={handleChange} className='form__input' placeholder='Last Name' required />
-                    <label htmlFor='lastName'>
-                      <Fontawesome className='fontawesome' name='users' />
-
-                      <span className='hidden' />
-                    </label>
-                  </div>
-
-                  <div className='form__field'>
-                    <input id='email' type='email' name='eamil' onChange={handleChange} className='form__input' placeholder='Email' required='required' />
-                    <label htmlFor='email'>
-                      <Fontawesome className='fontawesome' name='envelope' />
-                      <span className='hidden' />
-                    </label>
-                  </div>
-
-                  <div className='form__field'>
-                    <input id='password' type='password' name='password' onChange={handleChange} className='form__input' placeholder='Password' required />
-                    <label htmlFor='password'>
-                      <Fontawesome className='fontawesome' name='lock' />
-                      <span className='hidden' />
-                    </label>
-                  </div>
-
-                  <div className='form__field'>
-                    <input id='confirm' type='password' name='confirm' onChange={handleChange} className='form__input' placeholder='Confirm Password' required />
-                    <label htmlFor='confirm'>
-                      <Fontawesome className='fontawesome' name='undo-alt' />
-
-                      <span className='hidden' />
-                    </label>
-                  </div>
-
-                  <div className='form__field'>
-                    <input id='phone' type='number' name='phone' min='0' onChange={handleChange} className='form__input' placeholder='Phone Number' required />
-                    <label htmlFor='phone'>
-                      <Fontawesome className='fontawesome' name='phone' />
-                      <span className='hidden' />
-                    </label>
-                  </div>
+                  <Input arr={ arr } handleChange ={ handleChange }/>
 
                   <div className='spaceDiv--imgDiv'>
                     <div className='spaceDiv' />
-                    <img src={Group1} alt='' className='spaceImg' />
+                    <img src={ Group1 } alt='' className='spaceImg' />
                   </div>
 
                   <div className='checkBox'>
-                    <input id='mailingList' type='checkbox' onChange = {handleChange} name='mailingList' value='mailingList' />
-                    <span className='checkBoxSpan'>
-                  Join Mailing List
-                    </span>
-                    <input id='T&C' type='checkbox' onChange = {handleChange} name='T&C' value='T&C' />
-                    <span className='checkBoxSpan'>
-                  T&C
-                    </span>
+                    <Checkbox checkbox={ checkbox } handleChange= { handleChange }/>
                   </div>
 
                   <div className='form__field'>
