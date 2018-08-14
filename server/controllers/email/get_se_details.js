@@ -1,6 +1,7 @@
 const query = require('../../database/query/query');
 
 exports.getSEDetails =SEId => {
+
   return new Promise((resolve,reject) => {
     const sql = {
       text: `SELECT bs.SE_house_NO, bs.SE_name, bs.email, bs.phone_number, ds.SE_address,ds.trade_type, ds.location
@@ -10,8 +11,11 @@ exports.getSEDetails =SEId => {
             WHERE bs.id=$1`,
       values: [SEId]
     };
-    query(sql).then(queryResult => {
-      resolve(queryResult.rows[0]);
-    }).catch(err => reject(err));
+
+    query(sql)
+      .then(queryResult => {
+        resolve(queryResult.rows[0]);
+      })
+      .catch(err => reject(err));
   });
 };

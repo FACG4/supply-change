@@ -2,7 +2,7 @@ const { getSEDetails } = require('./get_se_details');
 const { getContractDetails } = require('./get_contract_details');
 const senEmail = require('./send_email');
 
-exports.mailing = (request, response) => {
+exports.email = (request, response) => {
   const { SEId, contractId } = request.body;
 
   Promise.all([getSEDetails(SEId), getContractDetails(contractId)])
