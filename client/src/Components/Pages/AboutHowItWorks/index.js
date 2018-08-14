@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import './style.css';
-
 import data from './aboutHowItWorksData';
+
+import './style.css';
 
 const AboutHowItWorks = ({ target }) => {
 
@@ -18,7 +18,6 @@ const AboutHowItWorks = ({ target }) => {
         ))}
       </div>
     </div>
-
   );
 };
 
