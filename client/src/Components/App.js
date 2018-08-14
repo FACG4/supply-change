@@ -4,6 +4,7 @@ import SEProfile from './Pages/SEProfile';
 import HomePage from './Pages/HomePage';
 import ResultPage from './Pages/ResultPage';
 import Signup from './Pages/Signup';
+import ContractDetails from './Pages/ContractDetails';
 import Header from './CommonComponents/Header';
 import Login from './CommonComponents/Login'
 
@@ -37,10 +38,12 @@ class App extends Component {
               <Route path='/contract/find'  render={()=><ResultPage SEId={this.state.businessId} />} exact  />
               <Route path='/signup' component={Signup} exact />
               <Route path='/login' component={Login} exact />
+              <Route path='/contractinfo/:id' component={ContractDetails} exact />
               </div>
             </Switch>
         </div>
       </BrowserRouter>
+
     );
   }
 }
