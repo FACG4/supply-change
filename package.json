@@ -9,15 +9,25 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "client:init": "cd client && npm i",
     "client:dev": "cd client && npm start",
-    "client:build": "cd client && npm run build"
+    "client:build": "cd client && npm run build",
+    "heroku-postbuild": "npm run client:init && npm run client:build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.286.2",
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.5.1",
     "body-parser": "^1.18.3",
     "env2": "^2.2.2",
     "express": "^4.16.3",
-    "request": "^2.87.0"
+    "file-type": "^8.1.0",
+    "jsonwebtoken": "^8.3.0",
+    "multiparty": "^4.2.0",
+    "nodemailer": "^4.6.7",
+    "pg": "^7.4.3",
+    "request": "^2.87.0",
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
