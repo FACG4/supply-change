@@ -26,9 +26,10 @@ INSERT INTO social_enterprise_basic VALUES
 INSERT INTO social_enterprise_details VALUES
 (DEFAULT, 1, 'Fusion Point', '61900', 'Matt', 'Functional Structure', 'Cleaning', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{2, 3}', '300', '50', '50k-100k', '50k-100k', 'We a small social enterprise', '{2}','{2,3}','London', '{"Greater London","North East"}'),
 (DEFAULT, 2, 'permin street', '00116', 'Ramy', 'Matrix Structure', 'Catering', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{1, 2, 3}', '500', '60', '100-150k', '100-150k', 'We a small social enterprise', NULL,'{2,5}','Leeds','{"East Midlands","South East"}'),
-(DEFAULT, 3, 'some street', '01412', 'HaMa', 'Hybrid Structure', 'Gardening & Landscaping', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', NULL, '200', '70', '150-250k', '150-250k', 'We a small social enterprise', '{2,3}','{1,3}','Sheffield','{"Yorkshire and the Humber"}');
-
-
+(DEFAULT, 3, 'some street', '01412', 'HaMa', 'Hybrid Structure', 'Gardening & Landscaping', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', NULL, '200', '70', '150-250k', '150-250k', 'We a small social enterprise', '{2,3}','{1,3}','Sheffield','{"Yorkshire and the Humber"}'),
+(DEFAULT, 4, 'Fusion Point1', '613900', 'Matt', 'Functional Structure1', 'Cleaning', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{2, 3}', '300', '50', '50k-100k', '50k-100k', 'We a small social enterprise', '{2}','{2,3}','London', '{"Greater London","North East"}'),
+(DEFAULT, 5,'Fusion Point1', '6113900', 'Matt', 'Functional Structure2', 'Catering', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{2, 3}', '300', '50', '50k-100k', '50k-100k', 'We a small social enterprise', '{2}','{2,3}','London', '{"Greater London","North East"}'),
+(DEFAULT, 6, 'Fusion Point1', '6900', 'Matt', 'Functional Structure3', 'Cleaning', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{2, 3}', '300', '50', '50k-100k', '50k-100k', 'We a small social enterprise', '{2}','{2,3}','London', '{"Greater London","North East"}');
 --//START// THESE ARE THE CONTRACT THAT SHOULD BE EXIST DURING THE SEARCH PROCESS
 
 INSERT INTO contract VALUES
@@ -65,9 +66,3 @@ INSERT INTO contract VALUES
 (DEFAULT, 'Gardening & Landscaping in East Midlands', 'Gardening & Landscaping', 'the company should have 50 employees or more...', 'contract about cleaning the houses in the East Midlands', 50500, 'this is going to help alot of people', '2018-09-07', DEFAULT, DEFAULT, 'Company Name22', 'https://bit.ly/2vryUZl','East Midlands', '00971', DEFAULT);
 
 --//END// THESE ARE THE CONTRACT THAT SHOULD BE EXIST DURING THE SEARCH PROCESS
-
-INSERT INTO social_enterprise_details VALUES
-(DEFAULT, 4, 'Fusion Point1', '613900', 'Matt', 'Functional Structure1', 'Cleaning', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{2, 3}', '300', '50', '50k-100k', '50k-100k', 'We a small social enterprise', '{2}','{2,3}','London', '{"Greater London","North East"}'),
-(DEFAULT,  5,'Fusion Point1', '6113900', 'Matt', 'Functional Structure2', 'Catering', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{2, 3}', '300', '50', '50k-100k', '50k-100k', 'We a small social enterprise', '{2}','{2,3}','London', '{"Greater London","North East"}'),
-(DEFAULT, 6, 'Fusion Point1', '6900', 'Matt', 'Functional Structure3', 'Cleaning', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{2, 3}', '300', '50', '50k-100k', '50k-100k', 'We a small social enterprise', '{2}','{2,3}','London', '{"Greater London","North East"}')
--- (DEFAULT, 4, 'Fusion Point1', '61300', 'Matt', 'Functional Structure4', 'Gardening & Landscaping', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{2, 3}', '300', '50', '50k-100k', '50k-100k', 'We a small social enterprise', '{2}','{2,3}','London', '{"Greater London","North East"}');
