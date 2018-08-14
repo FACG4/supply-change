@@ -42,7 +42,7 @@ class Header extends Component {
        this.setState({
          ...this.state,
          isLogin:true,
-         businessName:se_name.substring(0,12),
+         businessName:se_name.substring(0,15),
          avatarUrl:logo_link
        },()=>{
          this.state.isLogin ? window.addEventListener('scroll', this.handleScroll):this.fixNav(this.state.isLogin)

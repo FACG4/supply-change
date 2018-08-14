@@ -8,7 +8,7 @@ const HowItWork = () => (
       <h1> How it works</h1>
       <p > Do you work for a public sector organisation
         <br/>
-and want to drive more social value through your supply chain</p>
+        and want to drive more social value through your supply chain?</p>
       <p>Post upcoming contracts on Supply Change and find outstanding
         <br/> Social Suppliers that ncrease impact in your local communities.</p>
       <h1>Sign up today</h1>

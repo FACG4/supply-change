@@ -36,7 +36,7 @@ class App extends Component {
         this.setState({
           ...this.state,
           isLogin:true,
-          businessName:se_name.substring(0,12),
+          businessName:se_name.substring(0,15),
           avatarUrl:logo_link,
           businessId:id
         })

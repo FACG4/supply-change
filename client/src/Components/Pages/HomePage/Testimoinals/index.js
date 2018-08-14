@@ -30,12 +30,12 @@ class Testimoinals extends React.Component {
           </div>
           <div>
             <img src='https://cooloriginal.info/wp-content/uploads/2018/04/cleaning-company-logo-ideas-lovely-cleaning-service-logo-design-logo-design-louisas-cleaning-of-cleaning-company-logo-ideas.jpg' alt=''/>
-            <p className='test-descrp'>“as a social enterprise  company, supply change gave us the power and opportunity to find and submit for public organizations contracts ”</p>
+            <p className='test-descrp'>“As a social enterprise, Supply Change gave us the opportunity to find and tender for public contracts.”</p>
             <small className='test-descrp'>-Katty,Arnut</small>
           </div>
           <div>
             <img src={test} alt=''/>
-            <p className='test-descrp'>”We recommend all social enterprises to sign up on this site, it helped us to grow up”</p>
+            <p className='test-descrp'>”We recommend all social enterprises to sign up on this site, it helped us grow”</p>
             <small className='test-descrp'>-Ana,Mosh</small>
           </div>
         </Slider>

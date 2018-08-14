@@ -46,7 +46,7 @@ module.exports = (req, res) => {
               };
               query(sql2).then(queryResult2 => {
                 if (queryResult2.rowCount) {
-                  const { id, password: hashedPassword, is_complete, logo_link, se_name } = queryResult.rows[0];
+                  const { id, password: hashedPassword, is_complete, logo_link, se_name } = queryResult2.rows[0];
                   return res.end(JSON.stringify({
                     token,
                     id,
