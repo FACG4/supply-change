@@ -4,6 +4,7 @@ import SEProfile from './Pages/SEProfile';
 import HomePage from './Pages/HomePage';
 import ResultPage from './Pages/ResultPage';
 import Signup from './Pages/Signup';
+import AboutHowItWorks from './Pages/AboutHowItWorks';
 import Header from './CommonComponents/Header';
 import Footer from './CommonComponents/Footer';
 import Login from './Pages/Login'
@@ -26,6 +27,7 @@ class App extends Component {
         isLogin:!this.state.isLogin
       })
     }
+
     componentDidMount() {
       const info = JSON.parse(localStorage.getItem('userInfo'));
       if (info) {
@@ -41,9 +43,9 @@ class App extends Component {
     }
 
   render() {
+    
     return (
       <BrowserRouter>
-
         <div className='routerContainer'>
           <Route path={/[^/]/} render={() => <Header { ...this.state } loginLogout={ this.loginLogout }/>}/>
             <Switch>
@@ -53,6 +55,8 @@ class App extends Component {
               <Route path='/signup' component={Signup} exact />
               <Route path='/login' component={Login} exact />
               <Route path='/seinformation' render={() => <SEInofrmation SEId={this.state.businessId}/>}exact />
+              <Route path='/About' render={()=><AboutHowItWorks target='about' />} exact />
+              <Route path='/howitwork' render={()=><AboutHowItWorks target='howItWorks' />}  exact />
               <Route component={Error}  />
             </Switch>
             <Footer />
