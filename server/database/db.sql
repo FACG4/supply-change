@@ -122,7 +122,7 @@ CREATE TABLE contract(
     active_state BOOLEAN DEFAULT TRUE, 
     company_name VARCHAR UNIQUE NOT NULL,
     company_logo VARCHAR NOT NULL,
-    company_email VARCHAR NOT NULL,
+    company_email VARCHAR UNIQUE NOT NULL,
     contract_region regions NOT NULL,
     post_code VARCHAR NOT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
