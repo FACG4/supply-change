@@ -5,6 +5,7 @@ import HomePage from './Pages/HomePage';
 import ResultPage from './Pages/ResultPage';
 import Signup from './Pages/Signup';
 import AboutHowItWorks from './Pages/AboutHowItWorks';
+import ContractDetails from './Pages/ContractDetails';
 import Header from './CommonComponents/Header';
 import Footer from './CommonComponents/Footer';
 import Login from './Pages/Login'
@@ -43,7 +44,7 @@ class App extends Component {
     }
 
   render() {
-    
+
     return (
       <BrowserRouter>
         <div className='routerContainer'>
@@ -57,11 +58,13 @@ class App extends Component {
               <Route path='/seinformation' render={() => <SEInofrmation SEId={this.state.businessId}/>}exact />
               <Route path='/About' render={()=><AboutHowItWorks target='about' />} exact />
               <Route path='/howitwork' render={()=><AboutHowItWorks target='howItWorks' />}  exact />
+              <Route path='/contractinfo/:id' component={ContractDetails} exact />
               <Route component={Error}  />
             </Switch>
             <Footer />
         </div>
       </BrowserRouter>
+
     );
   }
 }

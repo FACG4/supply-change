@@ -5,6 +5,7 @@ const search = require('./search');
 const { email } = require('./email');
 const auth = require('./auth');
 const profile = require('./social_profile');
+const getContractInfo = require('./get_contract_info');
 const getCompanyInfo = require('./get_company_info');
 const storeData = require('./store_user_data');
 const uploadImage = require('./upload_image');
@@ -14,6 +15,7 @@ const router = express.Router();
 
 router.get('/companyinfo/:companyNumber', getCompanyInfo);
 router.post('/login', login);
+router.get('/contractinfo/:contractId', getContractInfo);
 router.post('/search', search);
 router.post('/userdata', storeData);
 router.get('/profile/:id',profile);
