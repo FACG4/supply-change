@@ -4,9 +4,11 @@ import { Redirect, NavLink } from 'react-router-dom';
 import './style.css';
 
 const Error=() => {
+  const info = JSON.parse(localStorage.getItem('userInfo'));
+  const id =info ? 'main' : null;
 
   return (
-    <div className='error_page_cntnt'>
+    <div className='error_page_cntnt' id={id}>
       <h2>
         <span>4</span>
         <span>0</span>

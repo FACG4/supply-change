@@ -6,6 +6,7 @@
 
 .ptracker__container{
     min-width: 600px;
+    padding-top: 1px;
 }
 
 .ptracker__v-center {

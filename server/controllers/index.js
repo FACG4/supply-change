@@ -2,7 +2,7 @@ const express = require('express');
 
 const userDetails = require('./userdetails');
 const search = require('./search');
-const email = require('./email');
+const { email } = require('./email');
 const auth = require('./auth');
 const profile = require('./social_profile');
 const getCompanyInfo = require('./get_company_info');

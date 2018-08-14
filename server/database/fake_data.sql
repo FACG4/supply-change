@@ -26,7 +26,7 @@ INSERT INTO social_enterprise_basic VALUES
 INSERT INTO social_enterprise_details VALUES
 (DEFAULT, 1, 'Fusion Point', '61900', 'Matt', 'Functional Structure', 'Cleaning', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{2, 3}', '300', '50', '50k-100k', '50k-100k', 'We a small social enterprise', '{2}','{2,3}','London', '{"Greater London","North East"}'),
 (DEFAULT, 2, 'permin street', '00116', 'Ramy', 'Matrix Structure', 'Catering', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{1, 2, 3}', '500', '60', '100-150k', '100-150k', 'We a small social enterprise', NULL,'{2,5}','Leeds','{"East Midlands","South East"}'),
-(DEFAULT, 3, 'some street', '01412', 'HaMa', 'Hybrid Structure', 'Gardening & LandGardening & Landscapingscaping', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', NULL, '200', '70', '150-250k', '150-250k', 'We a small social enterprise', '{2,3}','{1,3}','Sheffield','{"Yorkshire and the Humber"}');
+(DEFAULT, 3, 'some street', '01412', 'HaMa', 'Hybrid Structure', 'Gardening & Landscaping', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', NULL, '200', '70', '150-250k', '150-250k', 'We a small social enterprise', '{2,3}','{1,3}','Sheffield','{"Yorkshire and the Humber"}');
 
 
 --//START// THESE ARE THE CONTRACT THAT SHOULD BE EXIST DURING THE SEARCH PROCESS
