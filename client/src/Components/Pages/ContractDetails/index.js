@@ -52,7 +52,7 @@ export default class ContractDetails extends Component {
         
     }
 
-    componentWillMount(){        
+    componentDidMount(){        
         this.getContractInfo(this.props.match.params.id)        
     }
 
