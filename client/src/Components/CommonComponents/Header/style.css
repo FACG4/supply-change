@@ -1,4 +1,4 @@
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -11,8 +11,7 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 1900px;
-}
+} */
 
 header {
   position: fixed;
@@ -176,7 +175,9 @@ header {
   margin-top: 15px;
   width: 205px;
   padding: 20px 3px;
-  z-index: 10000
+  z-index: 10000;
+  margin-top: 5px;
+top: 29px;
 }
 
 .companyAction-content::after {

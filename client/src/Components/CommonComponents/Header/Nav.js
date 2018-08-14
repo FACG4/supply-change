@@ -16,7 +16,7 @@ const Nav = props => {
       </li>
       <li className='item'>
         <div className='post_find_Contract'>
-          <NavLink to={action(businessRole).path}>
+          <NavLink to={`/contract/${action(businessRole).path}`}>
             {action(businessRole).text} a contract
           </NavLink>
         </div>
