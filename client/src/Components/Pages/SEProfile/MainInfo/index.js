@@ -73,28 +73,28 @@ const mainInfo = props => {
           <div className='listItemsInfo'>
             <ul >
               <li>
-                <img src={Vector}/>
+                <img src={Vector} alt=''/>
                 <span>{se_address}</span>
               </li>
               <li>
-                <img src={compUrl}/>
+                <img src={compUrl} alt=''/>
                 <span>www.example.com</span>
               </li>
               <li>
-                <img src={phoneCall}/>
+                <img src={phoneCall} alt=''/>
                 <span>{phone_number}</span>
               </li>
               <li>
-                <img src={mail}/>
+                <img src={mail} alt=''/>
                 <span>example@example.com</span>
               </li>
             </ul>
           </div>
           <div className='socialMedia'>
             <ul >
-              <li><img src={facebook}/></li>
-              <li><img src={instagram}/></li>
-              <li><img src={twitter}/></li>
+              <li><img src={facebook} alt=''/></li>
+              <li><img src={instagram} alt=''/></li>
+              <li><img src={twitter} alt=''/></li>
             </ul>
           </div>
         </div>
