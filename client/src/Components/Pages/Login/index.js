@@ -14,7 +14,7 @@ class LogIn extends Component {
     redirect: false
   }
 
-  componentWillMount(){
+  componentWillMount() {
     if(localStorage.getItem('userInfo')){
         this.redirect();
     }
@@ -40,7 +40,7 @@ class LogIn extends Component {
     const { loginInfo } = this.state;
 
     axios.post('/login', loginInfo)
-    .then(res=>{
+    .then(res => {
       if(!res.data.err){
         console.log(res.data);
         localStorage.setItem('userInfo', JSON.stringify(res.data));
@@ -48,7 +48,7 @@ class LogIn extends Component {
       }else{
         this.callErr(res.data.err);
       }
-    }).catch(err=>{
+    }).catch(err => {
       this.callErr('Something went wrong');
     })
   }
@@ -64,24 +64,24 @@ class LogIn extends Component {
 
     return (
       this.state.redirect?
-        <Redirect to='/profile' /> :
+        <Redirect to ='/profile' /> :
         (
-          <div className="flex">
-          <div className="tringle"/>
-          <div className="log__header">
-              <h3 className="login__heading">
+          <div className ="flex">
+          <div className ="tringle"/>
+          <div className ="log__header">
+              <h3 className ="login__heading">
                   LOG IN
               </h3>
             </div>
-            <div className="login__main">
-              <div className="login__top">
-                <form action="" method="POST" className="form login">
+            <div className = "login__main">
+              <div className = "login__top">
+                <form action = "" method="POST" className="form login">
 
-                  <div className="form__field">
-                    <input id="username" type="text" name="email" onChange={this.handleChange} className="form__input" placeholder="email" required />
-                      <label htmlFor="username">
-                      <Fontawesome className="fontawe" name="user" />
-                      <span className="hidden" />
+                  <div className = "form__field">
+                    <input id = "username" type="text" name="email" onChange = {this.handleChange} className = "form__input" placeholder = "email" required />
+                      <label htmlFor = "username">
+                      <Fontawesome className = "fontawe" name = "user" />
+                      <span className = "hidden" />
                     </label>
                    </div>
 

@@ -21,7 +21,6 @@ module.exports = (req, res) => {
     workDistance,
     SEId
   } = req.body;
-  console.log(req.body);
 
   const sql={ text: `INSERT INTO social_enterprise_details (
   SE_id,
@@ -66,10 +65,6 @@ module.exports = (req, res) => {
   };
 
   query(sql).then(queryResult => {
-    console.log(queryResult);
-    // if (queryResult.rowCount !== 1) {
-    //   return res.end('failed');
-    // }
   }).then(() => {
     const sql2={
       text: 'UPDATE social_enterprise_basic SET is_complete = $1 WHERE id = $2;',

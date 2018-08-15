@@ -21,12 +21,9 @@ class SEProfile extends Component {
     const info = JSON.parse(localStorage.getItem('userInfo'));
     if (info && info.id ) {
       if  (info.is_complete) {
-        console.log(444444444);
-
         axios.get(`/profile/${info.id}`)
         .then(res => {
           if(res.data.err) {
-            console.log('err',res.data.err);
             this.setState({
               ...this.state,
               err:res.data.err,
@@ -35,7 +32,6 @@ class SEProfile extends Component {
               mainId: 'main'
             })
           } else {
-            console.log('no err',res.data)
             this.setState({
               ...this.state,
               userInfo:res.data,
@@ -43,13 +39,11 @@ class SEProfile extends Component {
               new: false,
               mainId: 'main'
             })
-            console.log(this.state.userInfo)
           }
         });
 
 
       } else {
-        console.log('else');
         this.setState({
           ...this.state,
           redirect:true,
@@ -60,20 +54,15 @@ class SEProfile extends Component {
 
 
       }
-      console.log('infooooo');
-
     } else {
-      console.log('no infioooo');
       this.setState({
         ...this.state,
         redirect: true,
         new:false,
         path:'login'
       })
-
     }
   }
-
 
   render() {
     return (
@@ -83,7 +72,7 @@ class SEProfile extends Component {
             <MainInfo {...this.state.userInfo} />
             <Place places = { this.state.userInfo.places_to_work_in} />
           </div>
-        ): <Redirect to={`/${this.state.path}`}/>
+        ): <Redirect to = {`/${this.state.path}`}/>
       )
     );
   }

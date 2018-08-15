@@ -1,7 +1,7 @@
 const query = require('./../database/query/query');
 
-module.exports = (req, res) => {  
-  if (req.params.contractId && typeof +req.params.contractId === 'number') {    
+module.exports = (req, res) => {
+  if (req.params.contractId) {
     const id = req.params.contractId;
 
     const sql = {

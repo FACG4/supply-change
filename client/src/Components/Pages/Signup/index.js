@@ -53,7 +53,6 @@ class SignUp extends Component {
     if (userInfo['T&C']) {
       axios.post('/userdata', userInfo)
         .then((response)=> {
-          console.log(response);
           if (response.data.msg === 'success') {
             this.setState({redirect:true})
           }else{
