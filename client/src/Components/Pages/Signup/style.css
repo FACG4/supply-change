@@ -22,6 +22,10 @@ body {
   min-height: 100vh;
 }
 
+.signup__main {
+  margin-top:5%
+}
+
 .align {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -110,7 +114,11 @@ body {
   flex: 1;
 }
 
-.Signup label, .Signup input[type='text'], .Signup input[type='password'], .Signup input[type='submit'] {
+.Signup label, .Signup input[type='text'],
+.Signup input[type='password'],
+.Signup input[type='submit'],
+.Signup input[type='email'],
+.Signup input[type='number'] {
   border-radius: 0.25rem;
   padding: 16px;
   padding: 1rem;
@@ -141,7 +149,10 @@ body {
   color: #474747
 }
 
-.Signup input[type='password'], .Signup input[type='text'] {
+.Signup input[type='password'],
+.Signup input[type='text'] ,
+.Signup input[type='email'],
+.Signup input[type='number']{
   background-color: #fff;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
@@ -163,7 +174,14 @@ body {
   text-transform: uppercase;
 }
 
-.Signup input[type='text']:focus, .Signup input[type='text']:hover, .Signup input[type='password']:focus, .Signup input[type='password']:hover {
+.Signup input[type='text']:focus,
+.Signup input[type='text']:hover,
+.Signup input[type='password']:focus,
+.Signup input[type='password']:hover ,
+.Signup input[type='email']:focus,
+.Signup input[type='number']:focus,
+.Signup input[type='email']:hover,
+.Signup input[type='number']:hover{
   box-shadow: -1px 0px 1px 0px #C4C4C4
 }
 
@@ -214,6 +232,7 @@ body {
   margin-top: 10px
 }
 
+
 .Signup input[type='submit']:focus, .Signup input[type='submit']:hover {
   border: 2px solid #2d918e;
   border-radius: 9px;
@@ -239,6 +258,20 @@ body {
   line-height: 4px
 }
 
+.buttonSE {
+  background-color:#bff1f1;
+  color: black;
+  border: 1px solid #bff1f1;
+  margin-left: 32px
+}
+
+.buttonSE :hover {
+  background-color:#bff1f1;
+  color: black;
+  border: 1px solid #bff1f1;
+  margin-left: 32px
+}
+
 .button0 {
   background-color: white;
   color: black;
@@ -246,10 +279,6 @@ body {
   margin-left: 32px
 }
 
-.button0:hover {
-  background-color: #77C0C0;
-  border: 1px solid #77C0C0
-}
 
 .SubmitDiv a {
   color: #aaa;
@@ -276,7 +305,7 @@ body {
 }
 
 .text--login {
-  color: red;
+  color: black;
   line-height: 70px;
   margin-left: 15px
 }
@@ -296,4 +325,20 @@ body {
   margin: auto;
   width: 100%;
   margin-left: 10%
+}
+
+.error-msg {
+  padding: 10px;
+  border-radius: 1rem;
+  color: red;
+  background-color: #eee;
+  width: 80%;
+  margin: 7% auto;
+  font-size: 20px;
+  word-spacing: .3em;
+  text-align: center;
+}
+
+.divBox {
+  display: inline;
 }
