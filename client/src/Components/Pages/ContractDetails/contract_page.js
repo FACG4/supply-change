@@ -55,7 +55,7 @@ const ContractPage = props => {
                 <SideIcon fontAwesomeClass='fa fa-th-large' sideTitle='Category:' fillInfo={category} />
                 <SideIcon fontAwesomeClass='fas fa-dollar-sign' sideTitle='Value:' fillInfo={value} />
               </div>
-              <Button >Apply Now</Button>
+              <Button onClick={props.sendMsg}>Apply Now</Button>
             </div>
           </section>
         </div>

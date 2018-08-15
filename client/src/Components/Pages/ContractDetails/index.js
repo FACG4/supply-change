@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import ContractPage from './contract_page';
 import './style.css';
+import { ConstructorJSONImport } from 'yandex-map-react';
 
 export default class ContractDetails extends Component {
 
@@ -10,7 +11,8 @@ export default class ContractDetails extends Component {
         lat: null,
         lon: null,
         details: null,
-        err:null 
+        userInfo: null,
+        err:null
     }
 
     //get the city lat and lng 
@@ -52,14 +54,38 @@ export default class ContractDetails extends Component {
         
     }
 
-    componentDidMount(){        
+    sendMsg = () => {
+        if(this.state.userInfo){
+            axios.post('/email',{
+                seId: this.state.userInfo.id,
+                contractId: this.props.match.params.id
+            },
+            withCredentials: true
+            )
+            .then(result => console.log(result))
+            .catch(err=>console.log(err))
+        }else{
+            window.location = '/';
+        }
+    }
+
+    componentDidMount(){
+        const userInfo = localStorage.getItem('userInfo')
+        if(userInfo){
+            this.setState({
+                ...this.state,
+                userInfo
+            })       
+        }else{
+            window.location = '/';
+        }
         this.getContractInfo(this.props.match.params.id)        
     }
 
 
   render() {
     return (
-      <ContractPage {...this.state} />
+      <ContractPage sendMsg={this.sendMsg} {...this.state} />
     );
   }
 }
