@@ -39,13 +39,10 @@ class SEInofrmation extends Component {
   componentWillMount() {
     const info = JSON.parse(localStorage.getItem('userInfo'));
     const {se_house_no} = info;
-    console.log(se_house_no);
       const companyNumber = se_house_no;
-      console.log(companyNumber,'iiiiiiiiiiiiiiiiii');
     companyNumber?
     axios.get(`/companyinfo/${companyNumber}`)
       .then(result => {
-        console.log(result, 'resulttttttttttt');
         if(result.data.err){
           this.setState({error: result.data.errors[0].error})
         }else{
@@ -79,7 +76,6 @@ saveState = () =>{
       ...this.state,
       logoLink: value
     },()=>{
-      console.log(this.state);
     })
 
 
@@ -117,7 +113,6 @@ saveState = () =>{
   }
 
   render() {
-    console.log(this.state);
     return (
       this.state.redirect ?
         <Redirect to='/profile' /> :
