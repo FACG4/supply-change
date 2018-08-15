@@ -119,9 +119,9 @@ export default ({ handleChange, visible, error, error2, isCompany, submitForm, c
                     <span className='checkBoxSpan'>
                   Join Mailing List
                     </span>
-                    <input id='T&C' type='checkbox' onChange = {handleChange} name='T&C' value='T&C' />
+                    <input id='T&C' type='checkbox' onChange = {handleChange} name='TC'  />
                     <span className='checkBoxSpan'>
-                  T&C
+                    T&C
                     </span>
                   </div>
 

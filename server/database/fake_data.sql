@@ -12,16 +12,10 @@ INSERT INTO policy VALUES
 (DEFAULT, 'Do you have a quality assurance certification relevant to the trade you registered for? (e.g ISO 9001:2000)');
 
 INSERT INTO social_enterprise_basic VALUES
-(DEFAULT, 'THE NUMBER UK LIMITED s', '61900', 'Matt', 'Davis', 'mm@gsg.com', '0044207243456', DEFAULT, DEFAULT, '$2a$08$zvbcrzJJmrKPi/Bn04b8GOUP7kbZq3YDmO1eUmn9QvSE0Zi7AQaKu'),
-(DEFAULT, 'MercyCorps', '00016', 'Mavis', 'Davis', 'mavs@mc.com', '00443072343456', DEFAULT, DEFAULT, '12345678'),
-(DEFAULT, 'GSMC', '00306', 'Ramy', 'Alsurfa', 'ramy@gsg.com', '00442076343456', DEFAULT, DEFAULT, '12345678'),
-(DEFAULT, 'MCGO', '00007', 'Dan', 'Sofer', 'dan@fandc.com', '00442072342456', DEFAULT, DEFAULT, '12345678');
-
-INSERT INTO social_enterprise_basic VALUES
-(DEFAULT, 'THE NUMBER UK LIMITED1', '619001', 'Matt1', 'Davis1', 'mavis@gsg.com1', '004420723434561', DEFAULT, DEFAULT, '123456781'),
-(DEFAULT, 'MercyCorps2', '000162', 'Mavis2', 'Davis2', 'mavs@mc.com2', '004430723434562', DEFAULT, DEFAULT, '123456782'),
-(DEFAULT, 'GSMC3', '003063', 'Ramy3', 'Alsurfa3', 'ramy@gsg.com3', '004420763434563', DEFAULT, DEFAULT, '123456783'),
-(DEFAULT, 'MCGO3', '000073', 'Dan3', 'Sofer3', 'dan@fandc.com3', '004420723424563', DEFAULT, DEFAULT, '123456783');
+(DEFAULT, 'THE NUMBER UK LIMITED s', '61900', 'Matt', 'Davis', 'mm@gsg.com', '0044207243456', DEFAULT, DEFAULT, '$2a$08$fdcSqbLxn1jr/ijgSBUQQuVEe/viQ9.FFYQfY57WMpGOqvaNc.2R6'),
+(DEFAULT, 'MercyCorps', '00016', 'Mavis', 'Davis', 'mavs@mc.com', '00443072343456', DEFAULT, DEFAULT, '$2a$08$fdcSqbLxn1jr/ijgSBUQQuVEe/viQ9.FFYQfY57WMpGOqvaNc.2R6'),
+(DEFAULT, 'GSMC', '00306', 'Ramy', 'Alsurfa', 'ramy@gsg.com', '00442076343456', DEFAULT, DEFAULT, '$2a$08$fdcSqbLxn1jr/ijgSBUQQuVEe/viQ9.FFYQfY57WMpGOqvaNc.2R6'),
+(DEFAULT, 'MCGO', '00007', 'Dan', 'Sofer', 'dan@fandc.com', '00442072342456', DEFAULT, DEFAULT, '$2a$08$fdcSqbLxn1jr/ijgSBUQQuVEe/viQ9.FFYQfY57WMpGOqvaNc.2R6');
 
 INSERT INTO social_enterprise_details VALUES
 (DEFAULT, 1, 'Fusion Point', '61900', 'Matt', 'Functional Structure', 'Cleaning', 'https://s3-us-west-2.amazonaws.com/supply-change/selogo.jpg', 'We are going to do some good', '{2, 3}', '300', '50', '50k-100k', '50k-100k', 'We a small social enterprise', '{2}','{2,3}','London', '{"Greater London","North East"}'),
