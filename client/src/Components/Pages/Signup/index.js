@@ -50,7 +50,7 @@ class SignUp extends Component {
       userInfo
     } = this.state;
     userInfo.companyName = this.state.companyInfo.company_name;
-    if (userInfo['T&C']) {
+    if (userInfo['TC']) {
       axios.post('/userdata', userInfo)
         .then((response)=> {
           if (response.data.msg === 'success') {

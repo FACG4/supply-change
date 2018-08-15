@@ -6,11 +6,13 @@ const loginInfo = {
     password: Joi.string().min(8).max(30).required()
   }
 };
+
 const companyInfo = {
   params: {
     companyNumber: Joi.string().required()
   }
 };
+
 const userdata = {
   body: {
     CompanyHouseNumber: Joi.number().required(),
@@ -19,9 +21,10 @@ const userdata = {
     lastName: Joi.string().required(),
     eamil: Joi.string().email().required(),
     password: Joi.string().min(8).max(30).required(),
+    confirm: Joi.string().min(8).max(30).required(),
     phone: Joi.string().required(),
-    mailingList: Joi.boolean()
-
+    mailingList: Joi.boolean(),
+    TC: Joi.boolean()
   }
 };
 const socailProfile = {
@@ -57,10 +60,11 @@ const search = {
     SEId: Joi.string().email().required()
   }
 };
+
 const contractId = {
   body: {
     contractId: Joi.number().required()
   }
 };
 
-module.exports = { loginInfo, companyInfo,userdata,socailProfile,userdetails, search,contractId };
+module.exports = { loginInfo, companyInfo,userdata,socailProfile,userdetails, search, contractId };
