@@ -3,7 +3,7 @@ const { Joi } = require('celebrate');
 const loginInfo = {
   body: {
     email: Joi.string().email().required(),
-    password: Joi.string().min(8).max(30).required()
+    password: Joi.string().max(30).required()
   }
 };
 
@@ -20,8 +20,8 @@ const userdata = {
     firstName: Joi.string().required(),
     lastName: Joi.string().required(),
     eamil: Joi.string().email().required(),
-    password: Joi.string().min(8).max(30).required(),
-    confirm: Joi.string().min(8).max(30).required(),
+    password: Joi.string().max(30).required(),
+    confirm: Joi.string().max(30).required(),
     phone: Joi.string().required(),
     mailingList: Joi.boolean(),
     TC: Joi.boolean()
