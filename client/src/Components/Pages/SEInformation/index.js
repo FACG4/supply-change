@@ -37,24 +37,32 @@ class SEInofrmation extends Component {
   }
 
   componentWillMount() {
-    const info = JSON.parse(localStorage.getItem('userInfo'));
-    const {se_house_no} = info;
-      const companyNumber = se_house_no;
-    companyNumber?
-    axios.get(`/companyinfo/${companyNumber}`)
-      .then(result => {
-        if(result.data.err){
-          this.setState({error: result.data.errors[0].error})
-        }else{
-          this.setState({
-              companyInfo:result.data,
-              SICCode:result.data.sic_codes[0],
-              companyLocation:result.data.registered_office_address.locality,
-              companyAddress:result.data.registered_office_address.address_line_1,
-              error:''})
-        }
-      this.saveState()
-}):null
+    if (localStorage.getItem('userInfo')){
+        const info = JSON.parse(localStorage.getItem('userInfo'));
+        const {se_house_no} = info;
+          const companyNumber = se_house_no;
+        companyNumber?
+        axios.get(`/companyinfo/${companyNumber}`)
+          .then(result => {
+            if(result.data.err){
+              this.setState({error: result.data.errors[0].error})
+            }else{
+              console.log('result=>> ', result);
+              
+              this.setState({
+                  companyInfo:result.data,
+                  companyLocation:result.data.registered_office_address.locality,
+                  companyAddress:result.data.registered_office_address.address_line_1,
+                  error:''})
+            }
+          this.saveState()
+        }):null
+    }else{
+      this.setState({
+        ...this.state,
+        redirect: true
+      })
+    }
 }
 
 saveState = () =>{

@@ -32,7 +32,7 @@ export default ({ handleChange, visible, error, error2, isCompany, submitForm, c
             <br/>
 
             <div className='form__field'>
-              <input id='CompanyHouseNumber' type='number' min='0' name='CompanyHouseNumber' onChange={handleChange} className='form__input' placeholder='Company House Number' required />
+              <input id='CompanyHouseNumber' type='text' name='CompanyHouseNumber' onChange={handleChange} className='form__input' placeholder='Company House Number' required />
               <label htmlFor='CompanyHouseNumber'>
                 <Fontawesome className='fontawesome' name='sort-numeric-up' />
                 <span className='hidden' />

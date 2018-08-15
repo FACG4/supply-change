@@ -15,7 +15,7 @@ const companyInfo = {
 
 const userdata = {
   body: {
-    CompanyHouseNumber: Joi.number().required(),
+    CompanyHouseNumber: Joi.string().required(),
     companyName: Joi.string().required(),
     firstName: Joi.string().required(),
     lastName: Joi.string().required(),
@@ -37,7 +37,6 @@ const userdetails = {
   body: {
     companyLocation: Joi.string().required(),
     companyAddress: Joi.string().required(),
-    SICCode: Joi.number().required(),
     director: Joi.string().required(),
     companyStructure: Joi.string().required(),
     tradeType: Joi.string().required(),
