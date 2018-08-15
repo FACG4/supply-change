@@ -116,7 +116,7 @@ CREATE TYPE uk_cities AS ENUM(
   'Cardiff',
   'Newport',
   'St. Asaph',
-  'St. David\'s',
+  'St. David''s',
   'Swansea'
 );
 
