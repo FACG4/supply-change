@@ -6,7 +6,7 @@ const Checkbox =({ checkbox, handleChange }) => {
   return (
     <div>
       {checkbox.map(el => (
-        <div >
+        <div className='divBox'>
           <input id={ el.id } type={ el.type } value={ el.value } name={ el.name } onChange={ handleChange } />
           <span className='checkBoxSpan'>
             { el.text }

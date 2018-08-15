@@ -330,3 +330,7 @@ body {
   word-spacing: .3em;
   text-align: center;
 }
+
+.divBox {
+  display: inline;
+}
