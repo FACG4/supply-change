@@ -4,6 +4,7 @@ import SEProfile from './Pages/SEProfile';
 import HomePage from './Pages/HomePage';
 import ResultPage from './Pages/ResultPage';
 import Signup from './Pages/Signup';
+import AboutHowItWorks from './Pages/AboutHowItWorks';
 import Header from './CommonComponents/Header';
 import Login from './CommonComponents/Login'
 
@@ -32,11 +33,13 @@ class App extends Component {
           <Route path={/[^/]/} render={() => <Header { ...this.state } loginLogout={ this.loginLogout }/>}/>
             <Switch>
               <Route path='/' component={HomePage} exact  />
-              <div id={ this.state.isLogin ? 'main' : null} >
+              <div id={ this.props.isLogin ? 'main' : null} >
               <Route path='/profile' component={SEProfile} exact />
-              <Route path='/contract/find'  render={()=><ResultPage SEId={this.state.businessId} />} exact  />
+              <Route path='/contract/find'  render={()=><ResultPage SEId={this.props.businessId} />} exact  />
               <Route path='/signup' component={Signup} exact />
               <Route path='/login' component={Login} exact />
+              <Route path='/About' render={()=><AboutHowItWorks target='about' />} exact />
+              <Route path='/howitwork' render={()=><AboutHowItWorks target='howItWorks' />}  exact />
               </div>
             </Switch>
         </div>
