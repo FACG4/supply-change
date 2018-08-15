@@ -59,7 +59,7 @@ class SignUp extends Component {
             this.setState({error2:response.data.err})
           }
         })
-        .catch(function(error) {
+        .catch((error) => {
           this.setState({error:"something error "})
         })
     }
