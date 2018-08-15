@@ -23,49 +23,75 @@ class BusinessInfomation extends Component {
     ],
     selectedCity: null,
     optionCity : [
-      {
-        value: 'London',
-        label: 'London'
-      }, {
-        value: 'Birmingham',
-        label: 'Birmingham'
-      }, {
-        value: 'Leeds',
-        label: 'Leeds'
-      }, {
-        value: 'Glasgow',
-        label: 'Glasgow'
-      }, {
-        value: 'Sheffield',
-        label: 'Sheffield'
-      }, {
-        value: 'Bradford',
-        label: 'Bradford'
-      }, {
-        value: 'Liverpool',
-        label: 'Liverpool'
-      }, {
-        value: 'Edinburgh',
-        label: 'Edinburgh'
-      }, {
-        value: 'Edinburgh',
-        label: 'Edinburgh'
-      }, {
-        value: 'Manchester',
-        label: 'Manchester'
-      }, {
-        value: 'Bristol',
-        label: 'Bristol'
-      }, {
-        value: 'Kirklees',
-        label: 'Kirklees'
-      }, {
-        value: 'Fife',
-        label: 'Fife'
-      }, {
-        value: 'Wirral',
-        label: 'Wirral'
-      }
+      { value: 'Bath', label: 'Bath' },
+    { value: 'Birmingham', label: 'Birmingham' },
+    { value: 'Bradford', label: 'Bradford' },
+    { value: 'Brighton & Hove', label: 'Brighton & Hove' },
+    { value: 'Bristol', label: 'Bristol' },
+    { value: 'Cambridge', label: 'Cambridge' },
+    { value: 'Canterbury', label: 'Canterbury' },
+    { value: 'Carlisle', label: 'Carlisle' },
+    { value: 'Chelmsford', label: 'Chelmsford' },
+    { value: 'Chester', label: 'Chester' },
+    { value: 'Chichester', label: 'Chichester' },
+    { value: 'Coventry', label: 'Coventry' },
+    { value: 'Derby', label: 'Derby' },
+    { value: 'Durham', label: 'Durham' },
+    { value: 'Ely', label: 'Ely' },
+    { value: 'Exeter', label: 'Exeter' },
+    { value: 'Gloucester', label: 'Gloucester' },
+    { value: 'Hereford', label: 'Hereford' },
+    { value: 'Kingston upon Hull', label: 'Kingston upon Hull' },
+    { value: 'Lancaster', label: 'Lancaster' },
+    { value: 'Leeds', label: 'Leeds' },
+    { value: 'Leicester', label: 'Leicester' },
+    { value: 'Lichfield', label: 'Lichfield' },
+    { value: 'Lincoln', label: 'Lincoln' },
+    { value: 'Liverpool', label: 'Liverpool' },
+    { value: 'London', label: 'London' },
+    { value: 'Manchester', label: 'Manchester' },
+    { value: 'Newcastle upon Tyne', label: 'Newcastle upon Tyne' },
+    { value: 'Norwich', label: 'Norwich' },
+    { value: 'Nottingham', label: 'Nottingham' },
+    { value: 'Oxford', label: 'Oxford' },
+    { value: 'Peterborough', label: 'Peterborough' },
+    { value: 'Plymouth', label: 'Plymouth' },
+    { value: 'Portsmouth', label: 'Portsmouth' },
+    { value: 'Preston', label: 'Preston' },
+    { value: 'Ripon', label: 'Ripon' },
+    { value: 'Salford', label: 'Salford' },
+    { value: 'Salisbury', label: 'Salisbury' },
+    { value: 'Sheffield', label: 'Sheffield' },
+    { value: 'Southampton', label: 'Southampton' },
+    { value: 'St Albans', label: 'St Albans' },
+    { value: 'Stoke-on-Trent', label: 'Stoke-on-Trent' },
+    { value: 'Sunderland', label: 'Sunderland' },
+    { value: 'Truro', label: 'Truro' },
+    { value: 'Wakefield', label: 'Wakefield' },
+    { value: 'Wells', label: 'Wells' },
+    { value: 'Westminster', label: 'Westminster' },
+    { value: 'Winchester', label: 'Winchester' },
+    { value: 'Wolverhampton', label: 'Wolverhampton' },
+    { value: 'Worcester', label: 'Worcester' },
+    { value: 'York', label: 'York' },
+    { value: 'Armagh', label: 'Armagh' },
+    { value: 'Belfast', label: 'Belfast' },
+    { value: 'Londonderry', label: 'Londonderry' },
+    { value: 'Lisburn', label: 'Lisburn' },
+    { value: 'Newry', label: 'Newry' },
+    { value: 'Aberdeen', label: 'Aberdeen' },
+    { value: 'Dundee', label: 'Dundee' },
+    { value: 'Edinburgh', label: 'Edinburgh' },
+    { value: 'Glasgow', label: 'Glasgow' },
+    { value: 'Inverness', label: 'Inverness' },
+    { value: 'Perth', label: 'Perth' },
+    { value: 'Stirling', label: 'Stirling' },
+    { value: 'Bangor', label: 'Bangor' },
+    { value: 'Cardiff', label: 'Cardiff' },
+    { value: 'Newport', label: 'Newport' },
+    { value: 'St. Asaph', label: 'St. Asaph' },
+    { value: 'St. David\'s', label: 'St. David\'s' },
+    { value: 'Swansea', label: 'Swansea' }
     ]
   }
 
@@ -109,15 +135,6 @@ class BusinessInfomation extends Component {
                   className='form__input' placeholder='Company Address' required />
                 <label htmlFor='CompanyAddress'>
                   <img src={signal} className='icons' alt='signal' />
-                  <span className='hidden' />
-                </label>
-              </div>
-
-              <div className='form__field'>
-                <input id='SIC-Code' type='text' name='SICCode' onChange={this.props.changeState}
-                  className='form__input' placeholder='SIC Code' required />
-                <label htmlFor='SIC-Code'>
-                  <img src={binarycode} className='icons' alt='binarycode' />
                   <span className='hidden' />
                 </label>
               </div>

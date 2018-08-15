@@ -22,10 +22,10 @@ const arr =[
 export default ({ activePageIndex }) => {
   return (
     <section className = 'ptracker__container'>
-      <div className = 'ptracker__v-center ptracker__caution' >
+      { /*     <div className = 'ptracker__v-center ptracker__caution' >
         <img className = 'ptracker__caution-img' src = '/images/caution.svg' alt = 'caution'/>
         <p>Sorry! You need to complete your full information to get Started</p>
-      </div>
+      </div> */}
       <div className = 'ptracker__step-container ptracker__v-center'>
         <div className = 'progress__container'>
           {arr.map((el,key) => <Progress title = {el.title} img = {el.img} key = {key} index = {key} activePageIndex = {activePageIndex} />)}

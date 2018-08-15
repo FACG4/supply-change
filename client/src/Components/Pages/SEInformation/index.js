@@ -69,7 +69,10 @@ class SEInofrmation extends Component {
   }
   indexIncrement = (e) => {
       this.state.activePageIndex === 5 ?
-      this.sendData() : (
+      (this.state.policyArray.length>=2 ? this.sendData() : this.setState ({
+              ...this.state,
+              error : 'Sorry you have to select at least 2 policies'
+            })): (
       this.setState ({
         ...this.state,
         activePageIndex:  1+ this.state.activePageIndex
@@ -90,10 +93,12 @@ class SEInofrmation extends Component {
         <Redirect to='/profile' /> :
         (
       <div className = 'SEForm' id='main' className='routerContainer'>
-        <ProgressTracker activePageIndex = { this.state.activePageIndex }/>
-        <Switch changeState = { this.changeState } activePageIndex = { this.state.activePageIndex } setImgLink= { this.setImgLink }/>
-        <div className ='errMsg'>{this.state.error}</div>
-        <Button children = {this.state.buttonText} className = 'generalButton' onClick = { this.indexIncrement }/>
+        <div className='se__container'>
+          <ProgressTracker activePageIndex = { this.state.activePageIndex }/>
+          <Switch changeState = { this.changeState } activePageIndex = { this.state.activePageIndex } setImgLink= { this.setImgLink }/>
+          <div className ='errMsg'>{this.state.error}</div>
+          <Button children = {this.state.buttonText} className = 'generalButton' onClick = { this.indexIncrement }/>
+        </div>
       </div>
     )
     );

@@ -1,4 +1,6 @@
 import React from 'react';
+import { NavLink, Redirect } from 'react-router-dom';
+
 import './style.css';
 
 const HeroSection = () => (
@@ -13,7 +15,7 @@ const HeroSection = () => (
         <br/>
         drive impact in their local
           communities.</p>
-      <a href='javascript:;' className='findMore'>Find out more!</a>
+      <NavLink to='/about' className='findMore'>Find out more!</NavLink>
     </div>
   </div>
 );

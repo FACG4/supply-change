@@ -28,6 +28,8 @@ export default ({ handleChange, visible, error, error2, isCompany, submitForm, c
         <div className='grid'>
 
           <form action='' method='POST' className='form Signup'>
+            <h3 className='form__top__heading'>What is your company Number?</h3>
+            <br/>
 
             <div className='form__field'>
               <input id='CompanyHouseNumber' type='number' min='0' name='CompanyHouseNumber' onChange={handleChange} className='form__input' placeholder='Company House Number' required />

@@ -5,6 +5,7 @@ height: 450px;
 background: #E3F4F4;
 text-align: center;
 flex-direction: column;
+color: black;
 }
 
 .section-how-work h1 {

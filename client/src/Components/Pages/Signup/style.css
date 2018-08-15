@@ -334,3 +334,10 @@ body {
   word-spacing: .3em;
   text-align: center;
 }
+
+.form__top__heading{
+text-align: center;
+color: black;
+font-size: 18px;
+font-weight: 100;
+}

@@ -2,10 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+   font-family: 'Montserrat', sans-serif;
+
 }
 
 .container__body{
-    margin-top: 105px; 
+    margin-top: 105px;
 }
 
 .contract__title{
@@ -64,6 +66,9 @@
     align-items: center;
     padding: 30px 0;
 }
+.contract__regions--city div{
+box-shadow: 0px 0px 8px #888888;
+}
 
 
 .contract__right-info{
@@ -106,5 +111,5 @@
 
 .contract__right-info-spec li:first-child{
     font-weight: bold;
-    padding-bottom: 5px; 
+    padding-bottom: 5px;
 }

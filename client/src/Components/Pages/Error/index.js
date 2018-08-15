@@ -14,7 +14,7 @@ const Error=() => {
         <span>0</span>
         <span>4</span>
       </h2>
-      <h3>Sorry, This Page Isn&#900;t available :(</h3>
+      <h3>Sorry, This Page not found :(</h3>
       <NavLink to='/'>Go Back To Home Page</NavLink>
 
     </div>
