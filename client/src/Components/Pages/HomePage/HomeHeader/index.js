@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, Redirect } from 'react-router-dom';
 
-import './Style.css';
+import './style.css';
 import logo from './logo.svg';
 
 const HomeHeader = () => (

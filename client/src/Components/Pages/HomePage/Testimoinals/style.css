@@ -37,6 +37,7 @@
 }
 
 .slick-slide img {
+  width: 147px;
   display: inline;
   margin-top: 15px;
 }
@@ -44,4 +45,16 @@
 .test-descrp {
   color: black;
   font-size: 20px;
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+}
+.testimonials >h3{
+  display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-size: 34px;
+    color: #2D918E;
 }

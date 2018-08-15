@@ -35,7 +35,7 @@ changeState = (key, value) => {
 
   fetch = () => {
     const { SEId } = this.state
-    axios.post('/search',{ SEId }).then(response => {
+    axios.post('/search',{SEId}).then(response => {
       const { contracts, SERegions } = response.data;
       this.setState({
         ...this.state,
@@ -47,12 +47,15 @@ changeState = (key, value) => {
   }
 
   componentDidMount() {
-    const { SEId } = this.props
+    const info = JSON.parse(localStorage.getItem('userInfo'));
+    if (info) {
+      const {id} = info
     this.setState({
       ...this.state,
-      SEId
+      SEId:id
     }, () => this.fetch())
   }
+}
 
   render() {
     const { handleChange } = this.props

@@ -6,30 +6,52 @@ import CompanyAction from './CompanyAction.js';
 import Nav from './Nav.js';
 
 import './style.css';
+import logo from './logo.svg';
 
 
 class Header extends Component {
   state = {
-    redirect: false
+    redirect: false,
+    businessRole:'SE',
+    isLogin:false
+
   }
 
    fixNav = () => {
+     if (document.querySelector('#navbar'))
     document.querySelector('#navbar').classList.add('scrolled');
-    if (this.props.isLogin)
+    if (this.state.isLogin&&document.querySelector('#main')){
       document.querySelector('#main').classList.add('scrolled');
+
+    }
   };
 
    handleScroll = () => {
     if (Math.round(window.scrollY) > 30) {
-      this.fixNav(this.props.isLogin);
-    } else {
+      this.fixNav(this.state.isLogin);
+    } else if (document.querySelector('#navbar')&&document.querySelector('#main')) {
       document.querySelector('#navbar').classList.remove('scrolled');
       document.querySelector('#main').classList.remove('scrolled');
     }
   };
 
    componentDidMount() {
-     this.props.isLogin ? window.addEventListener('scroll', this.handleScroll):this.fixNav(this.props.isLogin)
+     const info = JSON.parse(localStorage.getItem('userInfo'));
+     if (info) {
+       const {se_name, logo_link, is_complete} = info
+       this.setState({
+         ...this.state,
+         isLogin:true,
+         businessName:se_name.substring(0,12),
+         avatarUrl:logo_link
+       },()=>{
+         this.state.isLogin ? window.addEventListener('scroll', this.handleScroll):this.fixNav(this.state.isLogin)
+
+       })
+     }else{
+       this.state.isLogin ? window.addEventListener('scroll', this.handleScroll):this.fixNav(this.state.isLogin)
+
+     }
    }
 
    handleLogout = () => {
@@ -37,13 +59,13 @@ class Header extends Component {
        ...this.state,
        redirect:true
      } , () => {
-       this.props.loginLogout()
+       localStorage.removeItem('userInfo')
        window.removeEventListener('scroll', this.handleScroll)
      });
    }
 
   render() {
-    const { businessName, businessRole, isLogin, avatarUrl } = this.props;
+    const { businessName, businessRole, isLogin, avatarUrl } = this.state;
     const options = { businessName, businessRole, avatarUrl, handlelogout: this.handleLogout, isLogin };
     return (
       this.state.redirect ?
@@ -55,7 +77,7 @@ class Header extends Component {
                 <Nav {...options}/>
                 <div className='logo'>
                   <NavLink to='/'>
-                    <img src='https://pbs.twimg.com/profile_images/996015715722387458/WofTKvoF_400x400.jpg' />
+                    <img src={logo} />
                   </NavLink>
                 </div>
               </div>
