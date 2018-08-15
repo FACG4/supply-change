@@ -31,23 +31,51 @@ class SEInofrmation extends Component {
     socialImpactArray: [],
     logoLink: '',
     buttonText: 'Continue',
-    redirect:false
+    redirect:false,
+    error:'',
+    companyInfo:{}
   }
+
+  componentWillMount() {
+    const info = JSON.parse(localStorage.getItem('userInfo'));
+    const {se_house_no} = info;
+      const companyNumber = se_house_no;
+    companyNumber?
+    axios.get(`/companyinfo/${companyNumber}`)
+      .then(result => {
+        if(result.data.err){
+          this.setState({error: result.data.errors[0].error})
+        }else{
+          this.setState({
+              companyInfo:result.data,
+              SICCode:result.data.sic_codes[0],
+              companyLocation:result.data.registered_office_address.locality,
+              companyAddress:result.data.registered_office_address.address_line_1,
+              error:''})
+        }
+      this.saveState()
+}):null
+}
+
+saveState = () =>{
+  const {state} =  this;
+  const info = localStorage.setItem('state', JSON.stringify(state))
+}
 
   changeState = ({target}) => {
     const { value, name } = target
     this.setState ({
       ...this.state,
       [name]: value
-    },()=>{
     })
-  }
+    this.saveState()
+    }
+
   setImgLink = value => {
     this.setState ({
       ...this.state,
       logoLink: value
     },()=>{
-      console.log(this.state);
     })
 
 
@@ -69,13 +97,10 @@ class SEInofrmation extends Component {
   }
   indexIncrement = (e) => {
       this.state.activePageIndex === 5 ?
-      (this.state.policyArray.length>=2 ? this.sendData() : this.setState ({
-              ...this.state,
-              error : 'Sorry you have to select at least 2 policies'
-            })): (
+      this.sendData() : (
       this.setState ({
         ...this.state,
-        activePageIndex:  1+ this.state.activePageIndex
+        activePageIndex: 1+ this.state.activePageIndex
       },()=>{
         if(this.state.activePageIndex === 5){
           this.setState ({
@@ -92,13 +117,11 @@ class SEInofrmation extends Component {
       this.state.redirect ?
         <Redirect to='/profile' /> :
         (
-      <div className = 'SEForm' id='main' className='routerContainer'>
-        <div className='se__container'>
-          <ProgressTracker activePageIndex = { this.state.activePageIndex }/>
-          <Switch changeState = { this.changeState } activePageIndex = { this.state.activePageIndex } setImgLink= { this.setImgLink }/>
-          <div className ='errMsg'>{this.state.error}</div>
-          <Button children = {this.state.buttonText} className = 'generalButton' onClick = { this.indexIncrement }/>
-        </div>
+      <div className = 'SEForm'>
+        <ProgressTracker activePageIndex = { this.state.activePageIndex }/>
+        <Switch changeState = { this.changeState } activePageIndex = { this.state.activePageIndex } setImgLink= { this.setImgLink } companyInfo={this.state.companyInfo}/>
+        <div className ='errMsg'>{this.state.error}</div>
+        <Button children = {this.state.buttonText} className = 'generalButton' onClick = { this.indexIncrement }/>
       </div>
     )
     );

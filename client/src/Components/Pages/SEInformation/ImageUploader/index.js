@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import './style.css';
-import Button from '../../../CommonComponents/Button';
 import axios from 'axios';
+
+import Button from '../../../CommonComponents/Button';
+import Uploader from './uploader';
+
+import './style.css';
 
 class ImageUploader extends Component{
 
@@ -40,20 +43,12 @@ class ImageUploader extends Component{
                 ...this.state,
                 msg: `Can't upload the image / Check your internet connection`
             })
-            console.log('err=> ', err)
         });
     }
 
     render(){
         return(
-            <section className='uploadFile__file-upload'>
-                <label htmlFor='uploadFile__logo'>
-                    <img className='uploadFile__img-label' src='/images/upload.svg' alt='upload logo' />
-                </label>
-                <input id='uploadFile__logo' type='file' name='image' accept='image/*' onChange={this.handleImage} required/>
-                <div>{ this.state.msg }</div>
-                <Button className="uploadFile__btn" onClick = { this.uploadImage } children="click to upload"/>
-            </section>
+            <Uploader handleImage={ this.handleImage } uploadImage={ this.uploadImage } msg={ this.state.msg }/>
         )
     }
 }
