@@ -16,7 +16,7 @@ module.exports = (req, res) => {
     const s3 = new AWS.S3();
 
     const uploadFile = (buffer, name, type) => {
-        
+
         const params = {
             ACL: 'public-read',
             Body: buffer,
@@ -24,7 +24,7 @@ module.exports = (req, res) => {
             ContentType: type.mime,
             Key: `${name}.${type.ext}`
         };
-        
+
         return s3.upload(params).promise();
     };
 
@@ -45,4 +45,3 @@ module.exports = (req, res) => {
         }
     });
 }
-

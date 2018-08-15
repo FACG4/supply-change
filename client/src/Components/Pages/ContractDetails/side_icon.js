@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({ fontAwesomeClass, sideTitle, fillInfo}) => {
+export default ({ fontAwesomeClass, sideTitle, fillInfo }) => {
   return (
     <div className='contract__right-details'>
       <div className='contract__right-info-icon'>

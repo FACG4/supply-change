@@ -25,7 +25,6 @@ const mainInfo = props => {
 
       <div className='mainInfo'>
         <div className='allBoxesDiv'>
-
           <div className='boxDiv'>
             <div className='icon_div'>
               <img src={Group} alt=''/>

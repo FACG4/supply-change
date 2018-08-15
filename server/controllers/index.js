@@ -10,16 +10,18 @@ const getCompanyInfo = require('./get_company_info');
 const storeData = require('./store_user_data');
 const uploadImage = require('./upload_image');
 const login = require('./login');
+const { celebrate } = require('celebrate');
+const validate = require('./validation');
 
 const router = express.Router();
 
-router.get('/companyinfo/:companyNumber', getCompanyInfo);
-router.post('/login', login);
-router.get('/contractinfo/:contractId', getContractInfo);
-router.post('/search', search);
-router.post('/userdata', storeData);
-router.get('/profile/:id',profile);
-router.post('/userdetails', userDetails);
+router.get('/companyinfo/:companyNumber',celebrate(validate.companyInfo), getCompanyInfo);
+router.post('/login',celebrate(validate.loginInfo),login);
+router.post('/search',celebrate(validate.search) ,search);
+router.post('/userdata',celebrate(validate.userdata), storeData);
+router.get('/profile/:id',celebrate(validate.socailProfile), profile);
+router.post('/userdetails',celebrate(validate.userdetails), userDetails);
+router.get('/contractinfo/:contractId',celebrate(validate.contractId), getContractInfo);
 router.post('/upload-image', uploadImage);
 router.post('/email', email);
 

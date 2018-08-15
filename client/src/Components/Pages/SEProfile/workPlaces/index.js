@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+
 import './style.css';
 
 const convert = str => str.replace(/"/g, '').replace(/{|}/g,'').split(',');
@@ -14,7 +15,7 @@ const workPlaces = props => {
         <div className='spanTextsContainer'>
           {regions.map(region => {
             return (
-              <div className='spanText'>
+              <div className = 'spanText'>
                 <span>{ region }</span>
               </div>
             );
