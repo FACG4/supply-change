@@ -47,7 +47,7 @@ const userdetails = {
     workRegions: Joi.array().required(),
     policyArray: Joi.array().required(),
     socialDescription: Joi.string().required(),
-    socialImpactArray: Joi.number().required(),
+    socialImpactArray: Joi.array().required(),
     logoLink: Joi.string().required(),
     workDistance: Joi.number().required(),
     SEId: Joi.number().integer().required()

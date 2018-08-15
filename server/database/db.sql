@@ -137,7 +137,7 @@ CREATE TABLE social_enterprise_details(
     id SERIAL,
     SE_id INT PRIMARY KEY NOT NULL REFERENCES social_enterprise_basic(id) ON DELETE CASCADE ON UPDATE CASCADE,
     SE_address VARCHAR NOT NULL,
-    SIC_code INT NOT NULL,
+    SIC_code INT,
     director VARCHAR NOT NULL,
     company_structure VARCHAR NOT NULL,
     trade_type trade_type NOT NULL,

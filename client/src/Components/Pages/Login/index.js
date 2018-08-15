@@ -44,7 +44,8 @@ class LogIn extends Component {
       if(!res.data.err){
         console.log(res.data);
         localStorage.setItem('userInfo', JSON.stringify(res.data));
-        this.redirect()
+        // this.redirect()
+        window.location ='/profile'
       }else{
         this.callErr(res.data.err);
       }

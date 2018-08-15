@@ -125,7 +125,7 @@ saveState = () =>{
       this.state.redirect ?
         <Redirect to='/profile' /> :
         (
-      <div className = 'SEForm'>
+      <div id='main' className = 'SEForm'>
         <ProgressTracker activePageIndex = { this.state.activePageIndex }/>
         <Switch changeState = { this.changeState } activePageIndex = { this.state.activePageIndex } setImgLink= { this.setImgLink } companyInfo={this.state.companyInfo}/>
         <div className ='errMsg'>{this.state.error}</div>

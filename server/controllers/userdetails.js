@@ -1,6 +1,7 @@
 const query = require('./../database/query/query');
 
 module.exports = (req, res) => {
+  console.log(req.body);
 
   const {
     companyLocation,
@@ -46,7 +47,7 @@ module.exports = (req, res) => {
   values: [
     SEId,
     companyAddress,
-    SICCode,
+    null,
     director,
     companyStructure,
     tradeType,

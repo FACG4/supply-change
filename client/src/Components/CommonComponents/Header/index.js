@@ -7,6 +7,7 @@ import Nav from './Nav.js';
 
 import './style.css';
 import logo from './logo.svg';
+import axios from 'axios';
 
 
 class Header extends Component {
@@ -55,13 +56,21 @@ class Header extends Component {
    }
 
    handleLogout = () => {
-     this.setState({
-       ...this.state,
-       redirect:true
-     } , () => {
-       localStorage.removeItem('userInfo')
-       window.removeEventListener('scroll', this.handleScroll)
-     });
+   
+       axios.post('/logout')
+       .then(res=>{
+         localStorage.removeItem('userInfo')
+         window.removeEventListener('scroll', this.handleScroll)
+             this.setState({
+               ...this.state,
+               redirect: true
+             })
+       })
+        .catch(err=>{
+          localStorage.removeItem('userInfo')
+          window.removeEventListener('scroll', this.handleScroll)
+          
+       })
    }
 
   render() {

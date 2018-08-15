@@ -3,10 +3,11 @@
   padding: 0
 }
 .aboutUs{
-  padding-bottom: 250px;
+  padding-top: 40px;
+  /* padding-bottom: 250px; */
 }
 .aboutUs__heading{
-  margin-top: 115px;
+  /* margin-top: 115px; */
   text-align: center;
 }
 .aboutUs__heading h1 {
