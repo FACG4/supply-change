@@ -77,7 +77,7 @@
   height: 120px;
   border-radius: 50%;
   box-sizing: border-box;
-  margin-left: 65px;
+  margin-left: 30%;
   display: block;
   -webkit-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.41);
   -moz-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.41);
@@ -85,9 +85,9 @@
 }
 
 .comInformation figcaption {
-  margin-left: 40px;
-  margin-top: 10px;
-  font-size: 25px
+  margin-left: 50px;
+  margin-top: 20px;
+  font-size: 20px
 }
 
 .comInformation .listItems {

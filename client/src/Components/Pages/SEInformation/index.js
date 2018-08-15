@@ -104,7 +104,7 @@ saveState = () =>{
       this.sendData() : (
       this.setState ({
         ...this.state,
-        activePageIndex:  1+ this.state.activePageIndex
+        activePageIndex: 1+ this.state.activePageIndex
       },()=>{
         if(this.state.activePageIndex === 5){
           this.setState ({
