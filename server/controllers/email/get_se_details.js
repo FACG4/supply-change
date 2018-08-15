@@ -14,6 +14,7 @@ exports.getSEDetails =SEId => {
 
     query(sql)
       .then(queryResult => {
+        console.log(queryResult.rows[0],'queryResult');
         resolve(queryResult.rows[0]);
       })
       .catch(err => reject(err));

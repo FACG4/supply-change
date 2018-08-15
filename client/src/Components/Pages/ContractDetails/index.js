@@ -15,14 +15,14 @@ export default class ContractDetails extends Component {
         err:null
     }
 
-    //get the city lat and lng 
+    //get the city lat and lng
     getLatLng = (city) => {
         return axios.get(`http://maps.google.com/maps/api/geocode/json?address=${city}&sensor=false`)
-        .then(res => { 
+        .then(res => {
             return {
                     lat: res.data.results[0].geometry.location.lat,
                     lon: res.data.results[0].geometry.location.lng
-                };           
+                };
         }).catch(err => {
             this.setState({
                 ...this.state,
@@ -44,23 +44,23 @@ export default class ContractDetails extends Component {
                     lon: latlng.lon,
                     details: result.data
                 })
-            })            
+            })
         }).catch(err=>{
             this.setState({
                 ...this.state,
                 err: 'Server Error'
             })
         })
-        
+
     }
 
     sendMsg = () => {
+      console.log(this.state.userInfo,'this.state.userInfothis.state.userInfothis.state.userInfothis.state.userInfo');
         if(this.state.userInfo){
             axios.post('/email',{
-                seId: this.state.userInfo.id,
+                SEId: this.state.userInfo.id,
                 contractId: this.props.match.params.id
-            },
-            withCredentials: true
+            }
             )
             .then(result => console.log(result))
             .catch(err=>console.log(err))
@@ -70,16 +70,17 @@ export default class ContractDetails extends Component {
     }
 
     componentDidMount(){
-        const userInfo = localStorage.getItem('userInfo')
+        const userInfo = JSON.parse(localStorage.getItem('userInfo'))
+        console.log(userInfo);
         if(userInfo){
             this.setState({
                 ...this.state,
                 userInfo
-            })       
+            })
         }else{
             window.location = '/';
         }
-        this.getContractInfo(this.props.match.params.id)        
+        this.getContractInfo(this.props.match.params.id)
     }
 
 
