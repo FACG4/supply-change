@@ -150,6 +150,9 @@ header {
   vertical-align: middle;
   border-style: none;
   width: 40px;
+}
+.exist{
+
   height: 40px;
   background: #fff;
   object-fit: cover;

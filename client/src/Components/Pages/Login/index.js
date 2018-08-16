@@ -67,7 +67,7 @@ class LogIn extends Component {
       this.state.redirect?
         <Redirect to ='/profile' /> :
         (
-          <div className ="flex">
+          <div className ="flex login_container">
           <div className ="tringle"/>
           <div className ="log__header">
               <h3 className ="login__heading">
@@ -101,6 +101,16 @@ class LogIn extends Component {
                     </div>
 
                 </form>
+                <div className='SubmitDiv'>
+                  <p className='text--center'>
+                      {`Don't have an account?  `}
+                  </p>
+                  <a href='/signup'>
+                    <p className='text--login'>
+                         Signup Now
+                    </p>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

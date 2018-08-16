@@ -57,7 +57,7 @@ body {
   margin-top: 70px;
   background: #ebebeb;
   width: 400px;
-  height:300px;
+  height:380px;
   margin: auto;
   padding: auto
 }
@@ -238,4 +238,8 @@ body {
   text-align: center;
   color: red;
   font-size: 20px;
+}
+
+.login_container{
+      padding-bottom: 339px;
 }

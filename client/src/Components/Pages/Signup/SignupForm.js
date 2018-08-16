@@ -14,11 +14,11 @@ export default ({ handleChange, visible, error, error2, isCompany, submitForm, c
         </h3>
         <div className='select-user'>
 
-          <button className='signup__button button0'>
-              Buyer
+          <button className='signup__button button0 supplier'>
+        Supplier
           </button>
           <button className='signup__button button0'>
-             Supplier
+              Buyer
           </button>
         </div>
       </div>
@@ -119,7 +119,7 @@ export default ({ handleChange, visible, error, error2, isCompany, submitForm, c
                     <span className='checkBoxSpan'>
                   Join Mailing List
                     </span>
-                    <input id='T&C' type='checkbox' onChange = {handleChange} name='TC'  />
+                    <input id='T&C' type='checkbox' onChange = {handleChange} name='TC' />
                     <span className='checkBoxSpan'>
                     T&C
                     </span>
@@ -137,7 +137,7 @@ export default ({ handleChange, visible, error, error2, isCompany, submitForm, c
             <p className='text--center'>
                 Already have an account?
             </p>
-            <a href='#'>
+            <a href='/login'>
               <p className='text--login'>
                    Login Now
               </p>

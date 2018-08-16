@@ -4,10 +4,18 @@
 }
 .aboutUs{
   padding-top: 40px;
-  /* padding-bottom: 250px; */
+  padding-bottom: 250px;
+}
+#main .aboutUs{
+  /* padding-top: 40px; */
+  padding-bottom: 0px;
 }
 .aboutUs__heading{
-  /* margin-top: 115px; */
+  margin-top: 60px;
+  text-align: center;
+}
+#main .aboutUs__heading{
+  margin-top: 0;
   text-align: center;
 }
 .aboutUs__heading h1 {

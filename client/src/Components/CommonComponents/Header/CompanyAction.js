@@ -5,11 +5,13 @@ import action from './action.js';
 
 const CompanyAction = props => {
   const { businessName, avatarUrl, businessRole, handlelogout } = props;
+  console.log(avatarUrl,'avaaaaaaaaaaaaaaaaa');
+  const classname = avatarUrl? 'exist' : null;
   return (
     <div className=' companyAction'>
       <span className='companyAction__span'>
         <NavLink to='/profile'>
-          <img className='companyAction__img' src={avatarUrl} alt='' />
+          <img className={`companyAction__img ${classname}`} src={avatarUrl} alt='' />
         </NavLink>
         {businessName}
         <i className='fas fa-caret-down'></i>

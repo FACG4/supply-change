@@ -6,6 +6,7 @@ import CompanyAction from './CompanyAction.js';
 
 const Nav = props => {
   const { avatarUrl, businessRole, handlelogout, isLogin } = props;
+  window.scrollTo(0, 0);
   return (
     <ul className='nav'>
       <li className='item'>

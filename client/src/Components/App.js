@@ -45,6 +45,7 @@ class App extends Component {
 
   render() {
 
+ window.scrollTo(0, 0);
     return (
       <BrowserRouter>
         <div className='routerContainer'>
