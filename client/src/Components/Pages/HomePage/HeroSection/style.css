@@ -25,7 +25,7 @@
   font-size: 25px;
 }
 
-.findMore {
+/* .findMore {
   width: 60%;
   margin: 0 auto;
   background: #2D918E;
@@ -40,6 +40,37 @@
   display: flex;
   align-items: center;
   justify-content: center;
+} */
+
+.findMore {
+  background-image: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  border-radius: 0.25rem;
+  padding: 16px;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: #2D918E;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 15px;
+  width: 100%;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.findMore:hover{
+  box-shadow: -1px 0px 1px 0px #C4C4C4;
+  border: 2px solid #2d918e;
+  border-radius: 9px;
+  color: #2d918e;
+  background: #fff;
 }
 
 .hero-section {

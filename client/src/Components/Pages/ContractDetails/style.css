@@ -21,6 +21,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 50px;
 }
 
 .contract__details{
@@ -107,9 +108,41 @@ box-shadow: 0px 0px 8px #888888;
     padding-right: 20px;
     color: yellow;
     width: 20%;
+    color: #2D918E;
 }
 
 .contract__right-info-spec li:first-child{
     font-weight: bold;
     padding-bottom: 5px;
+}
+
+.applyButton {
+  background-image: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  border-radius: 0.25rem;
+  padding: 16px;
+  padding: 1rem;
+  box-sizing: border-box;
+  color: #000;
+  background-color: #2D918E;
+  color: #eee;
+  font-weight: 700;
+  margin-top: 15px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.applyButton:hover{
+  box-shadow: -1px 0px 1px 0px #C4C4C4;
+  border: 2px solid #2d918e;
+  border-radius: 9px;
+  color: #2d918e;
+  background: #fff;
 }

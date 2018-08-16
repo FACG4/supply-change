@@ -13,10 +13,12 @@ const HowItWork = () => (
         <br/> Social Suppliers that ncrease impact in your local communities.</p>
       <h1>Sign up today</h1>
       <div className='select-signup'>
-        <button className='homepage__button'><NavLink to='/signup'>
-          <p className='link__text1'> I am a Social Enterprise</p>
-        </NavLink> </button>
-        <button className='homepage__button'> <a href='javascript:;' ><p className='link__text2'>I am a Public Sector Organisation</p></a> </button>
+        <NavLink to='/signup' className='homepage__button'>
+          I am a Social Enterprise
+        </NavLink>
+        <NavLink to='/signup' className='homepage__button'>
+          I am a Public Sector Organisation
+        </NavLink>
       </div>
     </div>
 

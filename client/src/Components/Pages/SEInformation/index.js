@@ -44,11 +44,11 @@ class SEInofrmation extends Component {
         companyNumber?
         axios.get(`/companyinfo/${companyNumber}`)
           .then(result => {
-            if(result.data.err){
+            if(result.data.errors){
               this.setState({error: result.data.errors[0].error})
             }else{
               console.log('result=>> ', result);
-              
+
               this.setState({
                   companyInfo:result.data,
                   companyLocation:result.data.registered_office_address.locality,
