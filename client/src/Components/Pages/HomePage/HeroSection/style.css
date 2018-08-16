@@ -1,0 +1,104 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.supplyChange {
+  background-color: #ffffff8f;
+  height: 250vh;
+  width: 150vh;
+  top: -372px;
+  left: -21%;
+  position: absolute;
+  transform: skewX(30deg);
+}
+
+.description {
+  font-size: 35px;
+  width: 100%;
+  margin-top: 45px;
+  margin-bottom: 10px;
+}
+
+.whatSupplyChange {
+  font-size: 25px;
+}
+
+/* .findMore {
+  width: 60%;
+  margin: 0 auto;
+  background: #2D918E;
+  height: 40px;
+  text-align: center;
+  opacity: 0.8;
+  font-size: 20px;
+  font-family: Montserrat;
+  display: block;
+  text-decoration-line: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.findMore {
+  background-image: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  border-radius: 0.25rem;
+  padding: 16px;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: #2D918E;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 15px;
+  width: 100%;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.findMore:hover{
+  box-shadow: -1px 0px 1px 0px #C4C4C4;
+  border: 2px solid #2d918e;
+  border-radius: 9px;
+  color: #2d918e;
+  background: #fff;
+}
+
+.hero-section {
+  background: url('https://doitwise.com/wp-content/uploads/2018/07/01.-Transformational-Consulting-web.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 418px;
+  filter: brightness(90%);
+  position: relative;
+  overflow: hidden;
+  background-position: 50% 50%;
+}
+
+.hero-section .content-wrp {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: absolute;
+  padding: 100px;
+  z-index: 99;
+}
+
+.hero-section .content-wrp p {
+  margin-bottom: 30px;
+  font-size: 20px;
+  text-align: initial;
+  font-weight: 200;
+}
+
+.content-wrp {
+  color: black
+}

@@ -1,0 +1,68 @@
+.policy {
+  width: 55%;
+  margin: 0 auto;
+  max-width: 470px;
+}
+
+.policy__title {
+  text-align: left;
+  margin-bottom: 35px;
+  max-width: 470px
+}
+
+._box._checkbox {
+  border-top: 0.125rem solid #B2EBF2;
+}
+
+label input[type=checkbox] {
+  display: none;
+}
+
+.cell {
+  position: relative;
+  display: block;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.cell label {
+  text-transform: capitalize;
+  padding-left: 1.75rem;
+  line-height: 1.5rem;
+  cursor: pointer;
+}
+
+.cell label>span.tick {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  margin: 0.25rem 0;
+  border: 0.125rem solid #B0BEC5;
+  -webkit-transition: 0.1s all;
+  transition: 0.1s all;
+}
+
+.cell label input[type=checkbox]:checked~span.square {
+  border: 0.125rem solid #0097A7;
+}
+
+.cell label input[type=checkbox]:checked~span.square:after {
+  content: "";
+  position: absolute;
+  margin: 0.125rem;
+  display: inline-block;
+  background: #0097A7;
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.cell label input[type=checkbox]:checked~span.tick {
+  margin-left: 0.25rem;
+  width: 0.5rem;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+  border-color: #4CAF50;
+}

@@ -1,0 +1,49 @@
+{
+  "name": "express-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server/index.js",
+    "start": "node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client:init": "cd client && npm i",
+    "client:dev": "cd client && npm start",
+    "client:build": "cd client && npm run build",
+    "heroku-postbuild": "npm run client:init && npm run client:build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.286.2",
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.3",
+    "celebrate": "^8.0.1",
+    "env2": "^2.2.2",
+    "express": "^4.16.3",
+    "file-type": "^8.1.0",
+    "jsonwebtoken": "^8.3.0",
+    "multiparty": "^4.2.0",
+    "nodemailer": "^4.6.7",
+    "pg": "^7.4.3",
+    "request": "^2.87.0",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-preset-stage-1": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-config-standard": "^7.1.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx": "0.0.2",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-standard": "^2.1.1",
+    "nodemon": "^1.18.3"
+  }
+}
