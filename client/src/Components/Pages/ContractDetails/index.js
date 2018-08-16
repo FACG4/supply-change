@@ -17,7 +17,7 @@ export default class ContractDetails extends Component {
 
     //get the city lat and lng
     getLatLng = (city) => {
-        return axios.get(`http://maps.google.com/maps/api/geocode/json?address=${city}&sensor=false`)
+        return axios.get(`https://maps.google.com/maps/api/geocode/json?address=${city}&sensor=false`)
         .then(res => {
             return {
                     lat: res.data.results[0].geometry.location.lat,
