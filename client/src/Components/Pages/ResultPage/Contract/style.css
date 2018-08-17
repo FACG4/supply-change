@@ -1,0 +1,58 @@
+.contract-single {
+  width: 100%;
+  display: flex;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e8ecec;
+}
+
+.organizationAvatar {
+  width: 25%;
+  position: relative;
+}
+
+.organizationAvatar__img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+}
+
+.contract-title__heading {
+  float: left;
+  width: 100%;
+  font-size: 20px;
+  color: #202020;
+  margin-top: 14px;
+  margin-bottom: 10px;
+}
+
+.organizationName__heading, .organizationName__time {
+  display: inline;
+  padding: 5px;
+  font-size: 13px;
+  color: #a7a7a7;
+}
+
+.contract-desc__paragraph {
+  float: left;
+  width: 100%;
+  font-size: 13px;
+  color: #888888;
+  line-height: 24px;
+  margin-top: 4px;
+}
+
+.contractInfo {
+  width: 75%;
+  margin-left: 25px;
+}
+
+.contractAction__link {
+  border: none;
+  padding-top: 22px;
+  float: left;
+  font-size: 15px;
+  margin-left: 73%;
+  color: #fb236a;
+}

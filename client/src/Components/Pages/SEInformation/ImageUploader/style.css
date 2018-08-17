@@ -1,0 +1,23 @@
+.uploadFile__file-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 60px;
+    min-width: 600px;
+}
+
+.uploadFile__file-upload input[type='file'] {
+    display: none;
+}
+
+.uploadFile__img-label {
+    cursor: pointer;
+}
+
+.uploadFile__btn {
+    border: none;
+    background: none;
+    color: #2D918E;
+    margin-top: 30px;
+}
