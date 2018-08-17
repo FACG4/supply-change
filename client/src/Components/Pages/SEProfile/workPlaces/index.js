@@ -24,7 +24,7 @@ const workPlaces = props => {
       </div>
 
       <div className='browseBtnDiv'>
-        <button type='button' claasName='btn'><a className='no-line' href='/contract/find'>Browse Contracts</a></button>
+        <a className='no-line' href='/contract/find'><button type='button' claasName='btn'>Browse Contracts</button></a>
       </div>
     </div>
   );
