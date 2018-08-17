@@ -21,7 +21,7 @@ CREATE TYPE trade_type AS ENUM(
 );
 
 CREATE TYPE turnover_size AS ENUM(
-    'Turnover <50k',
+    '<50k',
     '50k-100k',
     '100-150k',
     '150-250k',
@@ -29,7 +29,7 @@ CREATE TYPE turnover_size AS ENUM(
 );
 
 CREATE TYPE contract_size AS ENUM(
-    'Less than 50k',
+    '<50k',
     '50k-100k',
     '100-150k',
     '150-250k',
@@ -151,7 +151,7 @@ CREATE TABLE social_enterprise_details(
     SE_description TEXT NOT NULL,
     selected_contract INT[],
     policy_general INT[],
-    location uk_cities NOT NULL,
+    location VARCHAR NOT NULL,
     places_to_work_in regions[] NOT NULL
 );
 
