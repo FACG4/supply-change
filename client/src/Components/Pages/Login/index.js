@@ -106,7 +106,7 @@ class LogIn extends Component {
                       {`Don't have an account?  `}
                   </p>
                   <a href='/signup'>
-                    <p className='text--login'>
+                    <p className='text--signup'>
                          Signup Now
                     </p>
                   </a>
