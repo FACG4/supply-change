@@ -104,8 +104,29 @@ saveState = () =>{
     });
   }
   indexIncrement = (e) => {
+    this.setState({
+      ...this.state,
+      error: ''
+    })
+    this.state.activePageIndex === 1 && !this.state.logoLink ? (
+      this.setState({
+        ...this.state,
+        error: 'you should upload your bussiness logo'
+      })
+
+    ) : (
+        this.setState({
+          ...this.state,
+          error: ''
+        },()=>{
+
+
+    
       this.state.activePageIndex === 5 ?
-      this.sendData() : (
+        (this.state.policyArray.length < 2 ? (this.setState({
+          ...this.state,
+          error: 'you should select 2 of your social missions'
+        })) : this.sendData()) : (
       this.setState ({
         ...this.state,
         activePageIndex: 1+ this.state.activePageIndex
@@ -117,6 +138,9 @@ saveState = () =>{
           })
         }
       })
+    )
+      })
+
     )
   }
 
