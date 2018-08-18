@@ -3,82 +3,61 @@ import ReactDOM from 'react-dom';
 import './style.css';
 import Group1 from './Imgs/Group1.png';
 import Fontawesome from 'react-fontawesome';
-import Input from './Input';
+import FormInput from './FormInput';
 import Checkbox from './Checkbox';
 
 export default ({ handleChange, visible, error, isCompany, submitForm, companyInfo }) => {
   const arr = [
-    { id: 'businessName',
-      type: 'text',
+    { type: 'text',
       name: 'businessName',
-      className: 'form__input',
       placeholder: 'Business Name',
-      htmlFor: 'businessName',
       value: companyInfo.company_name,
       required: true,
       finame: 'briefcase'
     },
-    { id: 'firstName',
-      type: 'text',
+    { type: 'text',
       name: 'firstName',
-      className: 'form__input',
       placeholder: 'First Name',
-      htmlFor: 'firstName',
       value: null,
       min: null,
       required: true,
       finame: 'user'
     },
-    { id: 'lastName',
-      type: 'text',
+    { type: 'text',
       name: 'lastName',
-      className: 'form__input',
       placeholder: 'Last Name',
-      htmlFor: 'lastName',
       value: null,
       min: null,
       required: true,
       finame: 'users'
     },
-    { id: 'email',
-      type: 'email',
+    { type: 'email',
       name: 'email',
-      className: 'form__input',
       placeholder: 'Email',
-      htmlFor: 'email',
       value: null,
       min: null,
       required: true,
       finame: 'envelope'
     },
-    { id: 'password',
-      type: 'password',
+    { type: 'password',
       name: 'password',
-      className: 'form__input',
       placeholder: 'Password',
-      htmlFor: 'password',
       value: null,
       min: null,
       required: true,
       finame: 'lock'
     },
-    { id: 'confirm',
-      type: 'password',
+    { type: 'password',
       name: 'confirm',
-      className: 'form__input',
       placeholder: 'Confirm Password',
-      htmlFor: 'confirm',
       value: null,
       min: null,
       required: true,
       finame: 'undo-alt'
     },
-    { id: 'phone',
-      type: 'number',
+    { type: 'number',
       name: 'phone',
-      className: 'form__input',
       placeholder: 'Phone Number',
-      htmlFor: 'phone',
       value: null,
       min: '0',
       required: true,
@@ -87,22 +66,15 @@ export default ({ handleChange, visible, error, isCompany, submitForm, companyIn
   ];
   const checkbox =[
     {
-      id: 'mailingList',
       name: 'mailingList',
-      value: 'mailingList',
-      className: 'checkBoxSpan',
       type: 'checkbox',
       text: 'Join Mailing List'
     },
     {
-      id: 'T&C',
       name: 'T&C',
-      value: 'T&C',
-      className: 'checkBoxSpan',
       type: 'checkbox',
       text: 'T&C'
     }
-
   ];
   return (
     <div className='signup__main'>
@@ -145,7 +117,7 @@ export default ({ handleChange, visible, error, isCompany, submitForm, companyIn
             {
               visible && (
                 <div>
-                  <Input arr={ arr } handleChange ={ handleChange }/>
+                  <FormInput arr={ arr } handleChange ={ handleChange }/>
 
                   <div className='spaceDiv--imgDiv'>
                     <div className='spaceDiv' />

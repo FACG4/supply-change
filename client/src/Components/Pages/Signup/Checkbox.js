@@ -7,7 +7,7 @@ const Checkbox =({ checkbox, handleChange }) => {
     <div>
       {checkbox.map(el => (
         <div className='divBox'>
-          <input id={ el.id } type={ el.type } value={ el.value } name={ el.name } onChange={ handleChange } />
+          <input id={ el.name } type={ el.type } value={ el.name } name={ el.name } onChange={ handleChange } />
           <span className='checkBoxSpan'>
             { el.text }
           </span>
@@ -15,6 +15,5 @@ const Checkbox =({ checkbox, handleChange }) => {
       ))}
     </div>
   );
-
 };
 export default Checkbox;

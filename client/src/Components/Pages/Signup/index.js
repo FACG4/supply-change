@@ -1,10 +1,6 @@
-import React, {
-  Component
-} from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import {
-  Redirect
-} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import './style.css';
 import axios from 'axios';
 import SignupForm from './SignupForm';
@@ -81,12 +77,12 @@ class SignUp extends Component {
   }
   render() {
     return (
-  this.state.redirect ?(
+   this.state.redirect ?(
       <Redirect to = '/login' / > ):(
       <SignupForm { ...this.state }
-      isCompany = { this.isCompany}
-      handleChange = {this.handleChange}
-      submitForm = {this.submitForm}
+      isCompany = { this.isCompany }
+      handleChange = { this.handleChange }
+      submitForm = { this.submitForm }
       />
     )
     );
