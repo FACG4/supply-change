@@ -14,9 +14,9 @@ const Form = ({ handleChange, handleSelect, SERegions }) => {
         <Select options={addoptions(SERegions)} placeholder='Select contract region...' isMulti={false}
           isClearable={true} name='city' handleSelect={ handleSelect }/>
       </div>
-      <div className='searchBtnDiv'>
+      {/* <div className='searchBtnDiv'>
         <button className='searchBtn'type='button'><i className='fas fa-search'></i></button>
-      </div>
+      </div> */}
     </form>
   );
 };

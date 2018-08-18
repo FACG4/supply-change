@@ -37,24 +37,32 @@ class SEInofrmation extends Component {
   }
 
   componentWillMount() {
-    const info = JSON.parse(localStorage.getItem('userInfo'));
-    const {se_house_no} = info;
-      const companyNumber = se_house_no;
-    companyNumber?
-    axios.get(`/companyinfo/${companyNumber}`)
-      .then(result => {
-        if(result.data.err){
-          this.setState({error: result.data.errors[0].error})
-        }else{
-          this.setState({
-              companyInfo:result.data,
-              SICCode:result.data.sic_codes[0],
-              companyLocation:result.data.registered_office_address.locality,
-              companyAddress:result.data.registered_office_address.address_line_1,
-              error:''})
-        }
-      this.saveState()
-}):null
+    if (localStorage.getItem('userInfo')){
+        const info = JSON.parse(localStorage.getItem('userInfo'));
+        const {se_house_no} = info;
+          const companyNumber = se_house_no;
+        companyNumber?
+        axios.get(`/companyinfo/${companyNumber}`)
+          .then(result => {
+            if(result.data.errors){
+              this.setState({error: result.data.errors[0].error})
+            }else{
+              console.log('result=>> ', result);
+
+              this.setState({
+                  companyInfo:result.data,
+                  companyLocation:result.data.registered_office_address.locality,
+                  companyAddress:result.data.registered_office_address.address_line_1,
+                  error:''})
+            }
+          this.saveState()
+        }):null
+    }else{
+      this.setState({
+        ...this.state,
+        redirect: true
+      })
+    }
 }
 
 saveState = () =>{
@@ -96,8 +104,29 @@ saveState = () =>{
     });
   }
   indexIncrement = (e) => {
+    this.setState({
+      ...this.state,
+      error: ''
+    })
+    this.state.activePageIndex === 1 && !this.state.logoLink ? (
+      this.setState({
+        ...this.state,
+        error: 'you should upload your bussiness logo'
+      })
+
+    ) : (
+        this.setState({
+          ...this.state,
+          error: ''
+        },()=>{
+
+
+    
       this.state.activePageIndex === 5 ?
-      this.sendData() : (
+        (this.state.policyArray.length < 2 ? (this.setState({
+          ...this.state,
+          error: 'you should select 2 of your social missions'
+        })) : this.sendData()) : (
       this.setState ({
         ...this.state,
         activePageIndex: 1+ this.state.activePageIndex
@@ -110,6 +139,9 @@ saveState = () =>{
         }
       })
     )
+      })
+
+    )
   }
 
   render() {
@@ -117,7 +149,7 @@ saveState = () =>{
       this.state.redirect ?
         <Redirect to='/profile' /> :
         (
-      <div className = 'SEForm'>
+      <div id='main' className = 'SEForm'>
         <ProgressTracker activePageIndex = { this.state.activePageIndex }/>
         <Switch changeState = { this.changeState } activePageIndex = { this.state.activePageIndex } setImgLink= { this.setImgLink } companyInfo={this.state.companyInfo}/>
         <div className ='errMsg'>{this.state.error}</div>

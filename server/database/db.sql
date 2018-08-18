@@ -1,16 +1,16 @@
 BEGIN;
 
-DROP TABLE IF EXISTS social_enterprise_basic, social_enterprise_details, contract, policy, social_impact_list; 
+DROP TABLE IF EXISTS social_enterprise_basic, social_enterprise_details, contract, policy, social_impact_list;
 DROP TYPE IF EXISTS regions, trade_type, turnover_size, contract_size, social_mission, uk_cities;
 
 CREATE TYPE regions AS ENUM(
     'Greater London',
-    'South East', 
-    'South West', 
-    'West Midlands', 
-    'North West', 
-    'North East', 
-    'Yorkshire and the Humber', 
+    'South East',
+    'South West',
+    'West Midlands',
+    'North West',
+    'North East',
+    'Yorkshire and the Humber',
     'East Midlands'
 );
 
@@ -21,7 +21,7 @@ CREATE TYPE trade_type AS ENUM(
 );
 
 CREATE TYPE turnover_size AS ENUM(
-    'Turnover <50k',
+    '<50k',
     '50k-100k',
     '100-150k',
     '150-250k',
@@ -29,7 +29,7 @@ CREATE TYPE turnover_size AS ENUM(
 );
 
 CREATE TYPE contract_size AS ENUM(
-    'Less than 50k',
+    '<50k',
     '50k-100k',
     '100-150k',
     '150-250k',
@@ -49,19 +49,75 @@ CREATE TYPE social_mission AS ENUM(
 );
 
 CREATE TYPE uk_cities AS ENUM(
-    'London',
-    'Birmingham',
-    'Leeds',
-    'Glasgow',
-    'Sheffield',
-    'Greater London',
-    'South East', 
-    'South West', 
-    'West Midlands', 
-    'North West', 
-    'North East', 
-    'Yorkshire and the Humber', 
-    'East Midlands'
+  'Bath',
+  'Birmingham',
+  'Bradford',
+  'Brighton & Hove',
+  'Bristol',
+  'Cambridge',
+  'Canterbury',
+  'Carlisle',
+  'Chelmsford',
+  'Chester',
+  'Chichester',
+  'Coventry',
+  'Derby',
+  'Durham',
+  'Ely',
+  'Exeter',
+  'Gloucester',
+  'Hereford',
+  'Kingston upon Hull',
+  'Lancaster',
+  'Leeds',
+  'Leicester',
+  'Lichfield',
+  'Lincoln',
+  'Liverpool',
+  'London',
+  'Manchester',
+  'Newcastle upon Tyne',
+  'Norwich',
+  'Nottingham',
+  'Oxford',
+  'Peterborough',
+  'Plymouth',
+  'Portsmouth',
+  'Preston',
+  'Ripon',
+  'Salford',
+  'Salisbury',
+  'Sheffield',
+  'Southampton',
+  'St Albans',
+  'Stoke-on-Trent',
+  'Sunderland',
+  'Truro',
+  'Wakefield',
+  'Wells',
+  'Westminster',
+  'Winchester',
+  'Wolverhampton',
+  'Worcester',
+  'York',
+  'Armagh',
+  'Belfast',
+  'Londonderry',
+  'Lisburn',
+  'Newry',
+  'Aberdeen',
+  'Dundee',
+  'Edinburgh',
+  'Glasgow',
+  'Inverness',
+  'Perth',
+  'Stirling',
+  'Bangor',
+  'Cardiff',
+  'Newport',
+  'St. Asaph',
+  'St. David''s',
+  'Swansea'
 );
 
 CREATE TABLE social_enterprise_basic(
@@ -81,7 +137,7 @@ CREATE TABLE social_enterprise_details(
     id SERIAL,
     SE_id INT PRIMARY KEY NOT NULL REFERENCES social_enterprise_basic(id) ON DELETE CASCADE ON UPDATE CASCADE,
     SE_address VARCHAR NOT NULL,
-    SIC_code INT NOT NULL, 
+    SIC_code INT,
     director VARCHAR NOT NULL,
     company_structure VARCHAR NOT NULL,
     trade_type trade_type NOT NULL,
@@ -95,8 +151,8 @@ CREATE TABLE social_enterprise_details(
     SE_description TEXT NOT NULL,
     selected_contract INT[],
     policy_general INT[],
-    location uk_cities NOT NULL,
-    places_to_work_in regions[] NOT NULL    
+    location VARCHAR NOT NULL,
+    places_to_work_in regions[] NOT NULL
 );
 
 CREATE TABLE social_impact_list(
@@ -117,9 +173,9 @@ CREATE TABLE contract(
     contract_description TEXT NOT NULL,
     value INT NOT NULL,
     social_impact_description TEXT NOT NULL,
-    start_date DATE NOT NULL, 
+    start_date DATE NOT NULL,
     open_for_splitting BOOLEAN DEFAULT FALSE,
-    active_state BOOLEAN DEFAULT TRUE, 
+    active_state BOOLEAN DEFAULT TRUE,
     company_name VARCHAR UNIQUE NOT NULL,
     company_logo VARCHAR NOT NULL,
     contract_region regions NOT NULL,

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import Button from '../../../CommonComponents/Button';
 import Uploader from './uploader';
 
 import './style.css';
@@ -19,15 +20,14 @@ class ImageUploader extends Component{
             image: e.target.files
         });
     }
-    
+
     uploadImage = (e) => {
         const formData = new FormData();
         formData.append('image', this.state.image[0]);
         axios.post(`/upload-image`, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
-            },
-            withCredentials: true 
+            }
         }).then(res => {
             this.setState({
                 ...this.state,
@@ -36,7 +36,9 @@ class ImageUploader extends Component{
             },()=>{
               this.props.setImgLink(res.data.Location)
             })
+            console.log('res=> ', res)
         }).catch(err => {
+          console.log(err);
             this.setState({
                 ...this.state,
                 msg: `Can't upload the image / Check your internet connection`

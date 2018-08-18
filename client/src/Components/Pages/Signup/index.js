@@ -11,6 +11,7 @@ class SignUp extends Component {
     companyInfo: [],
     visible: false,
     error: '',
+    error2: '',
     redirect: false
   }
 
@@ -51,9 +52,11 @@ class SignUp extends Component {
         .then((response)=> {
           if (response.data.msg === 'success') {
             this.setState({redirect:true})
+          }else{
+            this.setState({error2:response.data.err})
           }
         })
-        .catch(function(error) {
+        .catch((error) => {
           this.setState({error:"something error "})
         })
     }

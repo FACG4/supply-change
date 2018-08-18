@@ -6,6 +6,7 @@
 
 .ptracker__container{
     min-width: 600px;
+    padding-top: 1px;
 }
 
 .ptracker__v-center {
@@ -19,11 +20,11 @@
 .ptracker__caution-img {
     width: 50px;
     height: 50px;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .ptracker__caution {
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
 .ptracker__step-container {

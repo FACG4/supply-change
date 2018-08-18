@@ -2,7 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './style.css';
 
-const Footer = () => (<div>
+const Footer = () => (
+
   <footer className='footer'>
     <div className='contact-inf'>
       <img className='logo' src={logo} alt='logo image'/>
@@ -21,7 +22,7 @@ const Footer = () => (<div>
       <br/>
     </div>
     <div className='journey'>
-      <p id='follow'>Follow your journey</p>
+      <p id='follow'>Follow our journey!</p>
       <div className='labeld-input'>
         <input placeholder='Enter your email'/>
         <i className='fas fa-envelope'/>
@@ -32,6 +33,6 @@ const Footer = () => (<div>
       </div>
     </div>
   </footer>
-</div>);
+);
 
 export default Footer;

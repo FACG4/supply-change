@@ -6,7 +6,7 @@ import Fontawesome from 'react-fontawesome';
 import FormInput from './FormInput';
 import Checkbox from './Checkbox';
 
-export default ({ handleChange, visible, error, isCompany, submitForm, companyInfo }) => {
+export default ({ handleChange, visible, error, error2, isCompany, submitForm, companyInfo }) => {
   const arr = [
     { type: 'text',
       name: 'businessName',
@@ -83,7 +83,8 @@ export default ({ handleChange, visible, error, isCompany, submitForm, companyIn
              Sign Up
         </h3>
         <div className='select-user'>
-          <button className='signup__button buttonSE'>
+
+          <button className='signup__button button0 supplier'>
         Supplier
           </button>
           <button className='signup__button button0'>
@@ -97,9 +98,11 @@ export default ({ handleChange, visible, error, isCompany, submitForm, companyIn
         <div className='grid'>
 
           <form action='' method='POST' className='form Signup'>
+            <h3 className='form__top__heading'>What is your company Number?</h3>
+            <br/>
 
             <div className='form__field'>
-              <input id='CompanyHouseNumber' type='number' min='0' name='CompanyHouseNumber' onChange={handleChange} className='form__input' placeholder='Company House Number' required />
+              <input id='CompanyHouseNumber' type='text' name='CompanyHouseNumber' onChange={handleChange} className='form__input' placeholder='Company House Number' required />
               <label htmlFor='CompanyHouseNumber'>
                 <Fontawesome className='fontawesome' name='sort-numeric-up' />
                 <span className='hidden' />
@@ -112,7 +115,7 @@ export default ({ handleChange, visible, error, isCompany, submitForm, companyIn
               </div>
             }
             {
-              error && <div className='error-msg'>Company Not Found</div>
+              error && !visible && <div className='error-msg'>Company Not Found</div>
             }
             {
               visible && (
@@ -135,12 +138,12 @@ export default ({ handleChange, visible, error, isCompany, submitForm, companyIn
               )
             }
           </form>
-          <div>{error}</div>
+          {error2&&visible?<div className='error-msg'>{error2}</div>:null}
           <div className='SubmitDiv'>
             <p className='text--center'>
                 Already have an account?
             </p>
-            <a href='#'>
+            <a href='/login'>
               <p className='text--login'>
                    Login Now
               </p>

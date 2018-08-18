@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import Moment from 'react-moment';
+import { NavLink, Redirect } from 'react-router-dom';
 
 import './style.css';
 
@@ -10,7 +11,8 @@ const Contract = props => {
     title,
     company_name,
     created_at,
-    contract_description
+    contract_description,
+    id
   } = props.contract;
 
   return (
@@ -32,7 +34,7 @@ const Contract = props => {
           <p className='contract-desc__paragraph'>{contract_description}</p>
         </div>
         <div className='contractAction'>
-          <a href='#' className='contractAction__link' title=''>Read More <i className='fas fa-long-arrow-alt-right'></i></a>
+          <NavLink to={`/contractinfo/${id}`} className='contractAction__link'>Read More<i className='fas fa-long-arrow-alt-right'></i></NavLink>
         </div>
       </div>
     </div>

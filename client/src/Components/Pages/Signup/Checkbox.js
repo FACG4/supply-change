@@ -7,7 +7,7 @@ const Checkbox =({ checkbox, handleChange }) => {
     <div>
       {checkbox.map(el => (
         <div className='divBox'>
-          <input id={ el.name } type={ el.type } value={ el.name } name={ el.name } onChange={ handleChange } />
+          <input key={el.name} id={ el.name } type={ el.type } value={ el.name } name={ el.name } onChange={ handleChange } />
           <span className='checkBoxSpan'>
             { el.text }
           </span>

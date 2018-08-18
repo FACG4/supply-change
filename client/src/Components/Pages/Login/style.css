@@ -38,7 +38,6 @@ body {
   margin:auto;
   padding: auto;
   margin-bottom: -20px;
-
 }
 
 .login__main {
@@ -58,7 +57,7 @@ body {
   margin-top: 70px;
   background: #ebebeb;
   width: 400px;
-  height:300px;
+  height:340px;
   margin: auto;
   padding: auto
 }
@@ -75,6 +74,7 @@ body {
 .login__top {
   margin-left: auto;
   margin-right: auto;
+  margin-top: 30px;
   max-width: 320px;
   max-width: 20rem;
   width: 90%;
@@ -160,7 +160,7 @@ body {
   width: 60px
 }
 
-.login input :: placeholder {
+.login input::placeholder {
   color: #474747
 }
 
@@ -227,10 +227,44 @@ body {
   width: 110px;
   height: 25px;
   border-radius: 9px;
-  line-height: 4px
+  line-height: 4px;
 }
 
 .fontawe {
   font-size:1.5em;
-  color: #2D918E
+  color: #2D918E;
+}
+
+.errMsg{
+  text-align: center;
+  color: red;
+  font-size: 20px;
+}
+
+.login_container{
+      padding-bottom: 339px;
+}
+
+.text--signup {
+  color: black;
+  line-height: 70px;
+  margin-left: 15px;
+}
+
+.text--signup:hover {
+  text-decoration: underline;
+}
+
+ .text--signup p {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  margin-top: 24px;
+  margin-top: 1.5rem;
+  margin-left: 30px
+}
+
+.SubmitDiv {
+  margin: auto;
+  width: 100%;
+  margin-left: 15%;
 }
