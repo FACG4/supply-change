@@ -233,6 +233,7 @@ body {
   margin-top: 10px;
 }
 
+
 .Signup input[type='submit']:focus, .Signup input[type='submit']:hover {
   border: 2px solid #2d918e;
   border-radius: 9px;
@@ -256,6 +257,20 @@ body {
   height: 25px;
   border-radius: 9px;
   line-height: 4px;
+}
+
+.buttonSE {
+  background-color:#bff1f1;
+  color: black;
+  border: 1px solid #bff1f1;
+  margin-left: 32px
+}
+
+.buttonSE :hover {
+  background-color:#bff1f1;
+  color: black;
+  border: 1px solid #bff1f1;
+  margin-left: 32px
 }
 
 .button0 {
@@ -344,4 +359,20 @@ text-align: center;
 color: black;
 font-size: 18px;
 font-weight: 100;
+}
+
+.error-msg {
+  padding: 10px;
+  border-radius: 1rem;
+  color: red;
+  background-color: #eee;
+  width: 80%;
+  margin: 7% auto;
+  font-size: 20px;
+  word-spacing: .3em;
+  text-align: center;
+}
+
+.divBox {
+  display: inline;
 }

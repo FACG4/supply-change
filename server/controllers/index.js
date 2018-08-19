@@ -19,7 +19,7 @@ const router = express.Router();
 router.get('/companyinfo/:companyNumber',celebrate(validate.companyInfo), getCompanyInfo);
 router.post('/login',celebrate(validate.loginInfo),login);
 router.post('/search',/*celebrate(validate.search) ,*/search);
-router.post('/userdata',celebrate(validate.userdata), storeData);
+router.post('/userdata', storeData);
 router.get('/profile/:id',celebrate(validate.socailProfile), profile);
 router.post('/userdetails',/*celebrate(validate.userdetails),*/ userDetails);
 router.get('/contractinfo/:contractId',celebrate(validate.contractId), getContractInfo);

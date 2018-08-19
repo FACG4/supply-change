@@ -68,16 +68,16 @@
 
 .comInformation {
   grid-area: c;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-left: -20px
 }
 
 .comInformation .companyLogo {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   box-sizing: border-box;
-  margin-left: 65px;
+  margin-left: 34%;
   display: block;
   -webkit-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.41);
   -moz-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.41);
@@ -86,9 +86,9 @@
 }
 
 .comInformation figcaption {
-  margin-left: 40px;
+  margin-left: 60px;
   margin-top: 10px;
-  font-size: 25px
+  font-size: 20px
 }
 
 .comInformation .listItems {

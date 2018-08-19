@@ -1,10 +1,6 @@
-import React, {
-  Component
-} from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import {
-  Redirect
-} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import './style.css';
 import axios from 'axios';
 import SignupForm from './SignupForm';
@@ -14,7 +10,8 @@ class SignUp extends Component {
     userInfo: {},
     companyInfo: [],
     visible: false,
-    error: false,
+    error: '',
+    error2: '',
     redirect: false
   }
 
@@ -50,7 +47,7 @@ class SignUp extends Component {
       userInfo
     } = this.state;
     userInfo.companyName = this.state.companyInfo.company_name;
-    if (userInfo['TC']) {
+    if (userInfo['T&C']) {
       axios.post('/userdata', userInfo)
         .then((response)=> {
           if (response.data.msg === 'success') {
@@ -83,12 +80,12 @@ class SignUp extends Component {
   }
   render() {
     return (
-  this.state.redirect ?(
-      <Redirect to = '/login' /> ):(
+   this.state.redirect ?(
+      <Redirect to = '/login' / > ):(
       <SignupForm { ...this.state }
-      isCompany = { this.isCompany}
-      handleChange = {this.handleChange}
-      submitForm = {this.submitForm}
+      isCompany = { this.isCompany }
+      handleChange = { this.handleChange }
+      submitForm = { this.submitForm }
       />
     )
     );
