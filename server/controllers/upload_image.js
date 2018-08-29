@@ -38,8 +38,10 @@ module.exports = (req, res) => {
             const timestamp = Date.now().toString();
             const fileName = `companyLogo/${timestamp}-lg`;
             const data = await uploadFile(buffer, fileName, type);
+            console.info('image info ', data);
             return res.status(200).send(data);
         } catch (error) {
+            console.info('image err ', error);
             return res.status(400).send(error);
         }
     });
