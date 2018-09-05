@@ -1,0 +1,35 @@
+.contract-search-sec {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.contract-search-sec__title {
+  float: left;
+  width: 100%;
+  margin: 90px auto 20px auto;
+  color: #2D918E;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.contract-result {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 250px;
+}
+
+.contract-result-summary {
+  width: 100%;
+}
+
+.contract-result-summary__number {
+  float: left;
+  width: 100%;
+  margin-top: 25px;
+  font-size: 20px;
+  color: #222222;
+  font-weight: bold;
+  line-height: 33px;
+}

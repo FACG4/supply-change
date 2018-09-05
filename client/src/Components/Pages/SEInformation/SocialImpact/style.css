@@ -1,0 +1,166 @@
+.socialImpact__mainDiv {
+  /* margin-top: 10% */
+}
+
+.socialImpact__heading h3 {
+ text-align: center;
+ font-size: 2.2rem;
+}
+.h3__socialImpact {
+  margin: auto;
+  padding: auto;
+  width: 29%;
+  margin-top: 3%;
+}
+
+.select__impact {
+  margin: auto;
+  padding: auto;
+  width: 50%
+}
+
+.selectImpact {
+  width: 350px;
+  margin: 20px auto;
+}
+
+.text__area{
+  width: 350px;
+  border: 1px solid #CCD4D4;
+  border-radius: 12px;
+  margin: auto;
+  padding: 12px;
+  overflow: visible;
+}
+
+ .text__area textarea ::placeholder {
+  color:#7F7E7E;
+  line-height: 90px;
+  padding-left: 15px;
+  font-size: 14px
+}
+
+.form__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 14px;
+  margin: 0.375rem;
+  width: 100%
+}
+
+.form__input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+
+ .SaveBtn input[type='submit'] {
+    background-color: #2D918E;
+    color: #eee;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 0.25rem;
+      cursor: pointer;
+}
+
+ .SaveBtn input[type='submit']:focus,
+  .SaveBtn input[type='submit']:hover {
+    border: 2px solid #2d918e;
+    color: #2d918e;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.form__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 14px;
+  margin: 0.375rem;
+  width:100%
+}
+
+.space__mainDiv {
+  width: 45%;
+  position: relative;
+  margin-left: 37%;
+  margin-top: 20px;
+}
+
+.spaceDiv__img {
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  margin-left: 35px;
+  margin-top: 23px;
+  background: #aaa;
+  display: none
+}
+
+.space__img {
+  text-align: center;
+  margin-left: 25%
+}
+
+.SocialImpactDiv {
+  margin: auto;
+  padding: auto;
+  width: 50%;
+  margin-top: 3%;
+}
+
+.textDiv {
+  margin: auto;
+  padding: auto;
+  text-align: center;
+}
+
+.textDiv p {
+  text-align: center;
+}
+
+.checkbox {
+  margin: auto;
+  padding: auto;
+  width: 80%;
+  margin-top: 3%
+}
+
+.checkbox .checkBoxSpan {
+  overflow: hidden;
+  text-indent: 10px
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 25px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 27%;
+  height: 26px;
+  line-height: 4px;
+  margin-top: 3%;
+  margin: auto;
+  padding: auto
+}
+
+ .SaveBtn input[type='submit']:focus,
+ .SaveBtn input[type='submit']:hover {
+  border: 2px solid #2d918e;
+  color: #2d918e;
+  background: #fff;
+  border-radius: 12px
+}
+
+.SaveBtn {
+  margin-top: 50px;
+  border-radius: 12px
+}

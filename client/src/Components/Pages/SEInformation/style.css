@@ -1,0 +1,47 @@
+.SEForm {
+  text-align: center;
+  padding-top: 25px;
+  margin: 0 auto;
+}
+.se__container{
+  text-align: center;
+  margin: 0 auto;
+}
+
+.generalButton {
+  width: 330px;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  background-color: #2D918E;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  color: white;
+  padding: 25px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 50px auto;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  height: 25px;
+  line-height: 4px
+}
+
+.generalButton:focus, .generalButton:hover {
+  border: 2px solid #2d918e;
+  color: #2d918e;
+  background: #fff;
+  border-radius: 12px
+}
+.errMsg{
+  text-align: center;
+  color: red;
+  font-size: 20px;
+}
+
+#main{
+  padding-bottom: 250px;
+}
+

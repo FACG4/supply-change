@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   font-family: 'Montserrat', sans-serif;
+
+}
+
+.container__body{
+    margin-top: 105px;
+}
+
+.contract__title{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.contract__container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.contract__details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.contract__left-description{
+    width: 70%;
+    border: 1px solid #e9e9e9;
+    padding: 30px 25px;
+    background: white;
+}
+
+.contract__spec{
+    background: white;
+    width: 100%;
+    padding: 30px;
+}
+
+.contract__spec p{
+    background: white;
+    line-height: 20px;
+    font-size: 18px;
+    padding: 30px 0;
+}
+
+.contract__spec--download{
+    text-align: center;
+}
+
+.contract__regions{
+    width: 100%;
+    padding: 30px;
+}
+
+.contract__regions--city{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+}
+.contract__regions--city div{
+box-shadow: 0px 0px 8px #888888;
+}
+
+
+.contract__right-info{
+    width: 25%;
+    background: white;
+    border: 1px solid #e9e9e9;
+    padding: 30px;
+    padding-top: 50px;
+}
+
+.contract__logo{
+    text-align: center;
+}
+
+.contract__logo img{
+    width: 50%;
+    border-radius: 50%;
+}
+
+.contract__companyname{
+    margin: 50px auto;
+}
+
+.contract__right-details{
+    list-style: none;
+    margin: 24px 0;
+    display: flex;
+
+}
+
+.no-list{
+    list-style: none;
+}
+
+.contract__right-info-icon{
+    padding-right: 20px;
+    color: yellow;
+    width: 20%;
+    color: #2D918E;
+}
+
+.contract__right-info-spec li:first-child{
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.applyButton {
+  background-image: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  border-radius: 0.25rem;
+  padding: 16px;
+  padding: 1rem;
+  box-sizing: border-box;
+  color: #000;
+  background-color: #2D918E;
+  color: #eee;
+  font-weight: 700;
+  margin-top: 15px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.applyButton:hover{
+  box-shadow: -1px 0px 1px 0px #C4C4C4;
+  border: 2px solid #2d918e;
+  border-radius: 9px;
+  color: #2d918e;
+  background: #fff;
+}
