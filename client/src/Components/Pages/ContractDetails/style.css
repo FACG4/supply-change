@@ -108,7 +108,7 @@ box-shadow: 0px 0px 8px #888888;
     padding-right: 20px;
     color: yellow;
     width: 20%;
-    color: #2D918E;
+    color: #384e75;
 }
 
 .contract__right-info-spec li:first-child{
@@ -131,7 +131,7 @@ box-shadow: 0px 0px 8px #888888;
   padding: 1rem;
   box-sizing: border-box;
   color: #000;
-  background-color: #2D918E;
+  background-color: #384e75;
   color: #eee;
   font-weight: 700;
   margin-top: 15px;
@@ -141,8 +141,8 @@ box-shadow: 0px 0px 8px #888888;
 
 .applyButton:hover{
   box-shadow: -1px 0px 1px 0px #C4C4C4;
-  border: 2px solid #2d918e;
+  border: 2px solid #384e75;
   border-radius: 9px;
-  color: #2d918e;
+  color: #384e75;
   background: #fff;
 }

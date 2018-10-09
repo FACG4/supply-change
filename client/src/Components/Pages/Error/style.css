@@ -1,5 +1,5 @@
 *{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   padding: 0
 }
 .error_page_cntnt {
@@ -16,7 +16,7 @@
 
 .error_page_cntnt span {
   font-size: 200px;
-  color: #2D918E;
+  color: #384e75;
   font-weight: 900;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .error_page_cntnt a {
-  color: #2D918E;
+  color: #384e75;
   text-decoration: none;
   font-size: 25px;
 }

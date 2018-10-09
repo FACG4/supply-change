@@ -1,5 +1,4 @@
 * {
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -14,12 +13,13 @@
 }
 
 .textNavBar {
+  font-family: 'Work Sans', sans-serif;
   padding: 10px 0;
   width: 40%;
   position: absolute;
   top: 0;
   right: 0;
-  background: #302626;
+  background: #384e75;
   color: #E3F4F4;
   display: flex;
   justify-content: space-around;
@@ -35,5 +35,6 @@
 .logoDiv {
   position: relative;
   top: 1%;
-  left: 1%
+  left: 1%;
+  width: 20%;
 }

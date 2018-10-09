@@ -1,5 +1,5 @@
 *{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   padding: 0
 }
 .aboutUs{
@@ -19,10 +19,10 @@
   text-align: center;
 }
 .aboutUs__heading h1 {
-  color: #2D918E;
+  color: #384e75;
   font-size: 40px;
   font-weight: 100;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   display: block;
   width: 400px;
   margin: 0 auto;

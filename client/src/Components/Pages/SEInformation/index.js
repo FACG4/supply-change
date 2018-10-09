@@ -121,7 +121,7 @@ saveState = () =>{
         },()=>{
 
 
-    
+
       this.state.activePageIndex === 5 ?
         (this.state.policyArray.length < 2 ? (this.setState({
           ...this.state,
@@ -153,7 +153,8 @@ saveState = () =>{
         <ProgressTracker activePageIndex = { this.state.activePageIndex }/>
         <Switch changeState = { this.changeState } activePageIndex = { this.state.activePageIndex } setImgLink= { this.setImgLink } companyInfo={this.state.companyInfo}/>
         <div className ='errMsg'>{this.state.error}</div>
-        <Button children = {this.state.buttonText} className = 'generalButton' onClick = { this.indexIncrement }/>
+        {Object.keys(this.state.companyInfo).length > 0?
+        <Button children = {this.state.buttonText} className = 'generalButton' onClick = { this.indexIncrement }/>:null}
       </div>
     )
     );

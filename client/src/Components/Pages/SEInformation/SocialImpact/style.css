@@ -57,7 +57,7 @@
 
 
  .SaveBtn input[type='submit'] {
-    background-color: #2D918E;
+    background-color: #384e75;
     color: #eee;
     font-weight: 700;
     text-transform: uppercase;
@@ -67,8 +67,8 @@
 
  .SaveBtn input[type='submit']:focus,
   .SaveBtn input[type='submit']:hover {
-    border: 2px solid #2d918e;
-    color: #2d918e;
+    border: 2px solid #384e75;
+    color: #384e75;
     background: #fff;
     border-radius: 12px;
 }
@@ -154,8 +154,8 @@
 
  .SaveBtn input[type='submit']:focus,
  .SaveBtn input[type='submit']:hover {
-  border: 2px solid #2d918e;
-  color: #2d918e;
+  border: 2px solid #384e75;
+  color: #384e75;
   background: #fff;
   border-radius: 12px
 }

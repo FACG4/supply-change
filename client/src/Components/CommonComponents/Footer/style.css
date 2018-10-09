@@ -1,6 +1,6 @@
 *{
-  font-family: 'Montserrat', sans-serif;
-  padding: 0
+  padding: 0;
+  margin: 0;
 }
 
 .footer {
@@ -11,16 +11,17 @@
   justify-content: space-around;
   -ms-flex-align: center;
   align-items: center;
-  background: #2D918E;
+  background: #384e75;
   height: 220px;
   text-align: left;
-  color: #E3F4F4;
+  color:rgba(255,255,255,0.4);
   bottom: 0px;
   position: absolute;
 }
 
 .contact-inf, .journey {
   width: 170px;
+
 }
 
 .journey input {
@@ -28,7 +29,7 @@
   height: 35px;
   border-radius: 28px;
   text-align: center;
-  background: #edf7f6;
+  background: white;
   border: none;
 }
 
@@ -53,11 +54,11 @@
 .socail-media a {
   font-size: 25px;
   text-decoration-line: none;
-  color: #E3F4F4;
+  color: white;
 }
 
 .fa-envelope {
-  color: #2d918e;
+  color: #384e75;
   font-size: 20px;
 }
 
