@@ -19,11 +19,24 @@ export default class ContractDetails extends Component {
     getLatLng = (city) => {
         return axios.get(`https://maps.google.com/maps/api/geocode/json?address=${city}&sensor=false`)
         .then(res => {
+          console.log(res.data.results.length,'res.data.results.lenght');
+          if (res.data.results.length>0) {
+            console.log('11111111111111111111');
             return {
                     lat: res.data.results[0].geometry.location.lat,
                     lon: res.data.results[0].geometry.location.lng
                 };
+              } else {
+                console.log(22222222222222222222);
+                this.setState({
+                  ...this.state,
+                  err: 'Server Error'
+                })
+                throw new Error()
+                // next(new Error('session not found'));
+              }
         }).catch(err => {
+          console.log(err,'error');
             this.setState({
                 ...this.state,
                 err: 'Server Error'
@@ -35,9 +48,11 @@ export default class ContractDetails extends Component {
     getContractInfo = (ContractId) => {
         axios.get(`/contractinfo/${ContractId}`)
         .then(result=>{
+          console.log(result,'oooooooooooooooooooo');
             //use the returned location to get the lat&lng
             this.getLatLng(result.data.contract_region)
             .then(latlng=>{
+              console.log(latlng);
                 this.setState({
                     ...this.state,
                     lat: latlng.lat,
