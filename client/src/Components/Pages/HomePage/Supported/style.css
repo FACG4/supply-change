@@ -1,4 +1,6 @@
 .supported {
+  display: flex;
+  /* flex-direction: row; */
   height: 640px;
   margin-top:5%;
   display: flex;
@@ -35,7 +37,7 @@
 
 .imgs__box {
   display: flex;
-  align-content:space-between;
+  flex-direction: row;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -45,7 +47,30 @@
   margin-top: 10px;
 }
 
-.img__div {
+.img__first{
+  flex:1;
+  order: 4;
+}
+.img__second{
+  flex: 1;
+  order: 2;
+
+}
+
+.img_fifth{
+  flex: 1;
+  order: 3;
+}
+.img__third{
+  flex: 1;
+  order: 4;
+
+}
+.img__fourth{
+  flex: 1;
+  order: 1;
+}
+/* .img__div {
   padding:50px;
   margin: auto;
 }
@@ -73,7 +98,7 @@ margin-top:80px;
 .img_fifth {
   margin-top: 90px;
 }
-
+ */
 .slick-arrow{
   display: none !important;
 }
