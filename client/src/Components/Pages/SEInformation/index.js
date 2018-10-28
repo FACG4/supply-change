@@ -121,7 +121,7 @@ saveState = () =>{
         },()=>{
 
 
-    
+
       this.state.activePageIndex === 5 ?
         (this.state.policyArray.length < 2 ? (this.setState({
           ...this.state,
@@ -154,7 +154,7 @@ saveState = () =>{
         <Switch changeState = { this.changeState } activePageIndex = { this.state.activePageIndex } setImgLink= { this.setImgLink } companyInfo={this.state.companyInfo}/>
         <div className ='errMsg'>{this.state.error}</div>
         {Object.keys(this.state.companyInfo).length > 0?
-        <Button children = {this.state.buttonText} className = 'generalButton' onClick = { this.indexIncrement }/>:<img src="https://i.gifer.com/9wcA.gif"/>}
+        <Button children = {this.state.buttonText} className = 'generalButton' onClick = { this.indexIncrement }/>:null}
       </div>
     )
     );

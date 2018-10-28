@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import swal from 'sweetalert';
+
 
 import ContractPage from './contract_page';
 import './style.css';
@@ -17,19 +19,24 @@ export default class ContractDetails extends Component {
 
     //get the city lat and lng
     getLatLng = (city) => {
-        return axios.get(`https://maps.google.com/maps/api/geocode/json?address=${city}&sensor=false`)
-        .then(res => {
-            return {
-                    lat: res.data.results[0].geometry.location.lat,
-                    lon: res.data.results[0].geometry.location.lng
-                };
-        }).catch(err => {
-            this.setState({
-                ...this.state,
-                err: 'Server Error'
+            return axios.get(`https://open.mapquestapi.com/geocoding/v1/address?key=5vXogwcaGa9J8x6G2UbqohBdl8DQsIG1&location=${city}`)
+            .then(res => {
+                if (res.status !== 200) {
+                  return {err:'err'}
+                } else {
+                  return {
+                    lat: res.data.results[0].locations[0].latLng.lat,
+                    lon: res.data.results[0].locations[0].latLng.lng,
+                  };
+                }
             })
-        })
-    }
+            .catch(err => {
+                this.setState({
+                    ...this.state,
+                    err: 'Server Error'
+                })
+            })
+        }
 
     //get the company data then with the returned data use the location to get the lat and lng
     getContractInfo = (ContractId) => {
@@ -38,12 +45,21 @@ export default class ContractDetails extends Component {
             //use the returned location to get the lat&lng
             this.getLatLng(result.data.contract_region)
             .then(latlng=>{
+              if (latlng) {
                 this.setState({
-                    ...this.state,
-                    lat: latlng.lat,
-                    lon: latlng.lon,
-                    details: result.data
+                  ...this.state,
+                  lat: latlng.lat,
+                  lon: latlng.lon,
+                  details: result.data
                 })
+
+              } else {
+                this.setState({
+                  ...this.state,
+                  err: 'Server Error'
+                })
+
+              }
             })
         }).catch(err=>{
             this.setState({
@@ -55,15 +71,21 @@ export default class ContractDetails extends Component {
     }
 
     sendMsg = () => {
-      console.log(this.state.userInfo,'this.state.userInfothis.state.userInfothis.state.userInfothis.state.userInfo');
         if(this.state.userInfo){
             axios.post('/email',{
                 SEId: this.state.userInfo.id,
                 contractId: this.props.match.params.id
             }
             )
-            .then(result => console.log(result))
-            .catch(err=>console.log(err))
+            .then(result => {
+              swal("Great!", "Your Email has sent!", "success");
+            })
+            .catch(err=>{
+                this.setState({
+                    ...this.state,
+                    err: 'Server Error'
+                })
+            })
         }else{
             window.location = '/';
         }
@@ -71,7 +93,6 @@ export default class ContractDetails extends Component {
 
     componentDidMount(){
         const userInfo = JSON.parse(localStorage.getItem('userInfo'))
-        console.log(userInfo);
         if(userInfo){
             this.setState({
                 ...this.state,

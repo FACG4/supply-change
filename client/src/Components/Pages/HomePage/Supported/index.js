@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+
 import './style.css';
+
 import first from './imgs/first.png';
 import second from './imgs/second.png';
 import third from './imgs/third.png';
 import fourth from './imgs/fourth.png';
+import fifth from './imgs/fifth.png';
 
 const Supported =() => {
+
   return (
     <div className='supported'>
       <div className='supported__heading'>
-        <h2>Supported By</h2>
+        <h1>We are kindly supported By</h1>
         <div className='line__header'></div>
       </div>
 
@@ -38,6 +42,13 @@ const Supported =() => {
           <div className='img__fourth'>
             <img src={ third } alt='img__fourth' />
           </div>
+
+        </div>
+        <div className='fifth'>
+          <div className='img_fifth'>
+            <img src={ fifth } alt='img_fifth' />
+          </div>
+
         </div>
       </div>
     </div>

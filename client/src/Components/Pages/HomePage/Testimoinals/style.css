@@ -1,7 +1,6 @@
-* {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  padding: 0;
+
+.routerContainer {
+  background: #e5e5e554;
 }
 
 .slick-list {
@@ -10,7 +9,7 @@
   font-size: 30px;
   margin-top: 35px;
   text-align: center;
-  color: #2D918E;
+  color: #384e75;
 }
 
 .slick-dots {
@@ -43,18 +42,22 @@
 }
 
 .test-descrp {
+  font-family: 'Source Sans Pro', sans-serif;
   color: black;
   font-size: 20px;
   width: 75%;
   text-align: center;
   margin: 0 auto;
 }
-.testimonials >h3{
-  display: block;
+
+.testimonials >h3 {
+   font-family: 'Work Sans', sans-serif;
+   display: block;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 25px;
-    margin-top: 20px;
+    margin-top: 40px;
     font-size: 34px;
-    color: #2D918E;
+    color: black;
+
 }

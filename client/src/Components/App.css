@@ -1,11 +1,13 @@
- h1, h2, h3, p, h4, h5, h6{
-  font-family: 'Montserrat'!important;
 
-  }
 .routerContainer{
   position: relative;
     min-height: 100vh;
 }
-/* #main{
-  padding-bottom: 250px;
-} */
+
+h1 {
+  font-family: 'Work Sans', sans-serif;
+}
+
+h2,h3,p,h4,h5,h6,a {
+  font-family: 'Source Sans Pro', sans-serif;
+}

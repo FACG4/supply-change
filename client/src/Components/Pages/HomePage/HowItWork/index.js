@@ -1,8 +1,10 @@
 import React from 'react';
 import { NavLink, Redirect } from 'react-router-dom';
+
 import './style.css';
 
 const HowItWork = () => (
+  
   <React.Fragment>
     <div className='section-how-work'>
       <h1> How it works</h1>
@@ -21,9 +23,7 @@ const HowItWork = () => (
         </NavLink>
       </div>
     </div>
-
   </React.Fragment>
-
 );
 
 export default HowItWork;

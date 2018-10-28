@@ -16,6 +16,7 @@
     "react-select": "^2.0.0",
     "react-slick": "^0.23.1",
     "slick-carousel": "^1.8.1",
+    "sweetalert": "^2.1.0",
     "yandex-map-react": "^1.1.1"
   },
   "scripts": {

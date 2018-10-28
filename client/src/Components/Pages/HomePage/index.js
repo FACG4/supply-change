@@ -5,6 +5,7 @@ import HomeHeader from './HomeHeader';
 import HowItWork from './HowItWork';
 import Testimoinals from './Testimoinals';
 import Supported from './Supported';
+
 class HomePage extends Component {
   render() {
     return (

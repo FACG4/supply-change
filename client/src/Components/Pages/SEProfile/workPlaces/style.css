@@ -28,7 +28,7 @@
 .PlacesToWork .spanText {
   display:inline-block;
   margin: 10px;
-  width: 160px;
+  width: 260px;
   height: 60px;
   border-radius: 9px;
   text-align: center;
@@ -60,7 +60,7 @@
   height: 65px;
   padding: 16px 32px;
   margin: 50px 10px;
-  background-color: #2D918E;
+  background-color: #384e75;
   color: white;
   border: none;
   border-radius: 15px;
@@ -74,6 +74,6 @@
 
 .browseBtnDiv button:hover {
     background-color:#6ca19f;
-    color: #2D918E;
-    border: 1px solid #2D918E;
+    color: #384e75;
+    border: 1px solid #384e75;
 }

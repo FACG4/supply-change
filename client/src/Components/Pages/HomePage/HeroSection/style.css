@@ -1,10 +1,10 @@
 * {
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
 }
 
 .supplyChange {
+  font-family: 'Work Sans', sans-serif;
   background-color: #ffffff8f;
   height: 250vh;
   width: 150vh;
@@ -15,6 +15,7 @@
 }
 
 .description {
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 35px;
   width: 100%;
   margin-top: 45px;
@@ -25,24 +26,8 @@
   font-size: 25px;
 }
 
-/* .findMore {
-  width: 60%;
-  margin: 0 auto;
-  background: #2D918E;
-  height: 40px;
-  text-align: center;
-  opacity: 0.8;
-  font-size: 20px;
-  font-family: Montserrat;
-  display: block;
-  text-decoration-line: none;
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-
 .findMore {
+  font-family: 'Work Sans', sans-serif;
   background-image: none;
   border: 0;
   color: inherit;
@@ -56,7 +41,7 @@
   padding: 16px;
   padding: 1rem;
   box-sizing: border-box;
-  background-color: #2D918E;
+  background-color: #36b3a8;
   color: #fff;
   font-weight: 700;
   margin-top: 15px;
@@ -67,9 +52,9 @@
 
 .findMore:hover{
   box-shadow: -1px 0px 1px 0px #C4C4C4;
-  border: 2px solid #2d918e;
+  border: 2px solid #384e75;
   border-radius: 9px;
-  color: #2d918e;
+  color: #384e75;
   background: #fff;
 }
 

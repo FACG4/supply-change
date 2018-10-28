@@ -61,7 +61,7 @@
 .progress__circle {
     width: 70px;
     height: 70px;
-    background: #E3F4F4;
+    background: #c3cdde;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -71,7 +71,7 @@
 }
 
 .progress__circle-selected {
-    background: #2D918E;
+    background: #384e75;
 }
 
 .ptracker__steps-line {
