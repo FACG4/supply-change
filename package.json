@@ -25,7 +25,7 @@
     "file-type": "^8.1.0",
     "jsonwebtoken": "^8.3.0",
     "multiparty": "^4.2.0",
-    "nodemailer": "^4.6.7",
+    "nodemailer": "^6.4.16",
     "pg": "^7.4.3",
     "request": "^2.87.0",
     "serve-favicon": "^2.5.0"
