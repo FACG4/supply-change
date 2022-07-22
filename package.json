@@ -22,7 +22,7 @@
     "celebrate": "^8.0.1",
     "env2": "^2.2.2",
     "express": "^4.16.3",
-    "file-type": "^8.1.0",
+    "file-type": "^16.5.4",
     "jsonwebtoken": "^8.3.0",
     "multiparty": "^4.2.0",
     "nodemailer": "^4.6.7",
