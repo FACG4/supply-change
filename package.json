@@ -23,7 +23,7 @@
     "env2": "^2.2.2",
     "express": "^4.16.3",
     "file-type": "^8.1.0",
-    "jsonwebtoken": "^8.3.0",
+    "jsonwebtoken": "^9.0.0",
     "multiparty": "^4.2.0",
     "nodemailer": "^4.6.7",
     "pg": "^7.4.3",
